@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title></title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt =
+                "orientationchange" in window ? "orientationchange" : "resize",
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = "100px";
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+                    }
+                };
+            if (!doc.addEventListener) {
+                return;
+            }
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener("DOMContentLoaded", recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <noscript>
+      <strong
+        >We're sorry but TAF CHAIN doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://lib.baomitu.com/element-ui/2.13.2/index.js"></script> -->
+    <script src="vue@2_6_12.js"></script>
+    <script src="ele_index.js"></script>
+</body>
+
+</html>
