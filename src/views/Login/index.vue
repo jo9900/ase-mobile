@@ -237,9 +237,10 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="resetData.verify_code"
                 />
-                <div v-if="disabled1" class="get_code">{{ btntxt1 }}</div>
-                <div v-else class="get_code" @click="sendcode1()">
-                  {{ btntxt1 }}
+                <div :class="['get_code',{'disabledBtn': disabled1}]"
+                     @click="sendcode1()"
+                >
+                  {{ $t("message.70") }}
                 </div>
               </el-form-item>
               <el-form-item class="form_row" prop="password">
