@@ -689,7 +689,7 @@ export default {
           if (this.round == 3) {
             if (this.totalPrice > this.preInfo.total) {
               return this.$message.error(
-                this.$t("message.203") + this.preInfo.total + " USDT"
+                this.$t("message.203") + this.preInfo.total + " 份"
               );
             }
             if (this.preInfo.progress >= 100) {
@@ -724,7 +724,7 @@ export default {
                   " " +
                   this.preInfo.total +
                   " " +
-                  " USDT"
+                  " 份"
               );
               return;
             }
