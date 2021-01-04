@@ -15,7 +15,7 @@
           <div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>
 
           <div class="wrap_plan_first_title">首轮预售</div>
-          <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2020.12.30</div>
+          <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
           <div class="wrap_plan_first">
             <div>
               <span>{{ $t("message.147") }}</span

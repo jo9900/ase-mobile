@@ -105,10 +105,14 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="signInForm.verify_code"
                 />
-                <div v-if="disabled" class="get_code">{{ btntxt }}</div>
-                <div v-else class="get_code" @click="sendcode()">
-                  {{ btntxt }}
+                <div :class="['get_code',{'disabledBtn': disabled}]"
+                     @click="sendcode()"
+                >
+                  {{ $t("message.70") }}
                 </div>
+                <!--<div v-else class="get_code" >-->
+                  <!--{{ btntxt }}-->
+                <!--</div>-->
               </el-form-item>
               <el-form-item class="form_row" prop="password">
                 <!-- <img
@@ -484,6 +488,7 @@ export default {
     },
 
     sendcode() {
+      if (this.disabled) return
       this.$refs["signInForm"].validateField("email", (errMsg) => {
         if (!errMsg) {
           let data = {
@@ -491,8 +496,9 @@ export default {
             email: this.signInForm.email,
           };
           mailVcode(this.$qs.stringify(data)).then((res) => {
+            this.disabled = false
             if (res.code == 0) {
-              this.timer();
+              // this.timer();
               this.$message({
                 message: this.$t("message.81"),
                 type: "success",
@@ -513,6 +519,7 @@ export default {
       });
     },
     sendcode1() {
+      if (this.disabled1) return
       this.$refs["resetForm"].validateField("email", (errMsg) => {
         if (!errMsg) {
           let data = {
@@ -520,8 +527,9 @@ export default {
             email: this.resetData.email,
           };
           findPassword(this.$qs.stringify(data)).then((res) => {
+            this.disabled1 = false
             if (res.code == 0) {
-              this.timer1();
+              // this.timer1();
               this.$message({
                 message: this.$t("message.81"),
                 type: "success",
@@ -906,6 +914,9 @@ export default {
             }
             .get_code:hover {
               color: #efcf54;
+            }
+            .disabledBtn {
+              color: gray;
             }
           }
           .forget_link {
