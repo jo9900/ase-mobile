@@ -503,7 +503,7 @@ export default {
       roundtext: "",
       isLogin: false,
       roundstatus: 0,
-      firstDialogVisible: true,
+      firstDialogVisible: false,
       firstPayDialogVisible: false,
       ruleDialogVisible: false,
       loginDialogVisible: false,
