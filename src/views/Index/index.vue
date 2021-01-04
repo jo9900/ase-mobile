@@ -53,11 +53,13 @@
                     >
                       {{ $t("message.17") }}
                     </div>
-                    <div class="page_banner_item2">
-                      {{ $t("message.18") }}2020-12-30
-                    </div>
-                    <div class="page_banner_detail">
-                      {{ $t("message.19") }}2020-01-30
+                    <div class="page_banner_date_wrap">
+                      <div class="page_banner_item2 text_left">
+                        {{ $t("message.18") }}2021-01-05
+                      </div>
+                      <div class="page_banner_detail text_left">
+                        {{ $t("message.19") }}售罄即止
+                      </div>
                     </div>
                     <router-link :to="{ path: '/presell' }">
                       <div class="page_banner_btn">{{ $t("message.20") }}</div>
@@ -1003,6 +1005,9 @@ export default {
   color: #ffffff;
   line-height: 56/100rem;
   margin-top: 8/100rem;
+}
+.page_banner_date_wrap .text_left {
+  text-align: left;
 }
 .page_banner_item2 {
   width: 100%;
