@@ -12,7 +12,7 @@
         <div class="wrap_content">
           <div class="wrap-wllr"><img src="@/assets/images/pic_dian@3x.png"/></div>
           <div class="wrap-wllr ter"><img src="@/assets/images/pic_dian@3x.png"/></div>
-          <div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>
+          <!--<div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>-->
 
           <div class="wrap_plan_first_title">首轮预售</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="wrap-cont-text">首轮募集资金的75%将用于ARTHUR-EX平台的开发和拓展。15%将用于法律法规相关法务费用和公共宣传的相关费用。10%将用于社区服务。</div>
-          <div class="wrap_plan_first_title">次轮预售</div>
+          <!--<div class="wrap_plan_first_title">次轮预售</div>
           <div class="wrap_plan_second_title" style="font-size: 0.45rem;">
             2021.3.1
           </div>
@@ -46,13 +46,13 @@
             <div>
               <span>{{ $t("message.149") }}{{ $t("message.153") }}</span>
             </div>
-          </div>
+          </div>-->
           <div class="wrap_plan_first_title">全球公售</div>
-          <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.6.10</div>
+          <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
           <div class="wrap_plan_third">
             <div>
               <span>{{ $t("message.147") }}</span
-              >2021.6.10
+              >2021.5.1
             </div>
             <div>
               <span>{{ $t("message.148") }}</span
@@ -64,7 +64,7 @@
             </div>
           </div>
           <div class="wrap-cont-text" style="color: #9CB5FF;">
-            预计发行时间：2021.6.10开始，最终发行期以监管手续完成时确定。预计发行区域：亚洲、欧洲、中东及法律监管允许的区域。
+            预计发行时间：2021.5.1开始，最终发行期以监管手续完成时确定。预计发行区域：亚洲、欧洲、中东及法律监管允许的区域。
           </div>
           <div class="wrap-cont-text" style="color: #9CB5FF; margin-top: 0;">
             敬请期待2021年全球首次大规模发售盛宴。
@@ -878,9 +878,12 @@ export default {
 .wrap_content {
   position: relative;
   width: 750/100rem;
-  height: 1890/100rem;
+  /*height: 1890/100rem;
   background: url("../../assets/images/preSale.png") no-repeat;
-  background-size: 750/100rem 1830/100rem;
+  background-size: 750/100rem 1890/100rem;*/
+  height: 1248/100rem;
+  background: url("../../assets/images/preSale2.png") no-repeat;
+  background-size: 750/100rem 1248/100rem;
   margin-top: -2/100rem;
   display: flex;
   flex-direction: column;
