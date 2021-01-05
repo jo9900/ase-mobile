@@ -77,12 +77,13 @@
                 alt=""
                 class="iconImg"
               />
-              <template v-if="languageName == 'English'">
-                <a @click="messageTips">{{ $t("message.4") }}</a>
-              </template>
-              <template v-else>
-                <a @click="messageTips">{{ $t("message.4") }}</a>
-              </template>
+              <a href="https://m.arthurex.com/material/whitepaper.pdf">{{ $t("message.4") }}</a>
+              <!--<template v-if="languageName == 'English'">-->
+                <!--<a @click="messageTips">{{ $t("message.4") }}</a>-->
+              <!--</template>-->
+              <!--<template v-else>-->
+                <!--<a @click="messageTips">{{ $t("message.4") }}</a>-->
+              <!--</template>-->
             </li>
             <li :class="pagePath == '/plan' ? 'active' : ''">
               <img

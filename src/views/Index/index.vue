@@ -210,8 +210,8 @@
             </div>
             <div class="page_download_book">
               <img src="../../assets/images/icon_down_book.png" alt="" />
-              <div class="page_download_book_btn" @click="download">
-                {{ $t("message.45") }}
+              <div class="page_download_book_btn">
+                <a href="https://m.arthurex.com/material/whitepaper.pdf">{{ $t("message.45") }}</a>
               </div>
             </div>
           </div>
@@ -522,6 +522,11 @@ export default {
   font-weight: 400;
   color: #13228d;
   line-height: 76/100rem;
+  >a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 }
 //发行计划
 .page_content_plan {
