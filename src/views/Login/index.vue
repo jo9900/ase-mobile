@@ -244,7 +244,7 @@
                   <!--{{ $t("message.70") }}-->
                 <!--</div>-->
                 <div v-if="disabled1" class="get_code">{{ btntxt1 }}</div>
-                <div v-else class="get_code" @click="sendcode()">
+                <div v-else class="get_code" @click="sendcode1()">
                   {{ btntxt1 }}
                 </div>
               </el-form-item>
