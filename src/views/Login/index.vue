@@ -105,14 +105,15 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="signInForm.verify_code"
                 />
-                <div :class="['get_code',{'disabledBtn': disabled}]"
-                     @click="sendcode()"
-                >
-                  {{ $t("message.70") }}
-                </div>
-                <!--<div v-else class="get_code" >-->
-                  <!--{{ btntxt }}-->
+                <!--<div :class="['get_code',{'disabledBtn': disabled}]"-->
+                     <!--@click="sendcode()"-->
+                <!--&gt;-->
+                  <!--{{ $t("message.70") }}-->
                 <!--</div>-->
+                <div v-if="disabled" class="get_code">{{ btntxt }}</div>
+                <div v-else class="get_code" @click="sendcode()">
+                  {{ btntxt }}
+                </div>
               </el-form-item>
               <el-form-item class="form_row" prop="password">
                 <!-- <img
@@ -237,10 +238,14 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="resetData.verify_code"
                 />
-                <div :class="['get_code',{'disabledBtn': disabled1}]"
-                     @click="sendcode1()"
-                >
-                  {{ $t("message.70") }}
+                <!--<div :class="['get_code',{'disabledBtn': disabled1}]"-->
+                     <!--@click="sendcode1()"-->
+                <!--&gt;-->
+                  <!--{{ $t("message.70") }}-->
+                <!--</div>-->
+                <div v-if="disabled1" class="get_code">{{ btntxt1 }}</div>
+                <div v-else class="get_code" @click="sendcode()">
+                  {{ btntxt1 }}
                 </div>
               </el-form-item>
               <el-form-item class="form_row" prop="password">
@@ -496,10 +501,10 @@ export default {
             lang_type: this.$languageName,
             email: this.signInForm.email,
           };
+          this.disabled = true
           mailVcode(this.$qs.stringify(data)).then((res) => {
-            this.disabled = false
             if (res.code == 0) {
-              // this.timer();
+              this.timer();
               this.$message({
                 message: this.$t("message.81"),
                 type: "success",
@@ -527,10 +532,10 @@ export default {
             lang_type: this.$languageName,
             email: this.resetData.email,
           };
+          this.disabled1 = true
           findPassword(this.$qs.stringify(data)).then((res) => {
-            this.disabled1 = false
             if (res.code == 0) {
-              // this.timer1();
+              this.timer1();
               this.$message({
                 message: this.$t("message.81"),
                 type: "success",
