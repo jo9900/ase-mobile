@@ -77,7 +77,7 @@
                 alt=""
                 class="iconImg"
               />
-              <a href="https://m.arthurex.com/material/whitepaper.pdf">{{ $t("message.4") }}</a>
+              <a @click="downloadPDF">{{ $t("message.4") }}</a>
               <!--<template v-if="languageName == 'English'">-->
                 <!--<a @click="messageTips">{{ $t("message.4") }}</a>-->
               <!--</template>-->
@@ -237,6 +237,9 @@ export default {
     },
   },
   methods: {
+    downloadPDF(){
+      window.open(this.$BaseUrl + "material/whitepaper.pdf")
+    },
     messageTips() {
       this.$message({
         message: this.$t("message.215"),

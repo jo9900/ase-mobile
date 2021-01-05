@@ -211,7 +211,7 @@
             <div class="page_download_book">
               <img src="../../assets/images/icon_down_book.png" alt="" />
               <div class="page_download_book_btn">
-                <a href="https://m.arthurex.com/material/whitepaper.pdf">{{ $t("message.45") }}</a>
+                <a @click="downloadPDF">{{ $t("message.45") }}</a>
               </div>
             </div>
           </div>
@@ -312,6 +312,9 @@ export default {
   computed: {},
   watch: {},
   methods: {
+    downloadPDF(){
+      window.open(this.$BaseUrl + "material/whitepaper.pdf")
+    },
     download() {
       this.$message({
         message: this.$t("message.214"),
