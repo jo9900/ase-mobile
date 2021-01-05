@@ -71,7 +71,7 @@
               />
               <router-link to="/journalism">{{ $t("message.3") }}</router-link>
             </li>
-            <li :class="pagePath == '/community' ? 'active' : ''">
+            <li :class="pagePath == '/books' ? 'active' : ''">
               <img
                 src="../assets/images/icon_book.png"
                 alt=""
@@ -111,22 +111,18 @@
               />
               <router-link to="/presell">{{ $t("message.6") }}</router-link>
             </li>
+            <li :class="pagePath == '/help' ? 'active' : ''">
+              <img
+                  src="../assets/images/icon_help.png"
+                  alt=""
+                  class="iconImg"
+              />
+              <a @click="downloadPDFHelp">{{ $t("message.475") }}</a>
+            </li>
             <li :class="pagePath == '/about' ? 'active' : ''">
               <img src="../assets/images/icon_we.png" alt="" class="iconImg" />
               <router-link to="/about">{{ $t("message.7") }}</router-link>
             </li>
-            <!-- <li :class="pagePath == '/help' ? 'active' : ''">
-              <template v-if="languageName == 'English'">
-                <router-link to="/help">{{
-                  languageNav[languageName].language_text5
-                }}</router-link>
-              </template>
-              <template v-else>
-                <router-link to="/help">{{
-                  languageNav[languageName].language_text5
-                }}</router-link>
-              </template>
-            </li> -->
             <!-- <li @click="loginClose" v-if="isLogin">退出</li> -->
             <li @click="language">
               <img src="../assets/images/icon_zw.png" alt="" class="iconImg" />
@@ -239,6 +235,9 @@ export default {
   methods: {
     downloadPDF(){
       window.open(this.$BaseUrl + "material/whitepaper.pdf")
+    },
+    downloadPDFHelp(){
+      window.open(this.$BaseUrl + "material/help.pdf")
     },
     messageTips() {
       this.$message({
