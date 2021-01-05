@@ -510,6 +510,7 @@ export default {
                 type: "success",
               });
             } else {
+              this.disabled = false
               if (res.code == "101702") {
                 return this.$message.error(this.$t("message.82"));
               }
@@ -541,6 +542,7 @@ export default {
                 type: "success",
               });
             } else {
+              this.disabled1 = false
               if (res.code == "101702") {
                 return this.$message.error(this.$t("message.82"));
               }
