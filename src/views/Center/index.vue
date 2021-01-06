@@ -770,11 +770,12 @@ export default {
   font-weight: 400;
   color: #a7acc1;
   position: relative;
+  margin-top: 20px;
 }
 .page_invite_QRcode_div {
-  width: 340/100rem;
-  height: 340/100rem;
-  margin: 24/100rem 0;
+  width: 170px;
+  height: 170px;
+  margin: 12px 0;
   box-shadow: 0 0 13px 4px rgba(0,0,0, .1);
   border: 8px solid #FFF;
   box-sizing: content-box;
@@ -1091,9 +1092,6 @@ export default {
     // padding: 30px;
   }
 }
-  .email {
-    padding-top: 20px;
-  }
   .code_logo {
     position: absolute;
     z-index: 80;
