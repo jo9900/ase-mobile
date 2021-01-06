@@ -9,7 +9,17 @@
     </div>
     <div class="page_container">
       <div class="page_my">
-        <div class="page_my_title">{{ $t("message.93") }}</div>
+        <div class="page_apply_content"  @click="toTransfer()">
+          <div class="page_invite_content_pre">
+            <div class="page_invite_content_name title">{{ $t("message.93") }}</div>
+            <div class="page_invite_content_number transfer">{{ $t("message.478") }}</div>
+          </div>
+          <img
+              src="../../assets/images/icon_found_more.png"
+              alt=""
+              class="pagez_kyc_content_arrow"
+          />
+        </div>
         <div class="page_my_number">
           {{ $t("message.94") }}{{ myPreSale && myPreSale.user_balance_amount }}
         </div>
@@ -1034,11 +1044,17 @@ export default {
   padding-top: 50/100rem;
   border-bottom: 1/100rem solid #cad7e8;
 }
-.page_my_title {
-  font-size: 36/100rem;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #323a43;
+.page_my {
+  .title {
+    font-size: 36/100rem;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #323a43;
+  }
+  .transfer {
+    font-size: 28/100rem;
+    color: #4F7BFF;
+  }
 }
 .page_my_number {
   font-size: 28/100rem;
