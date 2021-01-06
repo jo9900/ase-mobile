@@ -68,3 +68,6 @@ export const taftBoert = (params) => {
 export const recordsList = (params) => {
     return post(baseUrl + "account/transfer/records", params);
 };
+export const authVerify = (params) => {
+    return post(baseUrl + "account/transfer/auth/verify", params);
+};

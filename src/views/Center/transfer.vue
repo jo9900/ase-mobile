@@ -33,13 +33,13 @@
                         label-width="80px"
                         :rules="rules"
                     >
-                        <el-form-item label="用户">
+                        <el-form-item label="用户" prop="to_account">
                             <el-input
                                 v-model.trim="form.to_account"
                                 placeholder="请输入对方注册邮箱"
                             ></el-input>
                         </el-form-item>
-                        <el-form-item label="额度">
+                        <el-form-item label="额度" prop="aeco_amount">
                             <el-input
                                 v-model="form.aeco_amount"
                                 placeholder="请输入转让的AECO额度"
@@ -47,18 +47,47 @@
                         </el-form-item>
                     </el-form>
                 </div>
+              <div class="btn-wrap">
+                <el-button class="bBottn" @click="subFromData">
+                  <span>提交</span>
+                </el-button>
+              </div>
             </div>
         </div>
+      <el-dialog
+          :visible.sync="validateDialog"
+          width="324px"
+          height="496px"
+          center
+      >
+        <div class="validateDialogWrap">
+          <div class="title">支付验证</div>
+          <p class="alert_amount">转出额度: <span>{{ form.aeco_amount}} AECC</span></p>
+          <p class="alert_password">支付密码</p>
+          <el-input v-model="verifyData.password"></el-input>
+          <p v-show="error_text" class="error_text">{{ error_text }}</p>
+        </div>
+        <span slot="footer" class="dialog-footer">
+            <el-button class="restBtn" @click="onVerifyData">验证</el-button>
+        </span>
+      </el-dialog>
+
     </div>
 </template>
 
 <script>
-    import { userInfo, myPreSale, myMarketing } from "@/request/user.js";
+    import { userInfo, authVerify } from "@/request/user.js";
 
     export default {
         name: "",
         data() {
             return {
+                error_text: '',
+                verifyData: {
+                  password: '',
+                  user_code: ''
+                },
+                validateDialog: true,
                 myPreSale: {
                     apply_usdt_amount: "",
                     apply_taft_amount: "",
@@ -93,10 +122,26 @@
                 }
             }
         },
+        created() {
+          this.verifyData.user_code = localStorage.getItem("code");
+        },
         mounted() {
             this.getMyPreSale();
         },
         methods: {
+            onVerifyData() {
+              let params = this.$qs.stringify(this.verifyData)
+              authVerify(params).then(res=> {
+                console.log(res)
+              })
+            },
+            subFromData() {
+              this.$refs["form"].validate((valid) => {
+                if (valid) {
+                  this.validateDialog = true
+                }
+              })
+            },
             toTransferLogs() {
 
             },
@@ -200,7 +245,7 @@
         border-radius: 40/100rem 40/100rem 0 0;
         .warning_text {
             width: 448/100rem;
-            height: 40/100rem;
+            height: 80/100rem;
             font-size: 28/100rem;
             margin: 0 auto;
             text-align: center;
@@ -209,8 +254,84 @@
             margin-top: 70/100rem;
         }
         .input-wrap {
-            margin-top: 204/100rem;
+            margin-top: 54/100rem;
             padding: 0 64/100rem 0 10/100rem;
+            /deep/ .el-input .el-input__inner {
+              background-color: #F5F6F7;
+            }
+        }
+        .btn-wrap {
+          background-color: #F4F5F9;
+          height: 248/100rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .bBottn {
+            width: 600/100rem;
+            height: 88/100rem;
+            background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
+            border-radius: 10/100rem;
+            font-size: 28/100rem;
+            color: #fff;
+            font-family: PingFangSC-Semibold, PingFang SC;
+          }
         }
     }
+
+    /deep/ .el-dialog__headerbtn {
+      left: 20px;
+    }
+    .validateDialogWrap {
+      padding: 0 54/100rem;
+      .title {
+        font-size: 36/100rem;
+        font-family: PingFang SC;
+        font-weight: bold;
+        line-height: 25px;
+        color: #323A43;
+        text-align: center;
+        position: relative;
+        margin-bottom: 44/100rem ;
+      }
+      /deep/ .el-input .el-input__inner {
+        background-color: #F5F6F7;
+      }
+      .alert_amount, .alert_password {
+        font-size: 28/100rem;
+        font-family: PingFang SC;
+        font-weight: bold;
+        line-height: 40/100rem;
+        color: #3660FF;
+      }
+      .alert_amount {
+        margin-bottom: 32/100rem;
+      }
+      .alert_password {
+        margin-bottom: 20/100rem;
+      }
+      .error_text {
+        text-align: center;
+        font-size: 24/100rem;
+        font-family: PingFang SC;
+        color: #F44242;
+        margin-top: 34/100rem;
+      }
+    }
+  .restBtn {
+    width: 240/100rem;
+    height: 78/100rem;
+    background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
+    border-radius: 10/100rem;
+    font-size: 28/100rem;
+    color: #fff;
+    padding: 0;
+    font-family: PingFangSC-Semibold, PingFang SC;
+  }
+  .dialog-footer {
+    height: auto;
+  }
+  /deep/ .el-dialog__body {
+    padding: 0;
+  }
 </style>
