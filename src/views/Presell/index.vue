@@ -5,7 +5,7 @@
     <div class="wrap">
       <div class="wrap_container">
         <!--<div class="wrap_title">{{ $t("message.145") }}</div>-->
-        <div class="wrap_line"></div>
+        <!--<div class="wrap_line"></div>-->
         <div class="wrap_header">
           <div class="wrap_header_title">{{ $t("message.146") }}</div>
         </div>
@@ -862,7 +862,7 @@ export default {
   height: 432/100rem;
   background: url("../../assets/images/pic_art_banner.png") no-repeat;
   background-size: 750/100rem 432/100rem;
-  margin-top: 20/100rem;
+  margin-top: 90/100rem;
 }
 .wrap_header_title {
   width: 380/100rem;
