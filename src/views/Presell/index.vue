@@ -4,7 +4,7 @@
   <div class="page">
     <div class="wrap">
       <div class="wrap_container">
-        <div class="wrap_title">{{ $t("message.145") }}</div>
+        <!--<div class="wrap_title">{{ $t("message.145") }}</div>-->
         <div class="wrap_line"></div>
         <div class="wrap_header">
           <div class="wrap_header_title">{{ $t("message.146") }}</div>

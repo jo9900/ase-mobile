@@ -117,7 +117,7 @@
                   alt=""
                   class="iconImg"
               />
-              <a @click="downloadPDFHelp">{{ $t("message.475") }}</a>
+              <a target="_self" @click="downloadPDFHelp">{{ $t("message.475") }}</a>
             </li>
             <li :class="pagePath == '/about' ? 'active' : ''">
               <img src="../assets/images/icon_we.png" alt="" class="iconImg" />
@@ -234,10 +234,10 @@ export default {
   },
   methods: {
     downloadPDF(){
-      window.open(this.$BaseUrl + "material/whitepaper.pdf")
+      window.open(this.$BaseUrl + "material/whitepaper.pdf", "_self")
     },
     downloadPDFHelp(){
-      window.open(this.$BaseUrl + "material/help.pdf")
+      window.open(this.$BaseUrl + "material/help.pdf", "_self")
     },
     messageTips() {
       this.$message({

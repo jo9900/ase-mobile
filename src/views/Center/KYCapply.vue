@@ -11,7 +11,7 @@
       <div class="wrap_kyc">
         <div class="wrap_kyc_title">{{$t('message.100')}}</div>
         <div class="wrap_kyc_line"></div>
-      </div> 
+      </div>
       <div class="page_content" >
         <!-- <div class="name">KYClanguage_text42</div> -->
         <el-form
@@ -42,9 +42,9 @@
                   <el-input
                     v-model.trim="name_cn"
                     :placeholder="$t('message.217')"
-                    readonly                  
+                    readonly
                   ></el-input>
-                </div>              
+                </div>
                  <input
                   type="hidden"
                   v-model.trim="formLabelAlign.country_code"
@@ -96,22 +96,21 @@
                   :placeholder="$t('message.221')"
                   readonly
                 ></el-input>
-                </div>               
+                </div>
                 <input type="hidden" v-model="formLabelAlign.id_type">
               </el-form-item>
             </el-col>
           </el-row>
           <el-row>
             <el-col :span="24">
-              <el-form-item class="el-form-item-country item_border_top" prop="id_number">
+              <el-form-item class=" item_border_top" prop="id_number">
                 <span>
                   {{formLabelAlign.id_type==''?$t('message.222'):formLabelAlign.id_type==1?$t('message.223') :formLabelAlign.id_type==2?$t('message.224'):$t('message.225')}}
                 </span>
-                <div @click="numberFocus">
+                <div>
                   <el-input
                     v-model.trim="formLabelAlign.id_number"
                     :placeholder="formLabelAlign.id_type==''?$t('message.222'):formLabelAlign.id_type==1?$t('message.223') :formLabelAlign.id_type==2?$t('message.224'):$t('message.225')"
-                    readonly
                   ></el-input>
                 </div>
               </el-form-item>
@@ -184,8 +183,8 @@
                       v-model.trim="formLabelAlign.mobile_no"
                       :placeholder="$t('message.234')"
                       readonly
-                    ></el-input>                  
-                </div>                      
+                    ></el-input>
+                </div>
               </el-form-item>
                <van-number-keyboard
                         :show="phoneISshow"
@@ -197,7 +196,7 @@
                         @delete="onDelete1"
                         ref="phoneKeyboard"
                         key="phoneKeyboard"
-                      />  
+                      />
             </el-col>
           </el-row>
           <div class="bBottn_div">
@@ -205,7 +204,7 @@
               <span>{{$t('message.236')}}</span>
             </el-button>
           </div>
-         
+
         </el-form>
       </div>
     </div>
@@ -246,7 +245,7 @@
       />
     </div>
     <!-- <webFoot/  > -->
-     <van-number-keyboard
+     <!--<van-number-keyboard
                 :show="numberISshow"
                 extra-key="X"
                 :close-button-text="$t('message.235')"
@@ -255,7 +254,7 @@
                 @delete="onDelete"
                 ref="numberKeyboard"
                 key="numberKeyboard"
-              />
+              />-->
   </div>
 </template>
 
