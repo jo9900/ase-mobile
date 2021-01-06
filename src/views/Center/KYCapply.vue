@@ -182,7 +182,6 @@
                     <el-input
                       v-model.trim="formLabelAlign.mobile_no"
                       :placeholder="$t('message.234')"
-                      readonly
                     ></el-input>
                 </div>
               </el-form-item>
