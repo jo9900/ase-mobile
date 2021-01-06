@@ -293,10 +293,11 @@
             v-show="isQR"
           />
         </div>
-        <div class="page_invite_QRcode" v-show="!isQR">
+        <div class="page_invite_QRcode" v-show="isQR">
           <div class="email">{{ user_email }}{{ $t("message.477") }}</div>
           <div class="page_invite_QRcode_div" id="qrcode" ref="qrcode"></div>
           <div>{{ $t("message.476") }}</div>
+          <div class="code_logo"><img src="../../assets/images/logo.png" alt="logo"></div>
         </div>
       </div>
       <div class="page_safe">
@@ -769,6 +770,7 @@ export default {
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #a7acc1;
+  position: relative;
 }
 .page_invite_QRcode_div {
   width: 340/100rem;
@@ -1091,15 +1093,22 @@ export default {
   }
 }
   .email {
-    margin-top: 10px;
+    padding-top: 10px;
   }
   .code_logo {
     position: absolute;
     z-index: 80;
-    background-color: red;
     height: 40px;
     width: 40px;
     left: 50%;
     margin-left: -20px;
+    top:50%;
+    margin-top: -20px;
+    border: 2px solid #fff;
+    img {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
   }
 </style>
