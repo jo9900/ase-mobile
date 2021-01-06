@@ -178,7 +178,7 @@
             <el-col :span="24">
               <el-form-item class="el-form-item-country item_border_top" prop="mobile_no">
                 <span>{{$t('message.233')}}</span>
-                <div @click="phoneClick">
+                <div>
                     <el-input
                       v-model.trim="formLabelAlign.mobile_no"
                       :placeholder="$t('message.234')"
@@ -401,11 +401,11 @@ export default {
     // });
   },
   methods: {
-    phoneClick() {
+    /*phoneClick() {
       this.phoneISshow = true;
       this.getTransform("pageKYC", "-245px", 1);
       this.getTransform("phoneKeyboard", "245px", 2);
-    },
+    },*/
     getTransform(className, numberPx, type) {
       let refs;
       if (type == 1) {

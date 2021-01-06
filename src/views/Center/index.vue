@@ -596,8 +596,7 @@ export default {
         width: 170,
         height: 170,
         // text: "http://192.168.0.84:9009/signIn?ref=5CBy", // 生成二维码的链接
-        // text: this.marketing.invite_url, // 生成二维码的链接
-        text: 'http://jindo.dev.naver.com/collie', // 生成二维码的链接
+        text: this.marketing.invite_url, // 生成二维码的链接
       });
     },
     qrclick() {
@@ -776,7 +775,7 @@ export default {
   width: 340/100rem;
   height: 340/100rem;
   margin: 24/100rem 0;
-  box-shadow: 0 0 13px 4px rgba(0,0,0, .14);
+  box-shadow: 0 0 13px 4px rgba(0,0,0, .1);
   border: 8px solid #FFF;
   box-sizing: content-box;
   position: relative;
@@ -1093,7 +1092,7 @@ export default {
   }
 }
   .email {
-    padding-top: 10px;
+    padding-top: 20px;
   }
   .code_logo {
     position: absolute;
@@ -1108,7 +1107,7 @@ export default {
     img {
       width: 100%;
       height: 100%;
-      pointer-events: none;
+      /*pointer-events: none;*/
     }
   }
 </style>
