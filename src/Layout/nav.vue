@@ -113,7 +113,7 @@
             </li>
             <li :class="pagePath == '/help' ? 'active' : ''">
               <img
-                  src="../assets/images/icon_help.png"
+                  src="../assets/images/icon_bz.png"
                   alt=""
                   class="iconImg"
               />
