@@ -320,7 +320,7 @@
         font-size: 66/100rem;
         color: #3660FF;
         text-align: center;
-        margin-top: 90/100rem;
+        margin-top: 8%;
         font-weight: bold;
     }
     .current_amount {
@@ -330,7 +330,7 @@
         margin-top: 20/100rem;
     }
     .logs {
-        margin-top: 44/100rem;
+        margin-top: 38/100rem;
         font-size: 28/100rem;
         color: #7D9DFB;
         text-align: center;
@@ -348,7 +348,7 @@
         width: 100%;
         background-color: #FFF;
         box-shadow: 0px -3px 10px rgba(46, 72, 110, 0.2);
-        height: 616/100rem;
+        height: 590/100rem;
         border-radius: 40/100rem 40/100rem 0 0;
         .warning_text {
             width: 448/100rem;
@@ -358,7 +358,7 @@
             text-align: center;
             color: #7D9DFB;
             line-height: 40/100rem;
-            margin-top: 70/100rem;
+            margin-top: 50/100rem;
         }
         .input-wrap {
             margin-top: 54/100rem;
