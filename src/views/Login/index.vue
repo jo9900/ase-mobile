@@ -105,6 +105,11 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="signInForm.verify_code"
                 />
+                <!--<div :class="['get_code',{'disabledBtn': disabled}]"-->
+                     <!--@click="sendcode()"-->
+                <!--&gt;-->
+                  <!--{{ $t("message.70") }}-->
+                <!--</div>-->
                 <div v-if="disabled" class="get_code">{{ btntxt }}</div>
                 <div v-else class="get_code" @click="sendcode()">
                   {{ btntxt }}
@@ -233,6 +238,11 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="resetData.verify_code"
                 />
+                <!--<div :class="['get_code',{'disabledBtn': disabled1}]"-->
+                     <!--@click="sendcode1()"-->
+                <!--&gt;-->
+                  <!--{{ $t("message.70") }}-->
+                <!--</div>-->
                 <div v-if="disabled1" class="get_code">{{ btntxt1 }}</div>
                 <div v-else class="get_code" @click="sendcode1()">
                   {{ btntxt1 }}
@@ -484,12 +494,14 @@ export default {
     },
 
     sendcode() {
+      if (this.disabled) return
       this.$refs["signInForm"].validateField("email", (errMsg) => {
         if (!errMsg) {
           let data = {
             lang_type: this.$languageName,
             email: this.signInForm.email,
           };
+          this.disabled = true
           mailVcode(this.$qs.stringify(data)).then((res) => {
             if (res.code == 0) {
               this.timer();
@@ -498,6 +510,7 @@ export default {
                 type: "success",
               });
             } else {
+              this.disabled = false
               if (res.code == "101702") {
                 return this.$message.error(this.$t("message.82"));
               }
@@ -513,12 +526,14 @@ export default {
       });
     },
     sendcode1() {
+      if (this.disabled1) return
       this.$refs["resetForm"].validateField("email", (errMsg) => {
         if (!errMsg) {
           let data = {
             lang_type: this.$languageName,
             email: this.resetData.email,
           };
+          this.disabled1 = true
           findPassword(this.$qs.stringify(data)).then((res) => {
             if (res.code == 0) {
               this.timer1();
@@ -527,6 +542,7 @@ export default {
                 type: "success",
               });
             } else {
+              this.disabled1 = false
               if (res.code == "101702") {
                 return this.$message.error(this.$t("message.82"));
               }
@@ -906,6 +922,9 @@ export default {
             }
             .get_code:hover {
               color: #efcf54;
+            }
+            .disabledBtn {
+              color: gray;
             }
           }
           .forget_link {

@@ -1,9 +1,9 @@
 <template>
   <div class="page">
-    <div class="page_apply_title">
+    <!--<div class="page_apply_title">
       <div class="page_apply_title_name">{{ $t("message.296") }}</div>
       <div class="page_apply_title_line"></div>
-    </div>
+    </div>-->
     <div class="page_content">
       <div class="page_content_plan">
         <div class="page_plan_title">{{ $t("message.35") }}</div>

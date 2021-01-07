@@ -53,11 +53,13 @@
                     >
                       {{ $t("message.17") }}
                     </div>
-                    <div class="page_banner_item2">
-                      {{ $t("message.18") }}2020-12-30
-                    </div>
-                    <div class="page_banner_detail">
-                      {{ $t("message.19") }}2020-01-30
+                    <div class="page_banner_date_wrap">
+                      <div class="page_banner_item2 text_left">
+                        {{ $t("message.18") }}2021-01-05
+                      </div>
+                      <div class="page_banner_detail text_left">
+                        {{ $t("message.19") }}售罄即止
+                      </div>
                     </div>
                     <router-link :to="{ path: '/presell' }">
                       <div class="page_banner_btn">{{ $t("message.20") }}</div>
@@ -208,8 +210,8 @@
             </div>
             <div class="page_download_book">
               <img src="../../assets/images/icon_down_book.png" alt="" />
-              <div class="page_download_book_btn" @click="download">
-                {{ $t("message.45") }}
+              <div class="page_download_book_btn">
+                <a @click="downloadPDF">{{ $t("message.45") }}</a>
               </div>
             </div>
           </div>
@@ -305,6 +307,9 @@ export default {
   computed: {},
   watch: {},
   methods: {
+    downloadPDF(){
+      window.open(this.$BaseUrl + "material/whitepaper.pdf")
+    },
     download() {
       this.$message({
         message: this.$t("message.214"),
@@ -515,6 +520,11 @@ export default {
   font-weight: 400;
   color: #13228d;
   line-height: 76/100rem;
+  >a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 }
 //发行计划
 .page_content_plan {
@@ -1003,6 +1013,9 @@ export default {
   color: #ffffff;
   line-height: 56/100rem;
   margin-top: 8/100rem;
+}
+.page_banner_date_wrap .text_left {
+  text-align: left;
 }
 .page_banner_item2 {
   width: 100%;

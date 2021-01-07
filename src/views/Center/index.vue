@@ -294,8 +294,10 @@
           />
         </div>
         <div class="page_invite_QRcode" v-show="isQR">
+          <div class="email">{{ user_email }}{{ $t("message.477") }}</div>
           <div class="page_invite_QRcode_div" id="qrcode" ref="qrcode"></div>
-          <div>{{ $t("message.116") }}</div>
+          <div>{{ $t("message.476") }}</div>
+          <div class="code_logo"><img src="../../assets/images/logo.png" alt="logo"></div>
         </div>
       </div>
       <div class="page_safe">
@@ -572,6 +574,7 @@ export default {
         invite_url: "",
       },
       languageName: this.$languageName,
+      user_email: localStorage.getItem("email")
     };
   },
   computed: {},
@@ -590,8 +593,8 @@ export default {
     qrcode() {
       document.getElementById("qrcode").innerHTML = "";
       let qrcode = new QRCode("qrcode", {
-        width: 120,
-        height: 120,
+        width: 170,
+        height: 170,
         // text: "http://192.168.0.84:9009/signIn?ref=5CBy", // 生成二维码的链接
         text: this.marketing.invite_url, // 生成二维码的链接
       });
@@ -766,12 +769,17 @@ export default {
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #a7acc1;
+  position: relative;
+  margin-top: 20px;
 }
 .page_invite_QRcode_div {
-  width: 240/100rem;
-  height: 240/100rem;
-  // background: red;
-  margin: 52/100rem 0 24/100rem 0;
+  width: 170px;
+  height: 170px;
+  margin: 12px 0;
+  box-shadow: 0 0 13px 4px rgba(0,0,0, .1);
+  border: 8px solid #FFF;
+  box-sizing: content-box;
+  position: relative;
 }
 .page_invite_QRcode_div img {
   width: 100%;
@@ -1084,4 +1092,20 @@ export default {
     // padding: 30px;
   }
 }
+  .code_logo {
+    position: absolute;
+    z-index: 80;
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    margin-left: -20px;
+    top:50%;
+    margin-top: -20px;
+    border: 2px solid #fff;
+    img {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
 </style>

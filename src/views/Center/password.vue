@@ -203,7 +203,9 @@ export default {
             type: "success",
           });
         } else {
-          this.$message.error(res.msg);
+          if (res.code == "101703") {
+            return this.$message.error(this.$t("message.83"));
+          }
         }
       });
     },
