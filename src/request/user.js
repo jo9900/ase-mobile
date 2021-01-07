@@ -63,7 +63,7 @@ export const kycInfo = (params) => {
 };
 
 export const taftBoert = (params) => {
-    return post(baseUrl + "account/transfer/taft", params);
+    return post(baseUrl + "account/transfer/aeco", params);
 };
 export const recordsList = (params) => {
     return post(baseUrl + "account/transfer/records", params);
