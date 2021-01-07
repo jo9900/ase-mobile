@@ -117,7 +117,7 @@
                   alt=""
                   class="iconImg"
               />
-              <a target="_self" @click="downloadPDFHelp">{{ $t("message.475") }}</a>
+              <router-link to="/help">{{ $t("message.475") }}</router-link>
             </li>
             <li :class="pagePath == '/about' ? 'active' : ''">
               <img src="../assets/images/icon_we.png" alt="" class="iconImg" />
@@ -235,9 +235,6 @@ export default {
   methods: {
     downloadPDF(){
       window.open(this.$BaseUrl + "material/whitepaper.pdf", "_self")
-    },
-    downloadPDFHelp(){
-      window.open(this.$BaseUrl + "material/help.pdf", "_self")
     },
     messageTips() {
       this.$message({

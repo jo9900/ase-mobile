@@ -6,6 +6,7 @@
         </div>
         <div class="page_container">
             <van-pull-refresh
+                style="min-height: 100vh"
                 v-model="refreshing"
                 @refresh="onRefresh"
                 v-if="list.length != 0"
@@ -17,7 +18,6 @@
                     :finished-text="$t('message.138')"
                     @load="onLoad"
                     :loading-text="$t('message.139')"
-                    :immediate-check="false"
                 >
                     <div class="list_title flex">
                         <div class="time">时间</div>
@@ -103,7 +103,6 @@
                         this.load_more = true;
                     }
                     this.list = [...this.list, ...res.data.rows];
-                    console.log(this.list)
                 });
             },
         },
@@ -165,7 +164,6 @@
         padding-top: 0.26rem;
     }
     .list_wrap {
-        height: 100vh;
         .flex {
             display: flex;
             justify-content: space-between;

@@ -32,6 +32,7 @@
                         :model="form"
                         label-width="80px"
                         :rules="rules"
+                        hide-required-asterisk
                     >
                         <el-form-item label="用户" prop="to_account">
                             <el-input

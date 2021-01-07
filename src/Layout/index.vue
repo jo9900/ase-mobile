@@ -59,11 +59,6 @@ export default {
     }
     #mint{
         overflow: hidden;
-        height: 100vh;
-        &>.page {
-            height: 100%;
-            overflow: auto;
-        }
     }
 
     .kf {
