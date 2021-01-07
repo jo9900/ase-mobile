@@ -9,9 +9,9 @@
                 style="min-height: 100vh"
                 v-model="refreshing"
                 @refresh="onRefresh"
-                v-if="list.length != 0"
             >
                 <van-list
+                    v-if="list.length != 0"
                     class="list_wrap"
                     v-model="loading"
                     :finished="finished"
@@ -33,6 +33,7 @@
                         <li class="van-list__finished-text" v-if="load_more">{{ $t("message.137") }}</li>
                     </ul>
                 </van-list>
+                <van-empty v-else description="当前暂无转让记录哦~" />
             </van-pull-refresh>
         </div>
     </div>

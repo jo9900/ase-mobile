@@ -12,9 +12,14 @@
         <div class="page_apply_content"  @click="toTransfer()">
           <div class="page_invite_content_pre">
             <div class="page_invite_content_name title">{{ $t("message.93") }}</div>
-            <div class="page_invite_content_number transfer">{{ $t("message.478") }}</div>
+            <div v-if="userInfo.kyc_status == 1"
+                 class="page_invite_content_number transfer"
+            >
+              {{ $t("message.478") }}
+            </div>
           </div>
           <img
+              v-if="userInfo.kyc_status == 1"
               src="../../assets/images/icon_found_more.png"
               alt=""
               class="pagez_kyc_content_arrow"
@@ -628,8 +633,8 @@ export default {
         document.documentElement.scrollTop = 0
         document.body.scrollTop = 0
         html2canvas(this.$refs.qrcode, {
-            width:185,
-            height:170,
+            width: 186,
+            height: 186,
             scale: 1
         }).then((canvas) => {
             this.imgData = canvas.toDataURL('image/png');

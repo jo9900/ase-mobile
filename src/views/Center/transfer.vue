@@ -64,7 +64,7 @@
       >
         <div class="validateDialogWrap">
           <div class="title">支付验证</div>
-          <p class="alert_amount">转出额度: <span>{{ form.aeco_amount}} AECC</span></p>
+          <p class="alert_amount">转出额度: <span>{{ form.aeco_amount}} AECO</span></p>
           <p class="alert_password">支付密码</p>
           <el-input type="password" v-model="verifyData.password"></el-input>
           <p v-show="error_text" class="error_text">{{ error_text }}</p>
@@ -141,7 +141,7 @@
                             trigger: "change",
                         },{
                             pattern: /^[0-9]*$/,
-                            message: '请输入金额'
+                            message: '请输入整数'
                         }
                     ]
                 }
@@ -365,7 +365,6 @@
             padding: 0 64/100rem 0 10/100rem;
         }
         .btn-wrap {
-          background-color: #F4F5F9;
           height: 248/100rem;
           width: 100%;
           display: flex;
