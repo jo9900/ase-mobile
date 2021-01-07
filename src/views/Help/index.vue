@@ -20,7 +20,7 @@
     <p>1.KYC（身份认证）审核成功通过后（提交申请的1-3 个工作日内），进入预售页，点击【立即抢购】 。</p>
     <img  src="@/assets/images/help5.jpg" alt="help5">
     <p>申购链接：<a class="link" href="https://m.arthurex.com/presell">https://m.arthurex.com/presell</a></p>
-    <p>2.在弹出的页面中填入自己所需抢购份数，系统会自动计算您所需要支付的USDT额度。确认信息无误后阅读并确认勾选 <img class="check" src="@/assets/images/help6.png" alt="help6">点击【下一步】。</p>
+    <p>2.在弹出的页面中填入自己所需抢购份数，系统会自动计算您所需要支付的USDT额度。确认信息无误后阅读并确认勾选 <img class="check" src="@/assets/images/help6.jpg" alt="help6">点击【下一步】。</p>
     <img src="@/assets/images/help7.jpg" alt="help7">
     <p>首轮预售AECO总量为1500份，AECO单价为 0.12 USDT ，1份起售，1份等于20000 AECO，即需支付 2400 USDT，依此类推。</p>
     <p class="h3">四、确认信息并完成支付</p>
@@ -55,7 +55,7 @@
 <style lang='less' scoped>
   .page {
     margin-top: 90/100rem;
-    padding: 0 40/100rem;
+    padding: 0  40/100rem 120/100rem 40/100rem;
   }
   .title {
     font-size: 50/100rem;
