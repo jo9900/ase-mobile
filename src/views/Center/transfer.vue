@@ -320,7 +320,7 @@
         font-size: 66/100rem;
         color: #3660FF;
         text-align: center;
-        margin-top: 94/100rem;
+        margin-top: 90/100rem;
         font-weight: bold;
     }
     .current_amount {
@@ -348,7 +348,7 @@
         width: 100%;
         background-color: #FFF;
         box-shadow: 0px -3px 10px rgba(46, 72, 110, 0.2);
-        height: 676/100rem;
+        height: 616/100rem;
         border-radius: 40/100rem 40/100rem 0 0;
         .warning_text {
             width: 448/100rem;
@@ -365,7 +365,6 @@
             padding: 0 64/100rem 0 10/100rem;
         }
         .btn-wrap {
-          height: 248/100rem;
           width: 100%;
           display: flex;
           justify-content: center;
