@@ -998,6 +998,7 @@ export default {
   // margin-right: 20/100rem;
 }
 .page_title {
+  flex-shrink: 0;
   width: 750/100rem;
   height: 104/100rem;
   background: #ffffff;
