@@ -16,8 +16,6 @@ import moment from "moment";
 import _ from "lodash";
 import throttle from "lodash/throttle";
 import { version } from "./util/throttle";
-
-/** 点击清除缓存 */
 document.onclick = _.throttle(
     function() {
 
@@ -92,7 +90,7 @@ router.beforeEach((to, from, next) => {
         if (getQueryVariable("ref", window.location.href)) {
             window.location.href =
                 process.env.VUE_APP_BASE_APILink +
-                "#/signIn?ref=" +
+                "signIn?ref=" +
                 getQueryVariable("ref", window.location.href);
             next();
         } else {
