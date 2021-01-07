@@ -252,7 +252,7 @@
               })
             },
             toTransferLogs() {
-
+              this.$router.push('/transferLogs')
             },
             getMyPreSale() {
                 let params = {
@@ -273,11 +273,8 @@
 
 <style scoped lang="less">
     .page {
-        // background: #f0f2f5;
         overflow: hidden;
         box-sizing: border-box;
-        -moz-box-sizing: border-box; /* Firefox */
-        -webkit-box-sizing: border-box; /* Safari */
         padding-top: 90/100rem;
         padding-bottom: 50px;
         display: flex;
@@ -349,7 +346,7 @@
         bottom: 0;
         width: 100%;
         background-color: #FFF;
-        box-shadow: 1px -3px 10px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px -3px 10px rgba(46, 72, 110, 0.2);
         height: 676/100rem;
         border-radius: 40/100rem 40/100rem 0 0;
         .warning_text {
@@ -365,9 +362,6 @@
         .input-wrap {
             margin-top: 54/100rem;
             padding: 0 64/100rem 0 10/100rem;
-            /deep/ .el-input .el-input__inner {
-              background-color: #F5F6F7;
-            }
         }
         .btn-wrap {
           background-color: #F4F5F9;
@@ -388,6 +382,10 @@
         }
     }
 
+    /deep/ .el-input .el-input__inner {
+      background-color: #F5F6F7;
+      border: 1px solid #A7B6CA;
+    }
     /deep/ .el-dialog__headerbtn {
       left: 20px;
     }
@@ -402,9 +400,6 @@
         text-align: center;
         position: relative;
         margin-bottom: 44/100rem ;
-      }
-      /deep/ .el-input .el-input__inner {
-        background-color: #F5F6F7;
       }
       .alert_amount, .alert_password {
         font-size: 28/100rem;
@@ -427,21 +422,23 @@
         margin-top: 34/100rem;
       }
     }
-  .restBtn {
-    width: 240/100rem;
-    height: 78/100rem;
-    background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
-    border-radius: 10/100rem;
-    font-size: 28/100rem;
-    color: #fff;
-    padding: 0;
-    font-family: PingFangSC-Semibold, PingFang SC;
-  }
-  .dialog-footer {
-    height: auto;
-  }
   /deep/ .el-dialog__body {
     padding: 0;
+  }
+  .validate_dialog {
+    .dialog-footer {
+      height: auto;
+    }
+    .restBtn {
+      width: 240/100rem;
+      height: 78/100rem;
+      background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
+      border-radius: 10/100rem;
+      font-size: 28/100rem;
+      color: #fff;
+      padding: 0;
+      font-family: PingFangSC-Semibold, PingFang SC;
+    }
   }
   .verify_result_wrap {
     display: flex;

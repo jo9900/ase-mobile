@@ -297,6 +297,14 @@ const routes = [{
                     require(["@/views/Center/transfer.vue"], resolve),
             },
             {
+                path: "/transferLogs",
+                name: "transferLogs",
+                label: "转让记录",
+                meta: { requiresAuth: true, title: "转让记录" },
+                component: (resolve) =>
+                    require(["@/views/Center/transferLogs.vue"], resolve),
+            },
+            {
                 path: "/loginlog",
                 name: "loginlog",
                 label: "登录记录",

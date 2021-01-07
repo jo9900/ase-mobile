@@ -496,5 +496,6 @@ const message = {
     485: "余额不足",
     486: "转让用户不能为自己",
     487: "对方账户未KYC认证",
+    488: "转让记录",
 };
 export default message;

@@ -58,7 +58,12 @@ export default {
         z-index: 99;
     }
     #mint{
-    overflow: hidden;
+        overflow: hidden;
+        height: 100vh;
+        &>.page {
+            height: 100%;
+            overflow: auto;
+        }
     }
 
     .kf {
