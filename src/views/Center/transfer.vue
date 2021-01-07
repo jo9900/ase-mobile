@@ -41,7 +41,7 @@
                         </el-form-item>
                         <el-form-item label="额度" prop="aeco_amount">
                             <el-input
-                                v-model="form.aeco_amount"
+                                v-model.trim="form.aeco_amount"
                                 placeholder="请输入转让的AECO额度"
                             ></el-input>
                         </el-form-item>
@@ -199,19 +199,19 @@
                     return
                   }
                   if (res.code == "102604") {
-                    this.verifyFailedText = this.$t("message.483");
-                    return
-                  }
-                  if (res.code == "102605") {
                     this.verifyFailedText = this.$t("message.484");
                     return
                   }
-                  if (res.code == "102606") {
+                  if (res.code == "102605") {
                     this.verifyFailedText = this.$t("message.485");
                     return
                   }
-                  if (res.code == "102607") {
+                  if (res.code == "102606") {
                     this.verifyFailedText = this.$t("message.486");
+                    return
+                  }
+                  if (res.code == "102607") {
+                    this.verifyFailedText = this.$t("message.487");
                     return
                   }
                 }
@@ -240,7 +240,7 @@
                   this._taftBoert()
                   this.validateDialog = false
                 } else {
-                  this.error_text = this.$t("message).488")
+                  this.error_text = this.$t("message.483")
                 }
               })
             },
