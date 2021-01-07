@@ -628,7 +628,6 @@ export default {
     },
 
     createPicture () {
-        let _this = this;
         window.pageYoffset = 0
         document.documentElement.scrollTop = 0
         document.body.scrollTop = 0
