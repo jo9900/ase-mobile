@@ -18,8 +18,6 @@ export function version(axios, Vue) {
     axios
         .get("./static/version.json?_=" + Math.random())
         .then((response) => {
-            console.log("当前最新版本" + response.data[0].version);
-            console.log("线上旧版本" + process.env.VUE_APP_BASE_VERSION);
             verion = response.data[0].version;
             if (
                 process.env.VUE_APP_BASE_VERSION == undefined ||

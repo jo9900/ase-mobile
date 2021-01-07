@@ -283,31 +283,36 @@
             v-if="myPreSale && myPreSale.apply_usdt_amount != 0"
           />
         </div>
-        <div class="page_invite_content" @click="qrclick">
+        <div class="page_invite_content" @click="qrclick" v-if="marketing.invite_url">
           <div class="page_invite_content_pre">
             <div class="page_invite_content_name">{{ $t("message.114") }}</div>
-            <div class="page_invite_content_number">
-              {{ $t("message.115") }}
-            </div>
+            <!--<div class="page_invite_content_number">-->
+              <!--{{ $t("message.115") }}-->
+            <!--</div>-->
           </div>
-          <img
-            src="../../assets/images/icon_more_off@3x.png"
-            alt=""
-            class="pagez_kyc_content_arrow"
-            v-show="!isQR"
-          />
-          <img
-            src="../../assets/images/icon_more_on@3x.png"
-            alt=""
-            class="pagez_kyc_content_arrow"
-            v-show="isQR"
-          />
+          <!--<img-->
+            <!--src="../../assets/images/icon_more_off@3x.png"-->
+            <!--alt=""-->
+            <!--class="pagez_kyc_content_arrow"-->
+            <!--v-show="!isQR"-->
+          <!--/>-->
+          <!--<img-->
+            <!--src="../../assets/images/icon_more_on@3x.png"-->
+            <!--alt=""-->
+            <!--class="pagez_kyc_content_arrow"-->
+            <!--v-show="isQR"-->
+          <!--/>-->
         </div>
-        <div class="page_invite_QRcode" v-show="isQR">
+        <div class="page_invite_QRcode" v-show="marketing.invite_url">
           <div class="email">{{ user_email }}{{ $t("message.477") }}</div>
-          <div class="page_invite_QRcode_div" id="qrcode" ref="qrcode"></div>
+          <div class="page_invite_QRcode_div" id="qrcode" ref="qrcode" style="position: relative" v-show="!imgData">
+            <img style="position: absolute;width: 40px;height: 40px;top: 60px;
+                 left: 65px;" src="@/assets/images/logo.png" alt="logo">
+          </div>
+          <div class="page_invite_QRcode_div" style="position: relative" v-show="imgData">
+            <img style="width: 170px;height: 170px" :src="imgData"/>
+          </div>
           <div>{{ $t("message.476") }}</div>
-          <div class="code_logo"><img src="../../assets/images/logo.png" alt="logo"></div>
         </div>
       </div>
       <div class="page_safe">
@@ -552,16 +557,18 @@
 <script>
 import { userInfo, myPreSale, myMarketing } from "@/request/user.js";
 // import webFoot from "@/components/footer";
+import html2canvas from 'html2canvas'
 import { Cell, CellGroup } from "vant";
 import QRCode from "qrcodejs2";
 export default {
   name: "",
-  components: { vanCellGroup: CellGroup, vanCell: Cell },
+  components: { vanCellGroup: CellGroup, vanCell: Cell, html2canvas},
   data() {
     return {
       tips: this.$t("message.117"),
       tips1: this.$t("message.118"),
       isQR: false,
+        imgData:"",
       userInfo: {
         area: "",
         code: "",
@@ -600,14 +607,33 @@ export default {
   },
   methods: {
     // http://192.168.0.84/#/signIn?ref=5CBy
+
     qrcode() {
-      document.getElementById("qrcode").innerHTML = "";
+
+      // document.getElementById("qrcode").innerHTML = "";
       let qrcode = new QRCode("qrcode", {
         width: 170,
         height: 170,
         // text: "http://192.168.0.84:9009/signIn?ref=5CBy", // 生成二维码的链接
         text: this.marketing.invite_url, // 生成二维码的链接
       });
+
+      setTimeout(()=>{this.createPicture();},0)
+
+    },
+
+    createPicture () {
+        let _this = this;
+        window.pageYoffset = 0
+        document.documentElement.scrollTop = 0
+        document.body.scrollTop = 0
+        html2canvas(this.$refs.qrcode, {
+            width:185,
+            height:170,
+            scale: 1
+        }).then((canvas) => {
+            this.imgData = canvas.toDataURL('image/png');
+        })
     },
     qrclick() {
       console.log(this.isQR);
@@ -615,7 +641,8 @@ export default {
         this.$message.error(this.$t("message.207"));
         return;
       }
-      this.isQR = !this.isQR;
+       this.isQR = !this.isQR;
+
     },
     copyArticle(event) {
       if (this.myPreSale.apply_usdt_amount == 0) {

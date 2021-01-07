@@ -36,6 +36,7 @@ service.interceptors.response.use(
         if (typeof error.response !== "undefined") {
             if (error.response.data.code === 401) {
                 setTimeout(function() {
+
                     store.dispatch("user/resetToken").then(() => {
                         window.location.href = "/login?redirect=%2Fdashboard";
                     });
