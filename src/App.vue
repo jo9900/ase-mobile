@@ -7,6 +7,7 @@
 </template>
 <script>
 import service from "@/components/service";
+import version from "./version"
 export default {
   name: "",
   components: { service },
@@ -15,6 +16,7 @@ export default {
   },
   methods: {},
   mounted() {
+    console.log( version )
     var el_ = this.$refs.box;
     this.$store.state.el_ = el_;
   },

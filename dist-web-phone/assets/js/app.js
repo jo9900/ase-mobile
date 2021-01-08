@@ -577,7 +577,7 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _service = _interopRequireDefault(__webpack_require__(/*! @/components/service */ \"./src/components/service/index.vue\"));\n\n//\n//\n//\n//\n//\n//\n//\nvar _default = {\n  name: \"\",\n  components: {\n    service: _service.default\n  },\n\n  data() {\n    return {};\n  },\n\n  methods: {},\n\n  mounted() {\n    var el_ = this.$refs.box;\n    this.$store.state.el_ = el_;\n  }\n\n};\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _service = _interopRequireDefault(__webpack_require__(/*! @/components/service */ \"./src/components/service/index.vue\"));\n\nvar _version = _interopRequireDefault(__webpack_require__(/*! ./version */ \"./src/version.js\"));\n\n//\n//\n//\n//\n//\n//\n//\nvar _default = {\n  name: \"\",\n  components: {\n    service: _service.default\n  },\n\n  data() {\n    return {};\n  },\n\n  methods: {},\n\n  mounted() {\n    console.log(_version.default);\n    var el_ = this.$refs.box;\n    this.$store.state.el_ = el_;\n  }\n\n};\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -4473,6 +4473,18 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.throttle = throttle;\nexports.version = version;\nexports.debounce = debounce;\n\nfunction throttle(func, wait) {\n  console.log(func);\n  let canRun = true;\n  return function () {\n    if (!canRun) {\n      return; // 如果开关关闭了，那就直接不执行下边的代码\n    }\n\n    canRun = false; // 持续触发的话，run一直是false，就会停在上边的判断那里\n\n    setTimeout(() => {\n      func.apply(this, arguments);\n      canRun = true; // 定时器到时间之后，会把开关打开，我们的函数就会被执行\n    }, wait);\n  };\n}\n\nfunction version(axios, Vue) {\n  var verion = \"\";\n  axios.get(\"./static/version.json?_=\" + Math.random()).then(response => {\n    verion = response.data[0].version;\n\n    if (\"1.0.2\" == undefined || \"1.0.2\" == null) {\n      return;\n    }\n\n    if (\"1.0.2\" != verion) {\n      // var message = \"系统版本有更新，点击确认加载最新，或按【CTRL + F5】!\";\n      // Vue.prototype.$alert(message, \"系统提示\", {\n      //     confirmButtonText: \"确定\",\n      //     callback: function() {\n      //         window.location.reload(true);\n      //     }\n      // });\n      window.location.reload(true);\n      return;\n    }\n  }).catch(err => {\n    console.error(err);\n  });\n}\n\nfunction debounce(fn, delay) {\n  // 定时器，用来 setTimeout\n  var timer; // 返回一个函数，这个函数会在一个时间区间结束后的 delay 毫秒时执行 fn 函数\n\n  return function () {\n    // 保存函数调用时的上下文和参数，传递给 fn\n    var context = this;\n    var args = arguments; // 每次这个返回的函数被调用，就清除定时器，以保证不执行 fn\n\n    clearTimeout(timer); // 当返回的函数被最后一次调用后（也就是用户停止了某个连续的操作），\n    // 再过 delay 毫秒就执行 fn\n\n    timer = setTimeout(function () {\n      fn.apply(context, args);\n    }, delay);\n  };\n}\n\n//# sourceURL=webpack:///./src/util/throttle.js?");
+
+/***/ }),
+
+/***/ "./src/version.js":
+/*!************************!*\
+  !*** ./src/version.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\nconst version = 202101081555;\nvar _default = version;\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/version.js?");
 
 /***/ }),
 
