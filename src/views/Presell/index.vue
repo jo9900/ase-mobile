@@ -1046,14 +1046,14 @@ export default {
         display: inline-block;
         line-height: 100/100rem;
         font-size: 34/100rem;
-        color: #ffffff;
+        color: #B1B3B3;
         text-align: center;
-        background: linear-gradient(to right, #d4d3d1, #757470);
+        background: #FBF2C8;
         cursor: pointer;
       }
       .daosk {
         width: 100%;
-
+        color: #fff;
         background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
         // background: linear-gradient(to right, #efcf54, #bf8d08) !important;
       }
