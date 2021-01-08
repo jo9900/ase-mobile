@@ -1046,7 +1046,7 @@ export default {
         display: inline-block;
         line-height: 100/100rem;
         font-size: 34/100rem;
-        color: #FFFFFF;
+        color: rgba(255,255,255, .5);
         text-align: center;
         background: #0B32A8;
         cursor: pointer;

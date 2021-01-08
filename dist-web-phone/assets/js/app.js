@@ -4484,7 +4484,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\nconst version = 202101081555;\nvar _default = version;\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/version.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\nconst version = 202101081644;\nvar _default = version;\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/version.js?");
 
 /***/ }),
 
