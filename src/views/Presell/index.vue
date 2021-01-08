@@ -1046,9 +1046,9 @@ export default {
         display: inline-block;
         line-height: 100/100rem;
         font-size: 34/100rem;
-        color: #B1B3B3;
+        color: #FFFFFF;
         text-align: center;
-        background: #FBF2C8;
+        background: #0B32A8;
         cursor: pointer;
       }
       .daosk {

@@ -26,7 +26,10 @@
                     </div>
                     <ul class="list_ul">
                         <li class="list_row flex" v-for="item in list">
-                            <div class="time">{{ item.time | trimet(that) }}</div>
+                            <div class="time">
+                                <div>{{ item.time | trimet(that, 0) }}</div>
+                                <div>{{ item.time | trimet(that, 1) }}</div>
+                            </div>
                             <div class="account">{{ item.account }}</div>
                             <div class="amount">{{ item.aeco_amount }}</div>
                         </li>
@@ -108,11 +111,12 @@
             },
         },
         filters: {
-            trimet(trime, that) {
+            trimet(trime, that ,type) {
                 let parsTrme = that
                     .$moment(Math.floor(trime * 1000))
                     .format("YYYY-MM-DD HH:mm");
-                return parsTrme;
+                let arr = parsTrme.split(' ')
+                return arr[type];
             },
         }
     }
@@ -188,7 +192,7 @@
                 border-bottom: 1px solid #CAD7E8;
             }
         }
-        .account, .amount {
+        .account{
             padding: 0 10/100rem;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -198,14 +202,18 @@
         .time {
             text-align: center;
             width: 25%;
+            flex-shrink: 0;
+            white-space:nowrap;
         }
         .account {
-            text-align: left;
+            text-align: center;
             width: 35%;
         }
         .amount {
-            text-align: right;
+            text-align: center;
+            flex-shrink: 0;
             width: 40%;
+            white-space:nowrap;
         }
     }
     .van-pull-refresh {
