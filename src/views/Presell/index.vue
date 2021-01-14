@@ -177,7 +177,7 @@
                       ? parseInt(preInfo.progress)
                       : preInfo.progress == 0
                       ? 0
-                      : parseInt((preInfo.progress / preInfo.total) * 100)
+                      : (preInfo.progress / preInfo.total).toFixed(3) * 100
                   "
                 ></el-progress>
 
