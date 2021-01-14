@@ -85,7 +85,7 @@
           <p class="text">支付成功</p>
         </div>
         <div v-else class="verify_result_wrap">
-          <img class="icon" src="../../assets/images/icon_fail.png" alt="icon_success">
+          <img class="icon" src="../../assets/images/icon_fail.png" alt="icon_fail">
           <p class="text">转让失败</p>
           <p class="text_detail">{{ verifyFailedText }}</p>
         </div>

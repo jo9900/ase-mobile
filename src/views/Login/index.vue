@@ -175,11 +175,10 @@
                   </div>
                 </div>
                 {{ $t("message.73") }}
-                <span
-                  >《<span class="usertext" @click="userText">{{
+                <span>
+                  <span class="usertext" @click="userText">{{
                     $t("message.74")
-                  }}</span
-                  >》
+                  }}</span>
                 </span>
               </div>
             </el-form>

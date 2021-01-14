@@ -27,7 +27,7 @@
             </div>
             <div>
               <span>{{ $t("message.149") }}</span
-              >{{ $t("message.150") }} USDT
+              >3,600,000 USDT
             </div>
           </div>
           <div class="wrap-cont-text">首轮募集资金的75%将用于ARTHUR-EX平台的开发和拓展。15%将用于法律法规相关法务费用和公共宣传的相关费用。10%将用于社区服务。</div>

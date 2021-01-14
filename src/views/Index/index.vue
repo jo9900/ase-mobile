@@ -78,11 +78,7 @@
                     <div class="page_right_title"></div>
                     <!-- <div class="page_right_title">FBC-Swap</div> -->
                     <div class="page_right_item1">
-                      <span class="page_right_item1_span">“ </span
-                      >ARTHUR-EX<span class="page_right_item1_span"> ”</span>
-                    </div>
-                    <div class="page_right_item2">
-                      {{ $t("message.21") }}
+                      {{ $t("message.519") }}
                     </div>
                   </div>
                 </div>
@@ -957,16 +953,16 @@ export default {
 }
 .page_right_title {
   width: 100%;
-  background: url("../../assets/images/FBC-Swap@3x.png") no-repeat center center;
-  background-size: 395/100rem 68/100rem;
+  background: url("../../assets/images/Atomic-Swap@3x.png") no-repeat center center;
+  background-size: 405/100rem 56/100rem;
   text-align: center;
-  height: 68/100rem;
+  height: 56/100rem;
   font-size: 72/100rem;
   font-family: PingFang SC;
   font-weight: 600;
   color: #ffffff;
   line-height: 48/100rem;
-  margin: 149/100rem 0 56/100rem 0;
+  margin: 206/100rem 0 54/100rem 0;
 }
 .page_home_item1 {
   width: 100%;
@@ -988,20 +984,6 @@ export default {
   color: #ffffff;
   line-height: 48/100rem;
   margin-top: 42/100rem;
-}
-.page_right_item1 {
-  width: 100%;
-  text-align: center;
-  height: 65/100rem;
-  font-size: 48/100rem;
-  font-family: Arial;
-  font-weight: 400;
-  color: #ffffff;
-  line-height: 36/100rem;
-}
-.page_right_item1_span {
-  font-size: 72/100rem;
-  color: #f0ba62;
 }
 .page_home_item2 {
   width: 100%;
@@ -1028,17 +1010,15 @@ export default {
   line-height: 48/100rem;
   margin-top: 53/100rem;
 }
-.page_right_item2 {
-  width: 100%;
+.page_right_item1 {
+  width: 575/100rem;
   padding: 0 5/100rem;
   text-align: center;
-  height: 65/100rem;
   font-size: 36/100rem;
-  font-family: Arial;
-  font-weight: 400;
+  font-family: PingFang SC;
+  font-weight: 300;
   color: #ffffff;
-  line-height: 36/100rem;
-  margin-top: 20/100rem;
+  line-height: 60/100rem;
 }
 .page_banner_detail {
   width: 100%;
