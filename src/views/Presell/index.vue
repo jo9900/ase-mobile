@@ -167,6 +167,7 @@
             ref="presellForm"
           >
             <el-row>
+
               <el-col :span="24">
                 <el-progress
                   class="progress"
@@ -177,7 +178,7 @@
                       ? parseInt(preInfo.progress)
                       : preInfo.progress == 0
                       ? 0
-                      : (parseInt( preInfo.progress * 1000 /  preInfo.total) / 1000).toFixed(3)*100
+                      : parseInt(preInfo.progress)>=parseInt(preInfo.total)?100:parseFloat((preInfo.progress/preInfo.total)*100).toFixed(2)
                   "
                 ></el-progress>
 
