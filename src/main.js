@@ -36,21 +36,8 @@ import { Locals } from "./lang/vantLocal.js";
 Vue.prototype.$Local = Locals;
 let i18n;
 let f = localStorage.getItem("lang");
-console.log("当前语言---------" + f);
-if (f == null || f == "zh") {
-    i18n = new VueI18n({
-        locale: "zh",
-        messages,
-    });
-    Locals("zh");
-} else {
-    i18n = new VueI18n({
-        locale: f,
-        messages,
-    });
-    Locals("en");
-}
-// ---------------
+i18n = new VueI18n({locale: f, messages});
+Locals(f);
 fastclick.prototype.focus = function(targetElement) {
 
     "use strict";
