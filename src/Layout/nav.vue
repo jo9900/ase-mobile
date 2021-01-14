@@ -206,8 +206,8 @@ export default {
     return {
       columns: [
           { name: "中文", value: "zh" },
-          { name: "English", value: "en" },
-          { name: "한국어", value: "ko" },
+          // { name: "English", value: "en" },
+          // { name: "한국어", value: "ko" },
       ],
       // columns: [
       //   { name: "中文", value: "zh" },
