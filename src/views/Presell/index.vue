@@ -16,7 +16,7 @@
 
           <div class="wrap_plan_first_title">首轮预售</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
-          <div class="wrap_plan_first">
+          <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo1.status == 1}]">
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.1.5至售罄即止
@@ -49,7 +49,7 @@
           </div>-->
           <div class="wrap_plan_first_title">全球公售</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
-          <div class="wrap_plan_third">
+          <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo2.status == 1}]">
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.5.1
@@ -911,11 +911,10 @@ export default {
   color: #ffffff;
   line-height: 84/100rem;
 }
-.wrap_plan_second,
-.wrap_plan_third {
+.wrap_plan_default {
   width: 540/100rem;
   height: 220/100rem;
-  background: url("../../assets/images/pic_yushou_bg.png") no-repeat;
+  background: url("../../assets/images/pic_yushou_bg.png") no-repeat; // deep
   background-size: 540/100rem 220/100rem;
   font-size: 24/100rem;
   font-family: PingFangSC-Regular, PingFang SC;
@@ -928,10 +927,10 @@ export default {
   margin-top: 28/100rem;
   padding-left: 36/100rem;
 }
-.wrap_plan_first {
+.wrap_plan_current {
   width: 540/100rem;
   height: 220/100rem;
-  background: url("../../assets/images/pic_yushou_bg_ing@3x.png") no-repeat;
+  background: url("../../assets/images/pic_yushou_bg_ing@3x.png") no-repeat;// light
   background-size: 540/100rem 220/100rem;
   font-size: 24/100rem;
   font-family: PingFangSC-Regular, PingFang SC;
@@ -950,9 +949,7 @@ export default {
 /*.wrap_plan_third_title {*/
   /*margin-top: 30/100rem;*/
 /*}*/
-.wrap_plan_first div,
-.wrap_plan_second div,
-.wrap_plan_third div {
+.wrap_plan_default div {
   height: 50/100rem;
   line-height: 50/100rem;
   letter-spacing: 1/100rem;
