@@ -12,8 +12,8 @@ const service = axios.create({
 // request interceptor
 service.interceptors.request.use(
     (config) => {
-        if (localStorage.getItem("toke")) {
-            config.headers["token"] = localStorage.getItem("toke");
+        if (localStorage.getItem("token")) {
+            config.headers["token"] = localStorage.getItem("token");
         }
         return config;
     },
@@ -26,7 +26,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
     (response) => {
         if (response.headers["refresh-token"]) {
-            localStorage.setItem("toke", response.headers["refresh-token"]);
+            localStorage.setItem("token", response.headers["refresh-token"]);
         }
         return response.data;
     },
