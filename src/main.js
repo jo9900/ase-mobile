@@ -72,7 +72,16 @@ router.beforeEach((to, from, next) => {
         navigator.userAgent.match(/(iPhone|Android.*Mobile)/) ||
         navigator.userAgent.match(/MSIE [6,7,8,9]/)
     ) {
-        next();
+        if (getQueryVariable("ref", window.location.href)) {
+            window.location.href =
+                process.env.VUE_APP_BASE_API +
+                "signIn?ref=" +
+                getQueryVariable("ref", window.location.href);
+            next();
+        } else {
+            next();
+            // window.location.href = process.env.VUE_APP_BASE_APILink;
+        }
     } else {
         if (getQueryVariable("ref", window.location.href)) {
             window.location.href =
