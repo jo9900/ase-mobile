@@ -136,9 +136,9 @@
             }}</template>
           </template>-->
           <template v-if="round == '2'">
-            <template v-if="roundstatus == '0'">{{
-              $t("message.171")
-            }}</template>
+            <template v-if="roundstatus == '0'">{{ $t("message.171") }}</template>
+            <template v-if="roundstatus == '1'">{{ $t("message.168") }}</template>
+            <template v-if="roundstatus == '2'">{{ $t("message.170") }}</template>
           </template>
         </div>
       </div>
