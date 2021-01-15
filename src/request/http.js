@@ -22,8 +22,8 @@ axios.interceptors.request.use(
     (config) => {
         const token = store.state.token;
         token && (config.headers.token = token);
-        if (localStorage.getItem("QY_toke")) {
-            config.headers["token"] = localStorage.getItem("QY_toke");
+        if (localStorage.getItem("toke")) {
+            config.headers["token"] = localStorage.getItem("toke");
         }
         return config;
     },
@@ -35,14 +35,14 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
     function(response) {
         if (response.headers["refresh-token"]) {
-            localStorage.setItem("QY_toke", response.headers["refresh-token"]);
+            localStorage.setItem("toke", response.headers["refresh-token"]);
         }
         return response;
     },
     function(error) {
         if (typeof error.response !== "undefined") {
             if (error.response.data.code === 401) {
-                localStorage.removeItem("QY_toke");
+                localStorage.removeItem("toke");
                 localStorage.removeItem("email");
                 window.location.href = "/login?redirect=%2Fdashboard";
             } else {
