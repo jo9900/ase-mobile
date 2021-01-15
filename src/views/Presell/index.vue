@@ -126,7 +126,7 @@
               $t("message.168")
             }}</template>
           </template>
-          <template v-if="round == '2'">
+          <!--<template v-if="round == '2'">
             <template v-if="roundstatus == 0">{{ $t("message.169") }}</template>
             <template v-if="roundstatus == '1'">{{
               $t("message.168")
@@ -134,8 +134,8 @@
             <template v-if="roundstatus == '2'">{{
               $t("message.170")
             }}</template>
-          </template>
-          <template v-if="round == '3'">
+          </template>-->
+          <template v-if="round == '2'">
             <template v-if="roundstatus == '0'">{{
               $t("message.171")
             }}</template>
@@ -148,9 +148,7 @@
         :title="
           round == 1
             ? $t('message.132')
-            : round == 2
-            ? $t('message.133')
-            : $t('message.172')
+            : $t('message.498')
         "
         :visible.sync="firstDialogVisible"
         custom-class="firstDialogVisible"
@@ -184,7 +182,7 @@
 
                 <div class="progress_info">
                   <div>
-                    <template v-if="round == 1 || round == 2">
+                    <template v-if="round == 1">
                       <template v-if="languageName == 'English'"
                         >{{ preInfo.progress }}
                         {{ $t("message.173") }}</template
@@ -195,18 +193,18 @@
                         {{ $t("message.174") }}</template
                       >
                     </template>
-                    <template v-if="round == 3"
+                    <template v-if="round == 2"
                       >{{ $t("message.175") }} {{ preInfo.progress }}%</template
                     >
                   </div>
 
                   <div>
                     {{ $t("message.176") }}
-                    <template v-if="round == 1 || round == 2">
+                    <template v-if="round == 1">
                       {{ preInfo.total }}
                       {{ $t("message.174") }}</template
                     >
-                    <template v-if="round == 3"
+                    <template v-if="round == 2"
                       >{{
                         preInfo.total
                           ? preInfo.total.replace(/\B(?=(?:\d{3})+\b)/g, ",")
@@ -230,7 +228,7 @@
               <el-col :span="24">
                 <el-form-item
                   :label="
-                    round == 1 || round == 2
+                    round == 1
                       ? $t('message.177') +
                         '（1' +
                         $t('message.174') +
@@ -246,7 +244,7 @@
                     type="number"
                     v-model.trim="presellForm.book_amount"
                     :placeholder="
-                      round == 1 || round == 2
+                      round == 1
                         ? $t('message.179')
                         : $t('message.180')
                     "
@@ -258,11 +256,11 @@
                     :style="{
                       width: languageName == 'English' ? '47px' : '31px',
                     }"
-                    v-if="round == 1 || round == 2"
+                    v-if="round == 1"
                   >
                     {{ $t("message.174") }}
                   </div>
-                  <div class="skert" style="width: 42px" v-if="round == 3">
+                  <div class="skert" style="width: 42px" v-if="round == 2">
                     AECO
                   </div>
                 </el-form-item>
@@ -305,13 +303,7 @@
 
       <!-- 首轮付款 弹窗 -->
       <el-dialog
-        :title="
-          round == 1
-            ? $t('message.132')
-            : round == 2
-            ? $t('message.133')
-            : $t('message.172')
-        "
+        :title="$t('message.517')"
         :visible.sync="firstPayDialogVisible"
         custom-class="firstPayDialogVisible"
         width="580px"
@@ -457,7 +449,7 @@ export default {
   components: { webFoot },
   data() {
     var roundtext = (rule, value, callback) => {
-      if (this.round == 1 || this.round == 2) {
+      if (this.round == 1) {
         if (value == "") {
           callback(new Error(this.$t("message.197")));
         } else if (value.toString().length > 8) {
@@ -466,7 +458,7 @@ export default {
           callback();
         }
       }
-      if (this.round == 3) {
+      if (this.round == 2) {
         if (value == "") {
           callback(new Error(this.$t("message.198")));
         } else {
@@ -475,7 +467,7 @@ export default {
       }
     };
     var validateSurnmae = (rule, value, callback) => {
-      if (this.round == 1 || this.round == 2) {
+      if (this.round == 1) {
         if (value < 1) {
           callback(new Error(this.$t("message.199")));
         } else if (!/(^[1-9]\d*$)/.test(value)) {
@@ -662,7 +654,7 @@ export default {
     },
 
     getPreSale2() {
-      preSale(this.$qs.stringify({ round: 2, amount_type: 1 })).then((res) => {
+      preSale(this.$qs.stringify({ round: 2, amount_type: 0 })).then((res) => {
         if (res.code == 0) {
           this.preInfo2 = res.data;
         }
@@ -672,7 +664,7 @@ export default {
     nextPay() {
       this.$refs["presellForm"].validate((valid) => {
         if (valid) {
-          if (this.round == 1 || this.round == 2) {
+          if (this.round == 1) {
             if (parseInt(this.presellForm.book_amount) > this.preInfo.total) {
               return this.$message.error(
                 this.languageName == "English"
@@ -687,7 +679,7 @@ export default {
               );
             }
           }
-          if (this.round == 3) {
+          if (this.round == 2) {
             if (this.totalPrice > this.preInfo.total) {
               return this.$message.error(
                 this.$t("message.203") + this.preInfo.total + " 份"
@@ -705,7 +697,7 @@ export default {
           subBook(
             this.$qs.stringify({
               user_code: localStorage.getItem("code"),
-              amount_type: this.round == 1 || this.round == 2 ? "1" : "0",
+              amount_type: this.round == 1 ? "1" : "0",
               book_amount: this.presellForm.book_amount,
             })
           ).then((res) => {
