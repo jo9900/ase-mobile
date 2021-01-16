@@ -60,34 +60,34 @@ Vue.prototype.$qs = qs;
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
 // ---------------
-router.beforeEach((to, from, next) => {
-    if (to.meta.title) {
-        document.title = to.meta.title;
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    window.pageYOffset = 0;
-    let ua = navigator.userAgent
-    if (
-        ua.match(/(iPhone|Android.*Mobile)/) ||
-        ua.match(/MSIE [6,7,8,9]/) ||
-        ua.toLowerCase().match(/MicroMessenger/i ) == 'micromessenger' // wx
-    ) {
-        next()
-    }
-    else {
-        if (getQueryVariable("ref", window.location.href)) {
-            window.location.href =
-                process.env.VUE_APP_BASE_APILink +
-                "signIn?ref=" +
-                getQueryVariable("ref", window.location.href);
-        }
-        else
-            window.location.href = process.env.VUE_APP_BASE_APILink;
-
-        next();
-    }
-});
+// router.beforeEach((to, from, next) => {
+//     if (to.meta.title) {
+//         document.title = to.meta.title;
+//     }
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
+//     window.pageYOffset = 0;
+//     let ua = navigator.userAgent
+//     if (
+//         ua.match(/(iPhone|Android.*Mobile)/) ||
+//         ua.match(/MSIE [6,7,8,9]/) ||
+//         ua.toLowerCase().match(/MicroMessenger/i ) == 'micromessenger' // wx
+//     ) {
+//         next()
+//     }
+//     else {
+//         if (getQueryVariable("ref", window.location.href)) {
+//             window.location.href =
+//                 process.env.VUE_APP_BASE_APILink +
+//                 "signIn?ref=" +
+//                 getQueryVariable("ref", window.location.href);
+//         }
+//         else
+//             window.location.href = process.env.VUE_APP_BASE_APILink;
+//
+//         next();
+//     }
+// });
 
 
 
