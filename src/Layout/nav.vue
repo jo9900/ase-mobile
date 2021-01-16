@@ -317,7 +317,8 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
 }
 .iconSelect {
   margin-left: 21/100rem;

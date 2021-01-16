@@ -69,7 +69,7 @@ export default {
 
 <style lang='less' scoped>
 .footer_container {
-  width: 750/100rem;
+  width: 100%;
   height: 570/100rem;
   background: #113071;
   margin-top: -2/100rem;
@@ -80,13 +80,13 @@ export default {
   box-sizing: border-box;
   -moz-box-sizing: border-box; /* Firefox */
   -webkit-box-sizing: border-box; /* Safari */
-  padding: 80/100rem 100/100rem 0 100/100rem;
 }
 .footer_container_header {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 80/100rem 100/100rem 0 100/100rem;
 }
 .footer_container_header_title {
   width: 100%;
@@ -139,7 +139,7 @@ export default {
   margin-top: 8/100rem;
 }
 .footer_container_bottom {
-  width: 750/100rem;
+  width: 100%;
   height: 100/100rem;
   line-height: 100/100rem;
   margin-top: 16/100rem;

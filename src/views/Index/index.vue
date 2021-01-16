@@ -400,7 +400,6 @@ export default {
 }
 //订阅
 .page_content_subscribe {
-  width: 750/100rem;
   // height: 498/100rem;
   background: #ffffff;
   box-sizing: border-box;
@@ -875,7 +874,7 @@ export default {
 }
 // banner
 .page_home {
-  width: 750/100rem;
+  width: 100%;
   height: 1016/100rem;
   // background: linear-gradient(162deg, #15095f 0%, #0f45db 100%);
   background: url("../../assets/images/picwold2@3x.png") no-repeat center center;
@@ -886,7 +885,7 @@ export default {
   position: relative;
 }
 .page_banner {
-  width: 750/100rem;
+  width: 100%;
   height: 1016/100rem;
   background: url("../../assets/images/banner.png") no-repeat center center;
   background-size: cover;
@@ -898,7 +897,7 @@ export default {
   position: relative;
 }
 .page_right {
-  width: 750/100rem;
+  width: 100%;
   height: 1016/100rem;
   background: url("../../assets/images/banner3@3x.png") no-repeat center center;
   background-size: cover;
@@ -912,7 +911,7 @@ export default {
 .page_home_top,
 .page_banner_top,
 .page_right_top {
-  width: 750/100rem;
+  width: 100%;
   // height: 550/100rem;
   display: flex;
   flex-direction: column;
