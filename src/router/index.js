@@ -23,6 +23,15 @@ if (
     store.commit("SETTOKEN", window.localStorage.getItem("token"));
     store.commit("SETCODE", window.localStorage.getItem("code"));
 }
+let getQueryVariable = (name, url) => {
+    return (
+        decodeURIComponent(
+            (new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(url) || [,
+                "",
+            ])[1].replace(/\+/g, "%20")
+        ) || null
+    );
+};
 router.beforeEach((to, from, next) => {
     if (to.meta.title) {
         document.title = to.meta.title;
@@ -54,8 +63,7 @@ router.beforeEach((to, from, next) => {
 
 router.beforeEach((to, from, next) => {
     if (to.meta.title) {
-        document.title = "TAFChain ";
-        // +to.meta.title
+        document.title = to.meta.title;
     }
 
     let token = localStorage.getItem("token");

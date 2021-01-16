@@ -44,15 +44,7 @@ fastclick.prototype.focus = function(targetElement) {
     targetElement.focus();
 };
 fastclick.attach(document.body);
-let getQueryVariable = (name, url) => {
-    return (
-        decodeURIComponent(
-            (new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(url) || [,
-                "",
-            ])[1].replace(/\+/g, "%20")
-        ) || null
-    );
-};
+
 // ---------------
 Vue.prototype.$moment = moment;
 Vue.prototype.$qs = qs;
