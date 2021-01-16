@@ -57,7 +57,6 @@ router.beforeEach((to, from, next) => {
         else
             window.location.href = process.env.VUE_APP_BASE_APILink;
 
-        next();
     }
 });
 
