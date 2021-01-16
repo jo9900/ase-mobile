@@ -20,7 +20,7 @@ module.exports = {
         hotOnly: true, // https:{type:Boolean}
         proxy: {
             "/api": {
-                target: "http://192.168.0.84:9009",
+                target: "http://m.t.arthurex.com/",
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {
