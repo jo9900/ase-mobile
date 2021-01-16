@@ -1,28 +1,11 @@
 <template>
     <div class="">
-
-        <div class="suspend" style="overflow: hidden; display: block;text-align: center" v-if="languageName=='English'">
-            <dl>
-                <dt class="IE6PNG">
-                    <div class="laodett">
-                        <!--tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=774276297-->
-                        <a target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/2">
-                            <div><img style="width: 30px;margin-top: -7px;" src="../../assets/img/icon_kefu_1.png"/></div>
-                          <!--{{languageNav[languageName].language_text1}}-->
-                        </a>
-                    </div>
-                </dt>
-            </dl>
-        </div>
-
-
-        <div class="suspend" style="overflow: hidden; width:37px; display: block;text-align: center" v-else>
+        <div class="suspend" style="overflow: hidden; width:40px; display: block;text-align: center">
             <dl style=" line-height: 32px;padding-top: 20px">
                 <dt class="IE6PNG">
                     <div class="laodett" style="height: 100%;">
-                        <a target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/1">
+                        <a target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5">
                             <div><img style="width: 30px;margin-top: -7px;" src="../../assets/img/icon_kefu_1.png"/></div>
-                        <!--{{languageNav[languageName].language_text1}}-->
                         </a>
                     </div>
                 </dt>
@@ -73,7 +56,7 @@
         width: 100%;
         height: 100%;
         z-index: 90;
-        background: #bf8d08;
+        background:  #100746;
         position:absolute;top:0;
         left:0;cursor:pointer;
     }

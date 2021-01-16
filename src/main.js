@@ -104,6 +104,7 @@ Vue.prototype.$lang = localStorage.getItem("lang") ?
     "zh";
 
 Vue.prototype.$BaseUrl = process.env.VUE_APP_BASE_API;
+console.log( process.env.VUE_APP_BASE_API )
 
 new Vue({
     router,

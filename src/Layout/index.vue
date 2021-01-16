@@ -6,11 +6,11 @@
         <div id="mint"><router-view></router-view></div>
         <!-- <el-footer><Footer/></el-footer> -->
 
-        <div class="kf">
-            <a class="kf_wrap" target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5">
-                <img src="../assets/images/kf.png" alt="">
-            </a>
-        </div>
+        <!--<div class="kf">-->
+            <!--<a class="kf_wrap" target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5">-->
+                <!--<img src="../assets/images/kf.png" alt="">-->
+            <!--</a>-->
+        <!--</div>-->
     </div>
 </template>
 
@@ -61,24 +61,24 @@ export default {
         overflow: hidden;
     }
 
-    .kf {
-        position: fixed;
-        z-index: 100;
-        bottom: 69px;
-        right: 0;
-        width: 40px;
-        height: 40px;
-        .kf_wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background: #100746;
-            height: 40px;
-            width: 40px;
-            img {
-                width: 30px;
-            }
-        }
-    }
+    /*.kf {*/
+        /*position: fixed;*/
+        /*z-index: 100;*/
+        /*bottom: 69px;*/
+        /*right: 0;*/
+        /*width: 40px;*/
+        /*height: 40px;*/
+        /*.kf_wrap {*/
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            /*border-radius: 50%;*/
+            /*background: #100746;*/
+            /*height: 40px;*/
+            /*width: 40px;*/
+            /*img {*/
+                /*width: 30px;*/
+            /*}*/
+        /*}*/
+    /*}*/
 </style>
