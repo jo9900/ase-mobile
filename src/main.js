@@ -102,11 +102,8 @@ Vue.prototype.$languageName = localStorage.getItem("languageName") ?
 Vue.prototype.$lang = localStorage.getItem("lang") ?
     localStorage.getItem("lang") :
     "zh";
-if (process.env.NODE_ENV === "development") {
-    Vue.prototype.$BaseUrl =  process.env.VUE_APP_BASE_API;
-} else {
-    Vue.prototype.$BaseUrl = process.env.VUE_APP_BASE_API;
-}
+
+Vue.prototype.$BaseUrl = process.env.VUE_APP_BASE_API;
 
 new Vue({
     router,
