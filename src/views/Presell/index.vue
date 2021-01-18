@@ -103,6 +103,9 @@
               {{ $t("message.164") }}
             </div>
             <div class="wrap_rule_detail" style="margin-top: 30px">
+              <span>{{ $t("message.522") }}</span>
+            </div>
+            <div class="wrap_rule_detail">
               <span>{{ $t("message.165") }}</span>
             </div>
             <div class="wrap_rule_detail">

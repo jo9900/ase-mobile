@@ -280,7 +280,7 @@ export default {
 
     languageChange(val) {
       localStorage.setItem("languageName", val);
-      if (this.pagePath == "/newsDetail") {
+      if (this.pagePath == "/journalismDetail") {
         this.$router.push("/");
       }
       location.reload();

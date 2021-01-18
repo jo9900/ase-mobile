@@ -336,7 +336,7 @@ export default {
     },
     slkowet() {
       // this.$router.push({
-      //   path: "/newsDetail",
+      //   path: "/journalismDetail",
       //   query: { code: this.list[0].code },
       // });
     },

@@ -175,7 +175,7 @@ const message = {
 
     164: "8. For any questions about the rules, contact the customer service personnel on the official website for professional support",
 
-    165: "Declaration: AECO is an important digital value circulating in the platform ecology, instead of an investment product. Owning AECO does not mean owning the public chain platform's ownership, control, and decision-making power.",
+    165: "AECO is an important digital value circulating in the platform ecology, instead of an investment product. Owning AECO does not mean owning the public chain platform's ownership, control, and decision-making power.",
 
     166: "Whether AECO is value-added depends on the market rules and the demand after the application of the ecosystem, and it may not have any value. The team does not make a commitment to its value added, and is not responsible for the consequences caused by the increase or decrease in value.",
 
@@ -629,5 +629,8 @@ const message = {
     517: "Payment required",
     518: "or scan the code to pay",
     519: "用户可以直接跨链在去中心化交易所进行不同币种的互换",
+    520: "用户可以直接跨链",
+    521: "在去中心化交易所进行不同币种的互换",
+    522: "Declaration: "
 };
 export default message;

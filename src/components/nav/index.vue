@@ -14,7 +14,6 @@
                     <li><a href="/news" :class="pagePath == '/news' ? 'active' : ''">新闻</a></li>
                     <li><a href="/books" :class="pagePath == '/books' ? 'active' : ''">白皮书</a></li>
                     <li><a href="/school" :class="pagePath == '/school' ? 'active' : ''">培训学院</a></li>
-                    <li><a href="/community" :class="pagePath == '/community' ? 'active' : ''">社区</a></li>
                     <li><a href="/presell" :class="pagePath == '/presell' ? 'active' : ''">预售</a></li>
                 </ul>
             </div>

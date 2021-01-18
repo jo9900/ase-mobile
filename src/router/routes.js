@@ -1,8 +1,6 @@
-import Vue from "vue";
 import Login from "@/views/Login";
 import Layout from "@/Layout";
 import Home from "@/views/Index";
-// import languageNav from "@/language/nav";
 
 let language = localStorage.getItem("lang");
 let name;
@@ -12,9 +10,7 @@ if (language == null || language == "zh") {
     name = language;
 }
 console.log(`${"@/lang/" + name + ".js"}`);
-// let a = `${"@/lang/" + name}`
-// import l from "" + a + "";
-// console.log(l)
+
 const routes = [{
         path: "/login",
         name: "login",
@@ -65,12 +61,12 @@ const routes = [{
                     require(["@/views/Journalism/index.vue"], resolve),
             },
             {
-                path: "/newsDetail",
-                name: "news",
+                path: "/journalismDetail",
+                name: "journalism",
                 label: "新闻详情",
                 meta: { requiresAuth: false, title: "新闻" },
                 component: (resolve) =>
-                    require(["@/views/Journalism/newsDetail.vue"], resolve),
+                    require(["@/views/Journalism/journalismDetail.vue"], resolve),
             },
         ],
     },
@@ -114,35 +110,6 @@ const routes = [{
             component: (resolve) => require(["@/views/Books/index.vue"], resolve),
         }, ],
     },
-
-    {
-        path: "/",
-        component: Layout,
-        label: "培训学院",
-        children: [{
-            path: "/school",
-            name: "school",
-            label: "培训学院",
-            meta: { requiresAuth: false, title: "培训学院" },
-            component: (resolve) => require(["@/views/School"], resolve),
-        }, ],
-    },
-
-    {
-        path: "/",
-        component: Layout,
-        label: "社区",
-        children: [{
-            path: "/community",
-            name: "community",
-            label: "社区",
-            meta: { requiresAuth: false, title: "社区" },
-
-            component: (resolve) =>
-                require(["@/views/Community/index.vue"], resolve),
-        }, ],
-    },
-
     {
         path: "/",
         component: Layout,
@@ -206,19 +173,6 @@ const routes = [{
             meta: { requiresAuth: false, title: "关于我们" },
 
             component: (resolve) => require(["@/views/about/index.vue"], resolve),
-        }, ],
-    },
-    {
-        path: "/",
-        component: Layout,
-        label: "测试",
-        children: [{
-            path: "/test",
-            name: "test",
-            label: "测试",
-            meta: { requiresAuth: false, title: "测试" },
-
-            component: (resolve) => require(["@/views/test/index.vue"], resolve),
         }, ],
     },
     {
