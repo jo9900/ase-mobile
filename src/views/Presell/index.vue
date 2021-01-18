@@ -14,12 +14,12 @@
           <div class="wrap-wllr ter"><img src="@/assets/images/pic_dian@3x.png"/></div>
           <!--<div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>-->
 
-          <div class="wrap_plan_first_title">首轮预售</div>
+          <div class="wrap_plan_first_title">{{ $t("message.132") }}</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
           <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo1.status == 1}]">
             <div>
               <span>{{ $t("message.147") }}</span
-              >2021.1.5至售罄即止
+              >2021.1.5{{ $t("message.496") }}
             </div>
             <div>
               <span>{{ $t("message.148") }}</span
@@ -30,7 +30,7 @@
               >3,600,000 USDT
             </div>
           </div>
-          <div class="wrap-cont-text">首轮募集资金的75%将用于ARTHUR-EX平台的开发和拓展。15%将用于法律法规相关法务费用和公共宣传的相关费用。10%将用于社区服务。</div>
+          <div class="wrap-cont-text">{{ $t("message.497") }}</div>
           <!--<div class="wrap_plan_first_title">次轮预售</div>
           <div class="wrap_plan_second_title" style="font-size: 0.45rem;">
             2021.3.1
@@ -47,7 +47,7 @@
               <span>{{ $t("message.149") }}{{ $t("message.153") }}</span>
             </div>
           </div>-->
-          <div class="wrap_plan_first_title">全球公售</div>
+          <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
           <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo2.status == 1}]">
             <div>
@@ -64,10 +64,10 @@
             </div>
           </div>
           <div class="wrap-cont-text" style="color: #9CB5FF;">
-            预计发行时间：2021.5.1开始，最终发行期以监管手续完成时确定。预计发行区域：亚洲、欧洲、中东及法律监管允许的区域。
+            {{ $t("message.499") }}
           </div>
           <div class="wrap-cont-text" style="color: #9CB5FF; margin-top: 0;">
-            敬请期待2021年全球首次大规模发售盛宴。
+            {{ $t("message.523") }}
           </div>
         </div>
         <div class="wrap_rule_container">

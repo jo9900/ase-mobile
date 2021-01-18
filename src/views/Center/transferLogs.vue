@@ -20,9 +20,9 @@
                     :loading-text="$t('message.139')"
                 >
                     <div class="list_title flex">
-                        <div class="time">时间</div>
-                        <div class="account">转让账户</div>
-                        <div class="amount">转让额度（AECO）</div>
+                        <div class="time">{{ $t('message.141') }}</div>
+                        <div class="account">{{ $t('message.508') }}</div>
+                        <div class="amount">{{ $t('message.509') }}</div>
                     </div>
                     <ul class="list_ul">
                         <li class="list_row flex" v-for="item in list">
@@ -36,7 +36,7 @@
                         <li class="van-list__finished-text" v-if="load_more">{{ $t("message.137") }}</li>
                     </ul>
                 </van-list>
-                <van-empty v-else description="当前暂无转让记录哦~" />
+                <van-empty v-else :description="$t('message.136')" />
             </van-pull-refresh>
         </div>
     </div>

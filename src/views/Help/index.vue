@@ -70,7 +70,7 @@
       }
     },
     created() {
-      this.text = text[this.$lang]
+      this.text = text['zh']
     }
 
   };

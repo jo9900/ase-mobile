@@ -9,11 +9,11 @@
                 {{ myPreSale && myPreSale.user_balance_amount }}
             </div>
             <div class="current_amount">
-                AECO当前额度
+                AECO {{ $t("message.502") }}
             </div>
             <div class="logs">
                 <div class="logs_wrap" @click="toTransferLogs">
-                    <div class="text">转让历史记录</div>
+                    <div class="text">{{ $t("message.488") }}</div>
                     <img
                         src="../../assets/images/icon_found_more.png"
                         alt=""
@@ -23,8 +23,8 @@
             </div>
             <div class="bottom_wrap">
                 <div class="warning_text">
-                    <span>转让前请再次确认对方账户的准确性</span>
-                    <span>以免您的财产受到损失</span>
+                    <span>{{ $t("message.524") }}</span>
+                    <span>{{ $t("message.525") }}</span>
                 </div>
                 <div class="input-wrap">
                     <el-form
@@ -34,23 +34,23 @@
                         :rules="rules"
                         hide-required-asterisk
                     >
-                        <el-form-item label="用户" prop="to_account">
+                        <el-form-item :label="$t('message.503')" prop="to_account">
                             <el-input
                                 v-model.trim="form.to_account"
-                                placeholder="请输入对方注册邮箱"
+                                :placeholder="$t('message.505')"
                             ></el-input>
                         </el-form-item>
-                        <el-form-item label="额度" prop="aeco_amount">
+                        <el-form-item :label="$t('message.504')" prop="aeco_amount">
                             <el-input
                                 v-model.trim="form.aeco_amount"
-                                placeholder="请输入转让的AECO额度"
+                                :placeholder="$t('message.506')"
                             ></el-input>
                         </el-form-item>
                     </el-form>
                 </div>
               <div class="btn-wrap">
                 <el-button class="bBottn" @click="subFromData">
-                  <span>提交</span>
+                  <span>{{ $t('message.236') }}</span>
                 </el-button>
               </div>
             </div>
@@ -63,14 +63,14 @@
           center
       >
         <div class="validateDialogWrap">
-          <div class="title">支付验证</div>
-          <p class="alert_amount">转出额度: <span>{{ form.aeco_amount}} AECO</span></p>
-          <p class="alert_password">支付密码</p>
+          <div class="title">{{ $t('message.510') }}</div>
+          <p class="alert_amount">{{ $t('message.511') }}: <span>{{ form.aeco_amount}} AECO</span></p>
+          <p class="alert_password">{{ $t('message.513') }}</p>
           <el-input type="password" v-model="verifyData.password"></el-input>
           <p v-show="error_text" class="error_text">{{ error_text }}</p>
         </div>
         <span slot="footer" class="dialog-footer">
-            <el-button class="restBtn" @click="onVerifyData">支付</el-button>
+            <el-button class="restBtn" @click="onVerifyData">{{ $t('message.512') }}</el-button>
         </span>
       </el-dialog>
       <el-dialog
@@ -82,11 +82,11 @@
       >
         <div v-if="isVerifySuccess" class="verify_result_wrap">
           <img class="icon" src="../../assets/images/icon_success.png" alt="icon_success">
-          <p class="text">支付成功</p>
+          <p class="text">{{ $t('message.514') }}</p>
         </div>
         <div v-else class="verify_result_wrap">
           <img class="icon" src="../../assets/images/icon_fail.png" alt="icon_fail">
-          <p class="text">转让失败</p>
+          <p class="text">{{ $t('message.481') }}</p>
           <p class="text_detail">{{ verifyFailedText }}</p>
         </div>
       </el-dialog>
@@ -141,7 +141,7 @@
                             trigger: "change",
                         },{
                             pattern: /^[0-9]*$/,
-                            message: '请输入整数'
+                            message: this.$t("message.507"),
                         }
                     ]
                 }
