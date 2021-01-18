@@ -445,7 +445,6 @@
 import webFoot from "@/Layout/footer";
 import { preSale, preSalePrice, payAddress, round } from "@/request/presale.js";
 import { userInfo, subBook } from "@/request/user.js";
-import languageNav from "@/language/presell";
 import QRCode from "qrcodejs2";
 export default {
   name: "",
@@ -524,7 +523,6 @@ export default {
           { required: true, validator: validateSurnmae, trigger: "blur" },
         ],
       },
-      languageNav: languageNav,
       languageName: this.$languageName,
       qrcode: null,
     };

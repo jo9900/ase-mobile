@@ -83,7 +83,6 @@
 <script>
 // import webFoot from "@/Layout/footer";
 import { digest } from "@/request/news";
-import languageNav from "@/language/index";
 import { List } from "vant";
 import { PullRefresh } from "vant";
 import { Empty } from "vant";
@@ -108,7 +107,6 @@ export default {
         page_size: 5,
       },
       total: 0,
-      languageNav: languageNav,
       languageName: this.$languageName,
       errorImg01:
         'this.src="' + require("../../assets/images/banner_loading.png") + '"',

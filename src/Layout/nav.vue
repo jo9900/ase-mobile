@@ -92,16 +92,6 @@
               />
               <router-link to="/plan">{{ $t("message.5") }}</router-link>
             </li>
-            <!-- <li :class="pagePath == '/school' ? 'active' : ''">
-            <img
-                src="../assets/images/icon_book.png"
-                alt=""
-                class="iconImg"
-              />
-              <router-link to="/school">{{
-                languageNav[languageName].language_school
-              }}</router-link>
-            </li> -->
             <li :class="pagePath == '/presell' ? 'active' : ''">
               <img
                 src="../assets/images/icon_yushou.png"
@@ -193,11 +183,7 @@
   </div>
 </template>
 <script>
-import languageNav from "@/language/nav";
-import Vue from "vue";
-import { Popup } from "vant";
-import { Picker } from "vant";
-import { Toast } from "vant";
+import { Popup, Picker } from "vant";
 export default {
   components: { vanPopup: Popup, vanPicker: Picker },
   name: "",
@@ -220,7 +206,6 @@ export default {
       loginOut: false,
       isLogin: false,
       lang: this.$lang,
-      languageNav: languageNav,
       languageName: this.$languageName,
       name: "中文",
       bosket: true,

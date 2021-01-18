@@ -16,13 +16,11 @@
 </template>
 
 <script>
-    import  languageNav from "@/language/nav"
     export default {
         name: "index",
         data(){
             return {
                 loginDialogVisible:false,
-                languageNav:languageNav,
                 languageName:this.$languageName,
             }
         },

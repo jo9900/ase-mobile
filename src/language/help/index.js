@@ -1,42 +1,33 @@
 const   languageNav = {
-    Chinese:{
-        language_text1:"TAF Chain 申购帮助手册",
-        language_text2:"一、注册登录",
-        language_text3:"官网首页注册按钮进入注册页，通过邮箱进行注册，完成后登录",
-        language_text4:"二、身份认证",
-        language_text5:"完成登录后，通过点击【个人中心】可以看到【KYC 认证】，点击去认证。填写个人信息、资料并提交，等到官方人员进行审核。",
-        language_text6:"三、开始申购",
-        language_text7:"待 KYC（身份认证）审核成功通过后（1-3 个工作日内），进入预售页，点击【去抢购】 https://tafchain.com/#/presell",
-        language_text8:"在弹出的页面中填入自己期望抢购的数量，系统会自动计算您所需要支付的额度。 确认无误后阅读并确认申购协议，点击【下一步】",
-        language_text9:"四、 确认支付信息",
-        language_text10:"完成申购信息填写并确认后，系统再次弹出支付确认弹框，请确认支付额，并复制您的\n" +
-            "USDT_Omini 地址，通过第三方数字货币钱包或者交易所向您的独立地址完成相应额度的\n" +
-            "USDT 转账。",
-        language_text11:"五、支付",
-        language_text12:"如果您没有 USDT，可以通过 火币 进行场外交易购买"
-
-    },
-    English:{
-        language_text1:"TAF Chain Purchase Help Manual",
-        language_text2:"1. Register and Login",
-        language_text3:"Click the “Register” button in the upper right corner of the navigation bar to enter the registration\n" +
-            "page. Complete registration with your e-mail. Then login at",
-        language_text4:"2. Identify Verification",
-        language_text5:'After logging in, enter “Personal Centre” and click “KYC certification” to complete identify verification. Please fill in your personal details and submit the information for our staff to review.',
-        language_text6:"3. Start Your Purchase",
-        language_text7:"After the KYC certification (identification verification) is reviewed and approved (which normally takes 1-3 working days), you could enter the “Pre-sale” page at https://tafchain.com/#/presell and click “PURCHASE” to start your purchase.",
-        language_text8:"In the pop-up window, fill in the number of the TAF Tokens you wish to buy. The system will\n" +
-            "    automatically work out the amount you need to pay. After confirming the amount, please read and\n" +
-            "declare your agreement of the Purchase Agreement. Then click “NEXT”.",
-        language_text9:"4. Confirm Your Payment",
-        language_text10:"After filling in and confirming your purchase details, you will be presented with another pop-up\n" +
-            "        window to confirm your payment. Please confirm the amount of the payment and copy your\n" +
-            "    USDT_Omini address to complete the payment by USDT transfer via a third-party crypto wallet or\n" +
-            "    the independent address provided by your exchange.",
-        language_text11:"5. Alternative Payment",
-        language_text12:"In case you could not pay by USDT transfer, you could alternatively make the payment via Huobi\n" +
-            "(to which you could get access by scanning the QR code below) in an OTC transaction."
-
+    zh:{
+         1: "AECO首轮预售帮助文档",
+         2: "一、注册登录",
+         3: "点击官网首页注册按钮进入注册页，通过邮箱进行注册，注册成功后登录。注册链接： ",
+         4: "，点击后进入 。",
+         5: "官网链接：",
+         6: "点击注册/立即注册，进入该页面，为了您的财产安全请确保您信息的真实有效性。",
+         7: "注册页链接：",
+         8: "二、身份认证",
+         9: "完成登录后，点击页面右上角图标弹出菜单栏后点击",
+         10: "【个人中心】可以看到【KYC 认证】，点击立即认证。填写个人信息并提交，官方人员会在收到认证申请后的1-3个工作日内完成审核。",
+         11: "三、开始申购",
+         12: "1.KYC（身份认证）审核成功通过后（提交申请的1-3 个工作日内），进入预售页，点击【立即抢购】。",
+         13: "申购链接：",
+         14: "2.在弹出的页面中填入自己所需抢购份数，系统会自动计算您所需要支付的USDT额度。确认信息无误后阅读并确认勾选 ",
+         15: "点击【下一步】。",
+         16: "首轮预售AECO总量为1500份，AECO单价为 0.12 USDT ，1份起售，1份等于20000 AECO，即需支付 2400 USDT，依此类推。",
+         17: "四、确认信息并完成支付",
+         18: "申购信息提交后，系统再次弹出支付确认弹框，确认支付额。",
+         19: "复制该收款地址（您的独立USDT账户）支持扫码支付。",
+         20: "1）从您的个人数字货币钱包中进行USDT（Omni类型）转账。",
+         21: "2）或者从数字货币交易所如币安、火币等进行USDT（Omni类型）购买后，从交易所进行转账即可。",
+         22: "五、完成转账，待客服确认后即申购成功，可从【个人中心】查看",
+         23: "个人中心我的AECO资产将会显示您已成功申购的AECO额",
+         24: "六、官方客服",
+         25: "如果您对AECO的申购、交易存在疑问、对本平台发展有建设意见或者建议，",
+         26: "欢迎联系官方客服：Email：aeco@arthurex.com",
+         27: "周一 ~ 周五：",
+         28: "周六 ~ 周日：",
     }
 }
 

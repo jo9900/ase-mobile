@@ -245,8 +245,6 @@
 <script>
 import webFoot from "@/Layout/footer";
 import { digest, subscription } from "@/request/news";
-import languageNav from "@/language/index";
-// import { slider, slideritem } from "vue-concise-slider";
 import { Swipe, SwipeItem } from "vant";
 
 export default {
@@ -280,7 +278,6 @@ export default {
       },
       email: "",
       placeholder: this.$t("message.48"),
-      languageNav: languageNav,
       languageName: this.$languageName,
       lang: this.$lang,
       rules: {
