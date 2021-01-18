@@ -30,10 +30,6 @@
         </div>
       </div>
       <div class="card">
-        <!-- <div class="page_hint colorD2A629">
-        <img src="@/assets/img/center_hint.png" alt />
-        {{languageNav[languageName].language_text0}}
-      </div>-->
         <div class="user_info_box">
           <div class="user_info">
             <div class="user_info_title">{{ $t("message.95") }}</div>

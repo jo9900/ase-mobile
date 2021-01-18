@@ -4,14 +4,6 @@
     <div class="page">
       <!-- <div style="height: 70px"></div> -->
       <div class="soloet">
-        <!-- <div class="page-gl">
-        <div class="page-sll">
-          <div class="laowlt">
-            <h2 class="page-oswt">{{languageNav[languageName].language_text27}}</h2>
-            <p class="wplder">{{languageNav[languageName].language_text28}}</p>
-          </div>
-        </div>
-      </div>-->
         <div class="page_apply_title">
           <div class="page_apply_title_name">{{ $t("message.258") }}</div>
           <div class="page_apply_title_line"></div>
@@ -294,13 +286,6 @@ export default {
   -webkit-line-clamp: 1;
   line-clamp: 1;
   -webkit-box-orient: vertical;
-}
-.page-gl {
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  margin-bottom: 58px;
-  background: url("/img/new-bg1.jpg") no-repeat center;
 }
 .soloet {
   box-sizing: border-box;

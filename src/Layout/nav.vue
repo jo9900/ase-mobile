@@ -33,7 +33,6 @@
     >
       <div class="drowMun">
         <div class="" style="position: relative">
-          <!-- <div class="dron-sj"><img src="@/assets/img/icon-sj.png" /></div> -->
           <ul class="mllert">
             <li :class="pagePath == '/center' ? 'active' : ''" v-if="isLogin">
               <img src="../assets/images/icon_my.png" alt="" class="iconImg" />

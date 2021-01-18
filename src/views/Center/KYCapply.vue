@@ -2,18 +2,12 @@
 <!-- -->
 <template>
   <div class="page"  id="scrollBody" ref="scrollBody">
-    <!-- <!-- <div style="height: 70px"></div> -->
     <div class="wrap" ref="pageKYC">
-      <!-- <div class="page_indicator">
-        <router-link class="gobaket" to="/center">{{languageNav[languageName].language_text1}}</router-link>
-        > {{languageNav[languageName].language_text26}}
-      </div>-->
       <div class="wrap_kyc">
         <div class="wrap_kyc_title">{{$t('message.100')}}</div>
         <div class="wrap_kyc_line"></div>
       </div>
       <div class="page_content" >
-        <!-- <div class="name">KYClanguage_text42</div> -->
         <el-form
           label-position="top"
           ref="formLabelAlign"
@@ -782,15 +776,6 @@ export default {
   -webkit-box-sizing: border-box; /* Safari */
   padding-top: 90/100rem;
   .wrap {
-    // .page_indicator {
-    //   margin-top: 20px;
-    //   height: 60px;
-    //   line-height: 60px;
-    //   color: #333333;
-    //   font-size: 16px;
-    //   padding: 0 30px;
-    //   background: #ffffff;
-    // }
     .page_content {
       padding: 30/100rem;
       background: #ffffff;

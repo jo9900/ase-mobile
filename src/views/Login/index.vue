@@ -18,11 +18,6 @@
               ref="loginForm"
             >
               <el-form-item class="form_row" prop="email">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_person.png"
-                  alt=""
-                /> -->
                 <el-input
                   prefix-icon="el-icon-user-solid"
                   autocomplete="off"
@@ -32,11 +27,6 @@
                 />
               </el-form-item>
               <el-form-item class="form_row" prop="password">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
                 <el-input
                   prefix-icon="el-icon-lock"
                   autocomplete="off"
@@ -78,11 +68,6 @@
               ref="signInForm"
             >
               <el-form-item prop="email">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_person.png"
-                  alt=""
-                /> -->
                 <el-input
                   class="row_input"
                   autocomplete="off"
@@ -93,11 +78,6 @@
                 />
               </el-form-item>
               <el-form-item class="form_row" prop="verify_code">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
                 <el-input
                   prefix-icon="el-icon-lock"
                   autocomplete="off"
@@ -116,11 +96,6 @@
                 </div>
               </el-form-item>
               <el-form-item class="form_row" prop="password">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
                 <el-input
                   type="password"
                   prefix-icon="el-icon-lock"
@@ -130,11 +105,6 @@
                 />
               </el-form-item>
               <el-form-item class="form_row" prop="againPassword">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
                 <el-input
                   prefix-icon="el-icon-lock"
                   type="password"
@@ -144,11 +114,6 @@
                 />
               </el-form-item>
               <el-form-item class="form_row form_row1">
-                <!-- <img
-                  class="input_img input_img1"
-                  src="@/assets/img/rewer.png"
-                  alt=""
-                /> -->
                 <template v-if="inviteCode">
                   <el-input
                     prefix-icon="el-icon-collection-tag"
@@ -212,11 +177,6 @@
               ref="resetForm"
             >
               <el-form-item class="form_row" prop="email">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_person.png"
-                  alt=""
-                /> -->
                 <el-input
                   prefix-icon="el-icon-user-solid"
                   type="text"
@@ -225,11 +185,6 @@
                 />
               </el-form-item>
               <el-form-item class="form_row" prop="verify_code">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
                 <el-input
                   type="text"
                   prefix-icon="el-icon-lock"
@@ -248,11 +203,7 @@
                 </div>
               </el-form-item>
               <el-form-item class="form_row" prop="password">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
+
                 <el-input
                   prefix-icon="el-icon-lock"
                   type="password"
@@ -261,11 +212,6 @@
                 />
               </el-form-item>
               <el-form-item class="form_row" prop="againPassword">
-                <!-- <img
-                  class="input_img"
-                  src="@/assets/img/login_password.png"
-                  alt=""
-                /> -->
                 <el-input
                   prefix-icon="el-icon-lock"
                   type="password"

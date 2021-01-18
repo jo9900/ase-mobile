@@ -17,7 +17,6 @@
           :model="dataForm"
         >
           <el-form-item prop="verify_code">
-            <!-- <img class="input_img" src="@/assets/img/login_person.png" alt="" /> -->
             <el-input
               prefix-icon="el-icon-user-solid"
               type="text"
@@ -30,11 +29,6 @@
             </div>
           </el-form-item>
           <el-form-item prop="password" style="margin-top: 25px">
-            <!-- <img
-              class="input_img"
-              src="@/assets/img/login_password.png"
-              alt=""
-            /> -->
             <el-input
               prefix-icon="el-icon-lock"
               type="password"
@@ -43,11 +37,6 @@
             />
           </el-form-item>
           <el-form-item prop="againPassword" style="margin-top: 25px">
-            <!-- <img
-              class="input_img"
-              src="@/assets/img/login_password.png"
-              alt=""
-            /> -->
             <el-input
               prefix-icon="el-icon-lock"
               type="password"

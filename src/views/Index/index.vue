@@ -283,8 +283,6 @@ export default {
       languageNav: languageNav,
       languageName: this.$languageName,
       lang: this.$lang,
-      errorImg01:
-        'this.src="' + require("../../assets/img/defaultImg.png") + '"',
       rules: {
         sub_email: [
           {

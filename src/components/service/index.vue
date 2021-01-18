@@ -5,7 +5,7 @@
                 <dt class="IE6PNG">
                     <div class="laodett" style="height: 100%;">
                         <a target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5">
-                            <div><img style="width: 30px;margin-top: -7px;" src="../../assets/img/icon_kefu_1.png"/></div>
+                            <div><img style="width: 30px;margin-top: -7px;" src="../../assets/images/icon_kefu_1.png"/></div>
                         </a>
                     </div>
                 </dt>

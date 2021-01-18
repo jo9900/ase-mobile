@@ -2,7 +2,7 @@
 <template>
     <div class="page">
         <div class="no_data">
-            <img class="no_data_img" src="@/assets/img/no_data.png" alt="">
+            <img class="no_data_img" src="@/assets/images/no_data.png" alt="">
             <p class="no_data_hint">等待主网上线后开通</p>
         </div>
         <webFoot/>
@@ -16,23 +16,23 @@ export default {
     components: {webFoot},
     data() {
        return {
-       
+
        }
     },
     computed:{
-    
+
     },
     watch:{
-    
+
     },
     methods:{
-    
+
     },
     created(){
-    
+
     },
     mounted(){
-    
+
     }
 }
 </script>
@@ -43,17 +43,18 @@ export default {
         background: rgb(242, 242, 242);
         overflow: hidden;
         .no_data{
-            width: 500px;
-            height: 800px;
+            height: 100vh;
             text-align: center;
-            margin: 200px auto 0;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             .no_data_img{
-                width: 140px;
-                height: 120px;
+                width: 50%;
             }
             .no_data_hint{
                 color: #999999;
-                font-size: 48px;
+                font-size: 28px;
             }
         }
     }

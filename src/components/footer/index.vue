@@ -8,12 +8,6 @@
                 <div class="flext-all1"><img src="@/assets/logo.png"/></div>
                 <div class="taf-kot">TAF Chain</div>
             </div>
-            <!--<div class="foot_link">-->
-                <!--<a href=""><img class="lin_img" src="@/assets/img/foot_icon1.png" alt=""></a>-->
-                <!--<a href=""><img class="lin_img" src="@/assets/img/foot_icon2.png" alt=""></a>-->
-                <!--<a href=""><img class="lin_img" src="@/assets/img/foot_icon3.png" alt=""></a>-->
-                <!--<a href=""><img class="lin_img" src="@/assets/img/foot_icon4.png" alt=""></a>-->
-            <!--</div>-->
         </div>
     </div>
 </template>

@@ -2,17 +2,13 @@
 <!-- -->
 <template>
   <div class="page">
-    <!-- <div style="height: 70px"></div> -->
     <div class="wrap">
-      <div class="page_indicator">
-        <router-link class="gobaket" to="/center">{{
-          $t("message.2")
-        }}</router-link>
-        > {{ $t("message.100") }}
+      <div class="wrap_kyc">
+        <div class="wrap_kyc_title">{{$t('message.100')}}</div>
+        <div class="wrap_kyc_line"></div>
       </div>
       <div class="page_content">
-        <div class="name">KYC</div>
-        <img class="KYC_logo" src="@/assets/img/KYC_logo.png" alt="" />
+        <img class="KYC_logo" src="@/assets/images/icon_shenhe_no@3x.png" alt="" />
         <div class="status">
           {{ $t("message.242") }}
         </div>
@@ -65,11 +61,39 @@ export default {
 </script>
 
 <style lang='less' scoped>
+  // 标题
+  .wrap_kyc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #fff;
+    height: 104/100rem;
+  }
+  .wrap_kyc_title {
+    width: 100%;
+    text-align: center;
+    height: 50/100rem;
+    font-size: 36/100rem;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #323a43;
+    line-height: 50/100rem;
+  }
+  .wrap_kyc_line {
+    width: 80/100rem;
+    height: 6/100rem;
+    background: #104cff;
+    margin-top: 8/100rem;
+  }
 .page {
   background: #f0f2f5;
   overflow: hidden;
-  // height: 100%;
   box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari */
+  padding-top: 90/100rem;
   .wrap {
     // height: 100%;
     .page_indicator {
@@ -78,38 +102,45 @@ export default {
       padding: 0 30px;
     }
     .page_content {
-      margin: 20px 0 0;
-      padding: 38px;
+      padding: 30/100rem;
       background: #ffffff;
-      text-align: center;
-      .name {
-        color: #104cff;
-        font-size: 36px;
-      }
+      margin: 20/100rem auto 0px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       .KYC_logo {
-        width: 60px;
-        height: 60px;
-        margin: 20px auto 0;
+       margin-top: 100/100rem;
+        width: 110/100rem;
+        height: 110/100rem;
       }
       .status {
-        font-size: 23px;
-        color: red;
-        margin: 20px auto 0;
+        font-size: 36/100rem;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #323A43;
+        line-height: 50/100rem;
+        margin: 40/100rem auto 0;
       }
       .describe {
-        margin: 30px auto 0;
-        color: #333333;
-        font-size: 16px;
+        font-size: 28/100rem;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #A7B6CA;
+        line-height: 40/100rem;
+        margin-top: 8/100rem;
       }
       .again_btn {
+        position: fixed;
+        bottom: 56/100rem;
+        text-align: center;
         cursor: pointer;
-        margin: 80px auto 0;
-        width: 240px;
-        height: 48px;
-        color: #fffffe;
-        font-size: 16px;
-        line-height: 48px;
-        border-radius: 6px;
+        width: 600/100rem;
+        height: 88/100rem;
+        color: #fff;
+        font-size: 32/100rem;
+        line-height: 88/100rem;
+        border-radius: 5px;
         background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
       }
     }
