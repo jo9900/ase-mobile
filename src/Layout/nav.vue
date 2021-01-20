@@ -166,8 +166,8 @@ export default {
       columns: [
           { name: "中文", value: "zh" },
           { name: "English", value: "en" },
-          { name: "日本語", value: "ja" },
-          { name: "عربى", value: "ar" },
+          // { name: "日本語", value: "ja" },
+          // { name: "عربى", value: "ar" },
           // { name: "한국어", value: "ko" },
           // { name: "русский", value: "ru" },
       ],
