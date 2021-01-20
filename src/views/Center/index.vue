@@ -47,7 +47,7 @@
                     style="color: #a7acc1"
                     :class="{ taost: userInfo.kyc_status == 1 }"
                   >
-                    <template v-if="languageName == 'English'">{{
+                    <template v-if="lang_type == 'English'">{{
                       userInfo.kyc_status == 1
                         ? userInfo.last_name + " · " + userInfo.first_name
                         : $t("message.97")
@@ -69,7 +69,7 @@
                   :class="{ taost: userInfo.kyc_status == 1 }"
                 >
                   <template v-if="userInfo.kyc_status == 1">{{
-                    languageName == "English"
+                    lang_type == "English"
                       ? userInfo.country_name_en
                       : userInfo.country_name
                   }}</template>
@@ -367,197 +367,12 @@
           />
         </div>
       </div>
-      <!-- <van-cell-group title="身份证">
-        <van-cell
-          title="KYC认证"
-          value="未认证"
-          is-link
-          v-if="userInfo.kyc_status == 0"
-          @click="toApply"
-          center
-        />
-        <van-cell
-          title="KYC认证"
-          value="已认证"
-          is-link
-          v-if="userInfo.kyc_status == 1"
-          center
-        />
-        <van-cell
-          title="KYC认证"
-          value="审核中"
-          is-link
-          v-if="userInfo.kyc_status == 2"
-          center
-        />
-        <van-cell
-          title="KYC认证"
-          value="未通过"
-          is-link
-          v-if="userInfo.kyc_status == 3"
-          @click="lookUp"
-          center
-        />
-      </van-cell-group> -->
-      <!-- <van-cell-group :title="languageNav[languageName].language_text10">
-        <van-cell
-          :value="myPreSale.apply_usdt_amount + ' USDT'"
-          is-link
-          center
-          v-show="myPreSale.apply_usdt_amount"
-          :title="languageNav[languageName].language_text14"
-          @click="toApplyBuylog"
-        >
-        </van-cell>
-        <van-cell
-          value="0 USDT"
-          is-link
-          center
-          v-show="!myPreSale.apply_usdt_amount"
-          :title="languageNav[languageName].language_text14"
-          @click="toApplyBuylog"
-        >
-        </van-cell>
-        <van-cell
-          :value="myPreSale.apply_taft_amount + ' TAFT'"
-          is-link
-          center
-          v-show="myPreSale.apply_taft_amount"
-          :title="languageNav[languageName].language_text15"
-          @click="toTransfer"
-        >
-        </van-cell>
-        <van-cell
-          value="0 TAFT"
-          is-link
-          center
-          v-show="!myPreSale.apply_taft_amount"
-          :title="languageNav[languageName].language_text15"
-          @click="toTransfer"
-        >
-        </van-cell>
-      </van-cell-group> -->
-      <!-- 我的推广 -->
-      <!-- <van-cell-group :title="languageNav[languageName].language_text13">
-        <van-cell
-          :title="languageNav[languageName].language_text16"
-          :value="marketing.rebate_amount + ' USDT'"
-          v-show="marketing.rebate_amount"
-          is-link
-          center
-          @click="toRebatelog"
-        />
-        <van-cell
-          :title="languageNav[languageName].language_text16"
-          value="0 USDT"
-          is-link
-          center
-          @click="toRebatelog"
-          v-show="!marketing.rebate_amount"
-        />
-        <van-cell
-          :title="languageNav[languageName].language_text17"
-          :value="
-            marketing.invite_count +
-            ' ' +
-            languageNav[languageName].language_text12
-          "
-          v-show="marketing.invite_count"
-          is-link
-          center
-          @click="toExtendLog"
-        />
-        <van-cell
-          :title="languageNav[languageName].language_text17"
-          :value="'0 ' + languageNav[languageName].language_text12"
-          is-link
-          center
-          @click="toExtendLog"
-          v-show="!marketing.invite_count"
-        />
-        <van-cell
-          :title="languageNav[languageName].language_text149"
-          class="invite-van"
-        >
-          <template>
-            <div class="invite-count">
-              <el-input
-                class="text extend_invite_input"
-                v-model="languageNav[languageName].language_text151"
-                style="width: 400px; max-width: 100%"
-                size="small"
-                id="invite_code"
-                v-if="myPreSale && myPreSale.apply_usdt_amount == 0"
-              />
-              <el-input
-                class="text extend_invite_input"
-                v-model="marketing.invite_code"
-                style="width: 400px; max-width: 100%"
-                size="small"
-                id="invite_code"
-                v-if="myPreSale && myPreSale.apply_usdt_amount != 0"
-              />
-              <el-button
-                type="primary"
-                icon="el-icon-document"
-                size="small"
-                @click="copyArticle('invite_code')"
-              >
-              </el-button>
-            </div>
-          </template>
-        </van-cell>
-        <van-cell
-          :title="languageNav[languageName].language_text150"
-          class="invite-van"
-        >
-          <template>
-            <div class="invite-count">
-              <el-input
-                class="text extend_invite_input"
-                v-model="marketing.invite_url"
-                style="width: 400px; max-width: 100%"
-                size="small"
-                id="invite_url"
-                v-if="myPreSale && myPreSale.apply_usdt_amount != 0"
-              />
-              <el-input
-                class="text extend_invite_input"
-                v-model="languageNav[languageName].language_text152"
-                style="width: 400px; max-width: 100%"
-                size="small"
-                id="invite_url"
-                v-if="myPreSale && myPreSale.apply_usdt_amount == 0"
-              />
-              <el-button
-                type="primary"
-                icon="el-icon-document"
-                size="small"
-                @click="copyArticle('invite_url')"
-              >
-              </el-button>
-            </div>
-          </template>
-        </van-cell>
-      </van-cell-group> -->
-      <!-- <van-cell-group :title="languageNav[languageName].language_text19">
-        <van-cell
-          :title="languageNav[languageName].language_text20"
-          :value="userInfo.email"
-        />
-        <van-cell
-          :title="languageNav[languageName].language_text21"
-          :value="languageNav[languageName].language_text22"
-          @click="toEditPas"
-        />
-      </van-cell-group> -->
     </div>
   </div>
 </template>
 
 <script>
 import { userInfo, myPreSale, myMarketing } from "@/request/user.js";
-// import webFoot from "@/components/footer";
 import html2canvas from 'html2canvas'
 import { Cell, CellGroup } from "vant";
 import QRCode from "qrcodejs2";
@@ -591,7 +406,7 @@ export default {
         invite_code: "",
         invite_url: "",
       },
-      languageName: this.$languageName,
+      lang_type: this.$langType,
       user_email: localStorage.getItem("email")
     };
   },

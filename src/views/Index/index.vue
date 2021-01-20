@@ -2,7 +2,6 @@
 <!-- -->
 <template>
   <div class="page">
-    <!-- <div style="height: 70/100rem"></div> -->
     <div class="">
       <div class="page_container">
         <van-swipe
@@ -14,8 +13,7 @@
         >
           <van-swipe-item
             ><div style="height: 500px" @click="slkowet">
-              <template v-if="languageName == 'English'"> </template>
-              <template v-else>
+              <template>
                 <div class="page_home">
                   <div class="page_home_top">
                     <div class="page_home_title">ARTHUR-EX</div>
@@ -42,8 +40,7 @@
           >
           <van-swipe-item
             ><div style="height: 100%">
-              <template v-if="languageName == 'English'"> </template>
-              <template v-else>
+              <template>
                 <div class="page_banner">
                   <div class="page_banner_top">
                     <div class="page_banner_title">{{ $t("message.16") }}</div>
@@ -71,12 +68,10 @@
           >
           <van-swipe-item>
             <div style="height: 100%">
-              <template v-if="languageName == 'English'"> </template>
-              <template v-else>
+              <template>
                 <div class="page_right">
                   <div class="page_right_top">
                     <div class="page_right_title"></div>
-                    <!-- <div class="page_right_title">FBC-Swap</div> -->
                     <div class="page_right_item1">
                       {{ $t("message.519") }}
                     </div>
@@ -272,13 +267,13 @@ export default {
         autoplay: 4000,
       },
       listQuery: {
-        lang_type: this.$languageName,
+        lang_type: this.$langType,
         page_no: 1,
         page_size: 3,
       },
       email: "",
       placeholder: this.$t("message.48"),
-      languageName: this.$languageName,
+      lang_type: this.$langType,
       lang: this.$lang,
       rules: {
         sub_email: [

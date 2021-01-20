@@ -13,10 +13,6 @@
       <div class="page_apply_title_line"></div>
     </div>
     <div class="wrap">
-      <!-- <div class="page_indicator">
-        <router-link class="gobaket" to="/center">{{languageNav[languageName].language_text1}}</router-link>
-        > {{languageNav[languageName].language_text8}}
-      </div>-->
       <div class="page_content" :class="{ marginTop: tableData.length == 0 }">
         <el-table
           :data="tableData"
@@ -152,7 +148,6 @@ export default {
       },
       tableData: [],
       total: 0,
-      languageName: this.$languageName,
     };
   },
   computed: {},

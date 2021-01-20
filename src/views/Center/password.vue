@@ -4,10 +4,7 @@
   <div class="page">
     <!-- <div style="height: 70px"></div> -->
     <div class="wrap">
-      <!-- <div class="page_indicator">
-        <router-link class="gobaket" to="/center">{{languageNav[languageName].language_text1}}</router-link>
-        > {{languageNav[languageName].language_text13}}
-      </div>-->
+
       <div class="page_content">
         <el-form
           label-position="top"
@@ -99,7 +96,6 @@ export default {
         verify_code: "", // 验证码
       },
       pk: "",
-      languageName: this.$languageName,
       rules: {
         password: [
           {
@@ -181,7 +177,7 @@ export default {
     sendcode(e) {
       this.timer();
       let data = {
-        lang_type: this.$languageName,
+        lang_type: this.$langType,
         user_code: localStorage.getItem("code"),
       };
       findPassword(this.$qs.stringify(data)).then((res) => {

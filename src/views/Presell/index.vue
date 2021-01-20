@@ -186,7 +186,7 @@
                 <div class="progress_info">
                   <div>
                     <template v-if="round == 1">
-                      <template v-if="languageName == 'English'"
+                      <template v-if="lang_type == 'English'"
                         >{{ preInfo.progress }}
                         {{ $t("message.173") }}</template
                       >
@@ -257,7 +257,7 @@
                   <div
                     class="skert"
                     :style="{
-                      width: languageName == 'English' ? '47px' : '31px',
+                      width: lang_type == 'English' ? '47px' : '31px',
                     }"
                     v-if="round == 1"
                   >
@@ -523,7 +523,7 @@ export default {
           { required: true, validator: validateSurnmae, trigger: "blur" },
         ],
       },
-      languageName: this.$languageName,
+      lang_type: this.$langType,
       qrcode: null,
     };
   },
@@ -668,7 +668,7 @@ export default {
           if (this.round == 1) {
             if (parseInt(this.presellForm.book_amount) > this.preInfo.total) {
               return this.$message.error(
-                this.languageName == "English"
+                this.lang_type == "English"
                   ? "The number of copies exceeds the maximum" +
                       " " +
                       this.preInfo.total +

@@ -77,12 +77,7 @@
                 class="iconImg"
               />
               <a @click="downloadPDF">{{ $t("message.4") }}</a>
-              <!--<template v-if="languageName == 'English'">-->
-                <!--<a @click="messageTips">{{ $t("message.4") }}</a>-->
-              <!--</template>-->
-              <!--<template v-else>-->
-                <!--<a @click="messageTips">{{ $t("message.4") }}</a>-->
-              <!--</template>-->
+
             </li>
             <li :class="pagePath == '/plan' ? 'active' : ''">
               <img
@@ -119,30 +114,6 @@
               <span v-if="lang == 'zh'">选择语言/中文</span>
               <span v-if="lang == 'ar'"> اختر اللغة العربية</span>
             </li>
-
-            <!-- <li @click="language">
-              <span v-if="languageName == 'English'"
-                >choose language/English</span
-              >
-              <span v-if="languageName == 'Chinese'">选择语言/中文</span>
-            </li> -->
-
-            <!-- <div class="ruelat">
-              <div
-                class="pullbot"
-                :class="languageName == 'Chinese' ? 'butonColor' : ''"
-                @click="languageChange('Chinese')"
-              >
-                中文
-              </div>
-              <div
-                class="pullbot"
-                :class="languageName == 'English' ? 'butonColor' : ''"
-                @click="languageChange('English')"
-              >
-                English
-              </div>
-            </div> -->
           </ul>
           <div class="loginout" @click="loginClose" v-if="isLogin">
             {{ $t("message.9") }}
@@ -206,11 +177,18 @@ export default {
       loginOut: false,
       isLogin: false,
       lang: this.$lang,
-      languageName: this.$languageName,
       name: "中文",
       bosket: true,
       code: localStorage.getItem("code"),
       email: localStorage.getItem("email"),
+      map: {
+        'zh': ['简体中文', 'Chinese'],
+        'en': ['English', 'English'],
+        'ja': ['日本語', 'Japanese'],
+        'ar': ['عربى', 'Arabic'],
+        'ko': ['한국어', 'Korean'],
+        'ru': ['русский', 'Russian'],
+      }
     };
   },
   computed: {},
@@ -236,7 +214,7 @@ export default {
       this.changeISlanguage = false;
       this.makes = false;
       setTimeout(() => {
-        this.languageChangeType(value.value);
+        this.handleCommandLang(value);
       }, 500);
       // this.name = value.name;
       // Toast(`当前值：${value.name}, 当前索引：${index}`);
@@ -261,20 +239,15 @@ export default {
       localStorage.clear("code");
       this.$router.push("/login");
     },
-
-    languageChange(val) {
-      localStorage.setItem("languageName", val);
-      if (this.pagePath == "/journalismDetail") {
-        this.$router.push("/");
-      }
-      location.reload();
+    handleCommandLang(command){
+      localStorage.setItem("lang", command.value)
+      localStorage.setItem("lang_type", this.map[command.value][1])
+      this.languageChangeType(command)
     },
     languageChangeType(val) {
-      localStorage.setItem("lang", val);
-      console.log(this.$t("message.1"));
       this.$i18n.locale = val; // 切换vue国际化
       this.$Local(val); // 切换vant
-      location.reload();
+      this.$router.go(0)
     },
     selecMun() {
       this.makes = !this.makes;
@@ -284,8 +257,7 @@ export default {
     },
   },
   created() {
-    console.log(localStorage.getItem("languageName"));
-    console.log(this.$lang, this.$languageName);
+    console.log(this.$lang, this.$langType);
     this.userCode = localStorage.getItem("code");
     this.isLogin = localStorage.getItem("token") ? true : false;
   },

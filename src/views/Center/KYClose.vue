@@ -30,7 +30,6 @@ export default {
   data() {
     return {
       userInfo: {},
-      languageName: this.$languageName,
     };
   },
   computed: {},

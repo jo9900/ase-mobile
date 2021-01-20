@@ -17,21 +17,8 @@
         >
           <el-row>
             <el-col :span="24">
-              <!--label="Country / Region"-->
               <el-form-item class="el-form-item-country" prop="country_code">
                 <span>{{$t('message.216')}}</span>
-                <!-- <el-select
-                  v-model="formLabelAlign.country_code"
-                  :placeholder="languageNav[languageName].language_text30"
-                  style="width: 100%;"
-                >
-                  <el-option
-                    :label="languageName=='English'?item.name_en:item.name_cn"
-                    :value="item.code"
-                    v-for="item in areaList"
-                    :key="item.code"
-                  ></el-option>
-                </el-select> -->
                 <div @click="chooseCountry">
                   <el-input
                     v-model.trim="name_cn"
@@ -72,18 +59,9 @@
           </el-row>
           <el-row>
             <el-col>
-              <!--label="ID Type"-->
               <el-form-item class="el-form-item-country item_border_top" prop="id_type">
                 <span>{{$t('message.220')}}</span>
-                <!-- <el-select
-                  v-model="formLabelAlign.id_type"
-                  :placeholder="languageNav[languageName].language_text34"
-                  style="width: 100%;"
-                >
-                  <el-option :label="languageNav[languageName].language_text35" value="1"></el-option>
-                  <el-option :label="languageNav[languageName].language_text36" value="2"></el-option>
-                  <el-option :label="languageNav[languageName].language_text37" value="3"></el-option>
-                </el-select> -->
+
                 <div @click="chooseIDtype">
               <el-input
                   v-model.trim="name"
@@ -276,7 +254,6 @@ export default {
       id_front: "",
       id_back: "",
       loading: false,
-      languageName: this.$languageName,
       pickerIsshow: false,
       pickerIDISshow: false,
       numberISshow: false,
@@ -300,7 +277,7 @@ export default {
       name_cn: "",
       name: "",
       lang: this.$lang,
-      lang_type: this.$languageName,
+      lang_type: this.$langType,
       formLabelAlign: {
         user_code: localStorage.getItem("code"),
         country_code: "",

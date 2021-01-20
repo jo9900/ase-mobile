@@ -102,12 +102,11 @@ export default {
       finished: false,
       refreshing: false,
       listQuery: {
-        lang_type: this.$languageName,
+        lang_type: this.$langType,
         page_no: 1,
         page_size: 5,
       },
       total: 0,
-      languageName: this.$languageName,
       errorImg01:
         'this.src="' + require("../../assets/images/banner_loading.png") + '"',
     };
@@ -144,7 +143,7 @@ export default {
         this.refreshing = false;
         this.loading = true;
         this.listQuery = {
-          lang_type: this.$languageName,
+          lang_type: this.$langType,
           page_no: 1,
           page_size: 5,
         };

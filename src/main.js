@@ -35,7 +35,16 @@ Vue.use(VueI18n);
 import { Locals } from "./lang/vantLocal.js";
 Vue.prototype.$Local = Locals;
 let i18n;
-let f = localStorage.getItem("lang") || 'zh';
+let f = ''
+if (localStorage.getItem("lang") ) {
+    f = localStorage.getItem("lang")
+} else {
+    localStorage.setItem("lang", 'zh')
+    f = 'zh'
+}
+if (!localStorage.getItem("lang_type")) {
+    localStorage.setItem("lang_type", 'Chinese')
+}
 i18n = new VueI18n({locale: f, messages});
 Locals(f);
 fastclick.prototype.focus = function(targetElement) {
@@ -56,14 +65,8 @@ Vue.config.productionTip = false;
 // --------------
 Vue.use(ElementUI);
 
-Vue.prototype.$languageName = localStorage.getItem("languageName") ?
-    localStorage.getItem("languageName") :
-    "Chinese";
-
-Vue.prototype.$lang = localStorage.getItem("lang") ?
-    localStorage.getItem("lang") :
-    "zh";
-
+Vue.prototype.$langType = localStorage.getItem("lang_type")
+Vue.prototype.$lang = localStorage.getItem("lang")
 Vue.prototype.$BaseUrl = process.env.VUE_APP_BASE_API;
 console.log( process.env.VUE_APP_BASE_API )
 

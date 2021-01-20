@@ -260,8 +260,6 @@ import {
 } from "@/request/login.js";
 const sha256 = require("js-sha256").sha256;
 import { JSEncrypt } from "jsencrypt";
-import languageNav from "@/language/login";
-import Vue from "vue";
 let that;
 export default {
   name: "",
@@ -285,8 +283,6 @@ export default {
     };
 
     return {
-      languageNav: languageNav,
-      languageName: this.$languageName,
       fromPath: "",
       flag: true,
       loading: false,
@@ -443,7 +439,7 @@ export default {
       this.$refs["signInForm"].validateField("email", (errMsg) => {
         if (!errMsg) {
           let data = {
-            lang_type: this.$languageName,
+            lang_type: this.$langType,
             email: this.signInForm.email,
           };
           this.disabled = true
@@ -475,7 +471,7 @@ export default {
       this.$refs["resetForm"].validateField("email", (errMsg) => {
         if (!errMsg) {
           let data = {
-            lang_type: this.$languageName,
+            lang_type: this.$langType,
             email: this.resetData.email,
           };
           this.disabled1 = true

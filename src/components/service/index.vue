@@ -21,7 +21,6 @@
         data(){
             return {
                 loginDialogVisible:false,
-                languageName:this.$languageName,
             }
         },
         methods:{
