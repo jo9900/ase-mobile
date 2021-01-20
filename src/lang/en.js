@@ -585,55 +585,105 @@ const message = {
     473: "Enter your name",
     474: "Enter your certificate number",
     475: "Help Center",
-    476: "Long press to save the picture, scan the QR code and share it with friends",
-    477: "You are invited to join AECO Ecology",
-    478: "To transfer",
-    479: "Credit transfer",
-    480: "invalid parameter",
-    481: "transfer failed",
-    482: "user does not exist",
+
+    476: "Long press to save the picture, and scan QR code to share it with your friends ",
+
+    477: "Invite you to join the AECO ecosystem",
+
+    478: "Transfer",
+
+    479: "Quota Transfer",
+
+    480: "Parameter error",
+
+    481: "Transfer failed",
+
+    482: "The user does not exist",
+
     483: "Incorrect account or password",
-    484: "the amount of transfer should be more than zero",
-    485: "insufficient balance",
-    486: "invalid transfer account, can not be yourself",
-    487: "the receiver should be KYC first",
-    488: "Transfer record",
-    489: "copy",
-    490: "Rebate record",
+
+    484: "Transfer amount <= 0",
+
+    485: "Insufficient balance",
+
+    486: "Users cannot be transferred for themselves",
+
+    487: "The other party's account is not KYC certified",
+
+    488: "Transfer records",
+
+    489: "Click Copy",
+
+    490: "Rebate records",
+
     491: "Reset password",
-    492: "ARTHUR -EX——去中心化交易所底层基础设施",
-    493: "ARTHUR、ARTHUR-EX、AECO、亚瑟交易平台底层系统、跨链交易、交易所、亚瑟交易所官网、去中心化交易所、区块链交易所、区块链资产交易平台、TAF、TAF主网、TAFT、区块链基础设施",
-    494: "ARTHUR-EX——高速、安全、可信的去中心化跨链数字资产交易平台底层系统，可快速构建去中心化交易所等应用",
-    495: "View more",
-    496: "Until stock lasts",
-    497: "首轮募集资金的75%将用于ARTHUR-EX平台的开发和拓展。15%将用于法律法规相关法务费用和公共宣传的相关费用。10%将用于社区服务。",
-    498: "Global public sale",
-    499: "预计发行时间：2021.5.1开始，最终发行期以监管手续完成时确定。预计发行区域：亚洲、欧洲、中东及法律监管允许的区域。",
-    500: "感谢您对ARTHUR-EX相关材料的兴趣，我们希望这些材料对您有用。 如果您有任何疑问，请随时通过 aeco@arthurex.com 与我们联系",
+
+    492: "ARTHUR-EX——Underlying Infrastructure of the Decentralized Exchange",
+
+    493: "ARTHUR, ARTHUR-EX, AECO, the underlying system of the Arthur trading platform, cross-chain trading, exchanges, the official website of Arthur Exchange, decentralized exchanges, blockchain exchanges, blockchain asset trading platforms, TAF, TAF mainnet, TAFT, blockchain infrastructure",
+
+    494: "ARTHUR-EX -- a high-speed, safe and credible underlying system for the decentralized cross-chain digital asset trading platform, which can quickly build applications such as decentralized exchanges",
+
+    495: "View More",
+
+    496: "Until sold out",
+
+    497: "75% of the funds raised in the first round will be used for the development and expansion of the ARTHUR-EX platform. 15% will be used for legal expenses related to laws and regulations and related publicity expenses. 10% will be used for community services.",
+
+    498: "Global Public Sale",
+
+    499: "Estimated issuance time: 2021.5.1 or later. The final issuance period will be determined when the regulatory procedures are completed. The expected issuance areas include Asia, Europe, the Middle East and areas permitted by legal supervision.",
+
+    500: "Thank you for your interest in ARTHUR-EX materials. We hope these materials are useful to you. For any questions, please feel free to contact us at aeco@arthurex.com",
+
     501: "Transfer",
-    502: "Current quota",
+
+    502: "Current Quota",
+
     503: "Account",
-    504: "Quota",
-    505: "Please enter the other party's registered email address",
-    506: "Please enter the AECO quota transferred",
-    507: "Please enter an integer",
-    508: "Transfer account",
-    509: "Transfer amount",
-    510: "Payment verification",
-    511: "Transfer amount",
-    512: "purchase",
-    513: "Please enter your payment code",
-    514: "Purchase succeed",
-    515: "return",
+
+    504: "Amount",
+
+    505: "Enter the other party's registered email address",
+
+    506: "Enter the transferred AECO quota",
+
+    507: "Enter an integer",
+
+    508: "Transfer Account",
+
+    509: "Amount of Transfer (AECO)",
+
+    510: "Payment Verification",
+
+    511: "Transfer Amount",
+
+    512: "Payment",
+
+    513: "Enter the payment password",
+
+    514: "Payed successfully",
+
+    515: "Back",
+
     516: "Bound",
+
     517: "Payment required",
-    518: "or scan the code to pay",
-    519: "用户可以直接跨链在去中心化交易所进行不同币种的互换",
-    520: "用户可以直接跨链",
-    521: "在去中心化交易所进行不同币种的互换",
-    522: "Declaration: ",
-    523: "敬请期待2021年全球首次大规模发售盛宴。",
-    524: "转让前请再次确认对方账户的准确性",
-    525: "以免您的财产受到损失"
+
+    518: "Or scan QR code to pay",
+
+    519: "You can exchange currencies directly across chains on decentralized exchanges",
+
+    520: "You can directly cross chain",
+
+    521: "Swap different currencies on decentralized exchanges",
+
+    522: "Statement:",
+
+    523: "Please look forward to the world's first large-scale sale feast in 2021.",
+
+    524: "Before transfer, reconfirm the accuracy of the other party's account",
+
+    525: "to avoid damage to your property"
 };
 export default message;
