@@ -684,6 +684,7 @@ const message = {
 
     524: "Before transfer, reconfirm the accuracy of the other party's account",
 
-    525: "to avoid damage to your property"
+    525: "to avoid damage to your property",
+    526: "Online Service"
 };
 export default message;

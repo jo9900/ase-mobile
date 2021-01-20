@@ -112,7 +112,10 @@
               <img src="../assets/images/icon_zw.png" alt="" class="iconImg" />
               <span v-if="lang == 'en'">choose language/English</span>
               <span v-if="lang == 'zh'">选择语言/中文</span>
+              <span v-if="lang == 'ja'">日本語</span>
               <span v-if="lang == 'ar'"> اختر اللغة العربية</span>
+              <span v-if="lang == 'ko'">한국어</span>
+              <span v-if="lang == 'ru'">русский</span>
             </li>
           </ul>
           <div class="loginout" @click="loginClose" v-if="isLogin">
@@ -164,7 +167,7 @@ export default {
           { name: "中文", value: "zh" },
           { name: "English", value: "en" },
           { name: "日本語", value: "ja" },
-          // { name: "عربى", value: "ar" },
+          { name: "عربى", value: "ar" },
           // { name: "한국어", value: "ko" },
           // { name: "русский", value: "ru" },
       ],

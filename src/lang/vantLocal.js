@@ -10,7 +10,7 @@ export function Locals(lang) {
             Locale.use("zh", zhCN);
             break;
         case "ja":
-            Locale.use("de", jaJP);
+            Locale.use("ja", jaJP);
             break;
         default:
             Locale.use("en", enUS);
