@@ -63,11 +63,11 @@
                 <span>{{$t('message.220')}}</span>
 
                 <div @click="chooseIDtype">
-              <el-input
-                  v-model.trim="name"
-                  :placeholder="$t('message.221')"
-                  readonly
-                ></el-input>
+                  <el-input
+                      v-model.trim="name"
+                      :placeholder="$t('message.221')"
+                      readonly
+                    ></el-input>
                 </div>
                 <input type="hidden" v-model="formLabelAlign.id_type">
               </el-form-item>
@@ -135,14 +135,21 @@
                 style="margin-top:10px;"
               >
                 <span>{{$t('message.231')}}</span>
-                <input
-                  @click="setData"
-                  onfocus="this.blur();"
-                  class="user-input"
-                  ref="userInput"
-                  :placeholder="$t('message.232')"
-                  v-model="formLabelAlign.birth_date"
-                />
+                <!--<input-->
+                  <!--@click="setData"-->
+                  <!--onfocus="this.blur();"-->
+                  <!--class="user-input"-->
+                  <!--ref="userInput"-->
+                  <!--:placeholder="$t('message.232')"-->
+                  <!--v-model="formLabelAlign.birth_date"-->
+                <!--/>-->
+                <div @click="openDatePicker">
+                  <el-input
+                      v-model.trim="formLabelAlign.birth_date"
+                      :placeholder="$t('message.232')"
+                      readonly
+                  ></el-input>
+                </div>
               </el-form-item>
             </el-col>
           </el-row>
@@ -215,6 +222,17 @@
         value-key="name"
       />
     </div>
+    <div class="pickerVan" v-show="birthDateshow">
+      <van-datetime-picker
+        @confirm="confirmDate"
+        @cancel="birthDateshow = false"
+        v-model="defaultDate"
+        type="date"
+        class="vanpicker"
+        :min-date="minDate"
+        :max-date="maxDate"
+      />
+    </div>
     <!-- <webFoot/  > -->
      <!--<van-number-keyboard
                 :show="numberISshow"
@@ -234,12 +252,10 @@ import { EXIF } from "@/util/exif";
 import { compress, dataURLtoFile } from "../../util/uploadImage";
 import webFoot from "@/Layout/footer";
 import { areaList, addkyc, kycInfo } from "@/request/user";
-import { Picker } from "vant";
-import { Toast } from "vant";
-import { NumberKeyboard } from "vant";
+import { Picker, NumberKeyboard, DatetimePicker } from "vant";
 export default {
   name: "",
-  components: { webFoot, vanPicker: Picker, vanNumberKeyboard: NumberKeyboard },
+  components: { webFoot, vanDatetimePicker: DatetimePicker, vanPicker: Picker, vanNumberKeyboard: NumberKeyboard },
   data() {
     var passwordValidator = (rule, value, callback) => {
       if (this.id_front == "" && this.id_back == "") {
@@ -258,6 +274,10 @@ export default {
       pickerIDISshow: false,
       numberISshow: false,
       phoneISshow: false,
+      birthDateshow: false,
+      minDate: new Date(1900, 0, 1),
+      maxDate: new Date(2199, 12, 31),
+      defaultDate: new Date(),
       columnsCountry: [],
       columnsType: [],
       idtype: [
@@ -361,16 +381,16 @@ export default {
     },
     numberISshow(newVal, oldVal) {},
   },
-  mounted() {
-    // window.addEventListener("scroll", () => {
-    //   let top =
-    //     document.documentElement.scrollTop ||
-    //     document.body.scrollTop ||
-    //     window.pageYOffset;
-    //   // console.log(top);
-    // });
-  },
   methods: {
+    confirmDate(val){
+      let formatted = this.$moment(val).format( 'yyyy-MM-DD' )
+      this.birthDateshow = false;
+      this.formLabelAlign.birth_date = formatted
+    },
+    openDatePicker(){
+      this.birthDateshow = true
+      this.defaultDate = this.formLabelAlign.birth_date || this.defaultDate
+    },
     /*phoneClick() {
       this.phoneISshow = true;
       this.getTransform("pageKYC", "-245px", 1);
@@ -453,7 +473,7 @@ export default {
       // Toast("取消");
       this.pickerIDISshow = false;
     },
-    setData() {
+    /*setData() {
       let self = this;
       setTimeout(() => {
         let yearData = document.getElementsByClassName("m-scroller-item");
@@ -470,7 +490,7 @@ export default {
           self.formLabelAlign.birth_date = res;
         },
       });
-    },
+    },*/
     subFromData() {
       this.$refs["formLabelAlign"].validate((valid) => {
         if (valid) {
@@ -723,15 +743,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.pickerVan {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-.pickerID {
+.pickerVan, .pickerID {
   width: 100%;
   height: 100%;
   position: fixed;
