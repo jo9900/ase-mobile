@@ -60,7 +60,7 @@ export default {
     }
     #mint{
         overflow: hidden;
-        margin-top: 2.42rem; /* 0.9rem */
+        margin-top: 0.9rem; /* 2.42rem */
     }
 
     /*.kf {*/

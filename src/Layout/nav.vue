@@ -1,7 +1,7 @@
 <!-- -->
 <template>
   <div class="web_nav">
-    <div :class="['top', $lang]" @click="toNews"></div>
+    <!--<div :class="['top', $lang]" @click="toNews"></div>-->
     <div class="wrap">
       <div class="username_span_div">
         <img src="@/assets/images/logo_art.png" class="logoImg" />
@@ -355,7 +355,8 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .web_nav {
-  height: 242/100rem;
+  height: 90/100rem;
+  // height: 242/100rem;
   background: #ffffff;
   // border-bottom: 1px solid #dcd8d8;
   position: relative;
