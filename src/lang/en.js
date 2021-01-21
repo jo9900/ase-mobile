@@ -71,7 +71,7 @@ const message = {
     67: "No account?",
     68: "Enter your email address",
     69: "Enter the verification code",
-    70: "Get verification code",
+    70: "Get code",
     71: "Enter password again",
     72: "Enter the invitation code (optional)",
     73: "I have read and agree",
