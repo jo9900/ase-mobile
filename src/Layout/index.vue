@@ -56,9 +56,11 @@ export default {
         position: fixed;
         width: 100%;
         z-index: 99;
+        top: 0;
     }
     #mint{
         overflow: hidden;
+        margin-top: 2.42rem; /* 0.9rem */
     }
 
     /*.kf {*/

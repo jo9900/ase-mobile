@@ -126,7 +126,6 @@
     .page {
         overflow: hidden;
         box-sizing: border-box;
-        padding-top: 242/100rem;
         padding-bottom: 50px;
         display: flex;
         flex-direction: column;

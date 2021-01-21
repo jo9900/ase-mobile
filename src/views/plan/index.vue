@@ -89,7 +89,6 @@ export default {
   box-sizing: border-box;
   -moz-box-sizing: border-box; /* Firefox */
   -webkit-box-sizing: border-box; /* Safari */
-  padding: 100/100rem 0/100rem 0 0;
 }
 // 标题
 .page_apply_title {

@@ -111,7 +111,7 @@
             <!-- <li @click="loginClose" v-if="isLogin">退出</li> -->
             <li @click="language">
               <img src="../assets/images/icon_zw.png" alt="" class="iconImg" />
-              <span v-if="lang == 'en'">choose language/English</span>
+              <span v-if="lang == 'en'">language/English</span>
               <span v-if="lang == 'zh'">选择语言/中文</span>
               <span v-if="lang == 'ja'">日本語</span>
               <span v-if="lang == 'ar'"> اختر اللغة العربية</span>

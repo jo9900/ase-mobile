@@ -78,7 +78,6 @@
 
 <style lang='less' scoped>
   .page {
-    margin-top: 242/100rem;
     padding: 0  40/100rem 120/100rem 40/100rem;
   }
   .title {

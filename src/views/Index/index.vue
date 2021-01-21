@@ -362,7 +362,7 @@ export default {
 
 <style lang='less' scoped>
 .page {
-  margin-top: 242/100rem;
+
 }
 .marginTop20 {
   margin-top: 60/100rem !important;

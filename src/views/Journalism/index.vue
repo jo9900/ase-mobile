@@ -288,7 +288,6 @@ export default {
   box-sizing: border-box;
   -moz-box-sizing: border-box; /* Firefox */
   -webkit-box-sizing: border-box; /* Safari */
-  padding-top: 242/100rem;
 }
 .page-sll {
   width: 100%;
