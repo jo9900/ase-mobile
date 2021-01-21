@@ -8,35 +8,37 @@
       <div class="page_content_plan">
         <div class="page_plan_title">{{ $t("message.35") }}</div>
         <div class="page_plan_img_div">
-          <div class="page_plan_img">{{ $t("message.36") }}</div>
+          <div class="page_plan_img"></div>
+          <div class="page_plan_img_title">{{ $t("message.36") }}</div>
+
         </div>
         <div class="page_plan_item">
           <div class="page_plan_part page_plan_item_div1">
-            <div class="page_plan_part_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.57") }}</div>
           </div>
           <div class="page_plan_part1 page_plan_item_div1 marginR">
-            <div class="page_plan_part1_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part1_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.58") }}</div>
           </div>
           <div class="page_plan_part2 page_plan_item_div">
-            <div class="page_plan_part2_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part2_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.59") }}</div>
           </div>
           <div class="page_plan_part6 page_plan_item_div3">
-            <div class="page_plan_part6_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part6_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.60") }}</div>
           </div>
           <div class="page_plan_part3 page_plan_item_div1">
-            <div class="page_plan_part3_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part3_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.61") }}</div>
           </div>
           <div class="page_plan_part4 page_plan_item_div">
-            <div class="page_plan_part2_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part2_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.62") }}</div>
           </div>
           <div class="page_plan_part5 page_plan_item_div2">
-            <div class="page_plan_part5_pre" v-show="lang != 'en'"></div>
+            <div class="page_plan_part5_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.63") }}</div>
           </div>
         </div>
@@ -124,10 +126,19 @@ export default {
 }
 .page_plan_img_div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.page_plan_img_title {
+  text-align: center;
+  font-size: 24/100rem;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #65728b;
+  margin-bottom: 20/100rem;
+}
+
 .page_plan_detail {
   display: flex;
   flex-direction: column;
@@ -253,44 +264,44 @@ export default {
   margin-right: 85/100rem;
 }
 .page_plan_part_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #00befa;
   margin-right: 8/100rem;
 }
 .page_plan_part1_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #3064fd;
   margin-right: 8/100rem;
 }
 .page_plan_part2_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #1039b6;
   margin-right: 8/100rem;
 }
 .page_plan_part3_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #36d8f3;
   margin-right: 8/100rem;
 }
 .page_plan_part4_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #64b6ff;
   margin-right: 8/100rem;
 }
 .page_plan_part5_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #baf2fe;
   margin-right: 8/100rem;
 }
 .page_plan_part6_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #9cdbe7;
   margin-right: 8/100rem;
 }

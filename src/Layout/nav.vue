@@ -363,12 +363,15 @@ export default {
   .top {
     height: 152/100rem;
     width: 100%;
-    background-size: contain;
     &.zh {
       background: url("../assets/images/top_zh.png") center center no-repeat;
+
+      background-size: contain;
     }
     &.en {
       background: url("../assets/images/top_en.png") center center no-repeat;
+
+      background-size: contain;
     }
   }
   .wrap {
