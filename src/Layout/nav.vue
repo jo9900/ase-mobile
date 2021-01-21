@@ -1,7 +1,7 @@
 <!-- -->
 <template>
   <div class="web_nav">
-    <div :class="['top', $lang]"></div>
+    <div :class="['top', $lang]" @click="toNews"></div>
     <div class="wrap">
       <div class="username_span_div">
         <img src="@/assets/images/logo_art.png" class="logoImg" />
@@ -159,6 +159,8 @@
 </template>
 <script>
 import { Popup, Picker } from "vant";
+import { digest } from "@/request/news";
+
 export default {
   components: { vanPopup: Popup, vanPicker: Picker },
   name: "",
@@ -190,7 +192,8 @@ export default {
         'ar': ['عربى', 'Arabic'],
         'ko': ['한국어', 'Korean'],
         'ru': ['русский', 'Russian'],
-      }
+      },
+      newsCode: ''
     };
   },
   computed: {},
@@ -201,6 +204,30 @@ export default {
     },
   },
   methods: {
+    getNews() {
+      let params = {
+        lang_type: this.$langType,
+        page_no: 1,
+        page_size: 3,
+      }
+      digest(this.$qs.stringify(params)).then((res) => {
+        if (res.code == 0) {
+          try {
+            this.newsCode = res.data.news[0].code // 取第一条
+          } catch {
+            this.newsCode = ''
+          }
+        }
+      });
+    },
+    toNews() {
+      this.$router.push({
+        path: 'journalismDetail',
+        query: {
+          code: this.newsCode
+        }
+      })
+    },
     downloadPDF(){
       window.open(this.$BaseUrl + "material/whitepaper.pdf", "_self")
     },
@@ -260,6 +287,7 @@ export default {
   },
   created() {
     console.log(this.$lang, this.$langType);
+    this.getNews()
     this.userCode = localStorage.getItem("code");
     this.isLogin = localStorage.getItem("token") ? true : false;
   },
@@ -327,19 +355,19 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .web_nav {
-  height: 262/100rem;
+  height: 242/100rem;
   background: #ffffff;
   // border-bottom: 1px solid #dcd8d8;
   position: relative;
   z-index: 99;
   .top {
-    height: 172/100rem;
+    height: 152/100rem;
     width: 100%;
     &.zh {
-      background: url("../assets/images/top_zh.png");
+      background: url("../assets/images/top_zh.png") center center no-repeat;
     }
     &.en {
-      background: url("../assets/images/top_en.png");
+      background: url("../assets/images/top_en.png") center center no-repeat;
     }
   }
   .wrap {

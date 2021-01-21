@@ -276,7 +276,7 @@
     .page {
         overflow: hidden;
         box-sizing: border-box;
-        padding-top: 262/100rem;;;
+        padding-top: 242/100rem;
         padding-bottom: 50px;
         display: flex;
         flex-direction: column;

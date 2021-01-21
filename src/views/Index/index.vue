@@ -362,7 +362,7 @@ export default {
 
 <style lang='less' scoped>
 .page {
-  margin-top: 262/100rem;
+  margin-top: 242/100rem;
 }
 .marginTop20 {
   margin-top: 60/100rem !important;
@@ -924,7 +924,7 @@ export default {
 }
 .page_home_title {
   width: 100%;
-  height: 262/100rem;;;
+  height: 242/100rem;
   text-align: center;
   font-size: 60/100rem;
   font-family: Helvetica;

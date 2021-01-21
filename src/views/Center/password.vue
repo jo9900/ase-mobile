@@ -287,7 +287,7 @@ export default {
   box-sizing: border-box;
   -moz-box-sizing: border-box; /* Firefox */
   -webkit-box-sizing: border-box; /* Safari */
-  padding-top: 262/100rem;;;
+  padding-top: 242/100rem;
   // height: 700/100rem;
   .wrap {
     // .page_indicator {
