@@ -49,7 +49,10 @@
           </div>-->
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
-          <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo2.status == 1}]">
+          <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo2.status == 1}]"  :style="{
+                      height: lang_type != 'Chinese' ? '2.8rem' : '2.2rem;',
+                      backgroundSize:lang_type != 'Chinese' ? '5.4rem 2.8rem;' : '5.4rem 2.2rem;'
+                    }">
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.5.1
@@ -833,6 +836,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #042588;
 }
 .wrap_title {
   width: 100%;
@@ -875,7 +879,7 @@ export default {
   /*height: 1890/100rem;
   background: url("../../assets/images/preSale.png") no-repeat;
   background-size: 750/100rem 1890/100rem;*/
-  height: 1248/100rem;
+  //height: 1248/100rem;
   background: url("../../assets/images/preSale2.png") no-repeat;
   background-size: 750/100rem 1248/100rem;
   margin-top: -2/100rem;
@@ -905,7 +909,7 @@ export default {
 .wrap_plan_second_title,
 .wrap_plan_third_title {
   // width: 308/100rem;
-  height: 84/100rem;
+  //height: 84/100rem;
   font-size: 60/100rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
