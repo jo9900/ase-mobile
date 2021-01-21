@@ -363,6 +363,7 @@ export default {
   .top {
     height: 152/100rem;
     width: 100%;
+    background-size: contain;
     &.zh {
       background: url("../assets/images/top_zh.png") center center no-repeat;
     }

@@ -11,33 +11,33 @@
           indicator-color="white"
           :height="swipeHeight"
         >
-          <van-swipe-item
-            ><div style="height: 500px" @click="slkowet">
-              <template>
-                <div class="page_home">
-                  <div class="page_home_top">
-                    <div class="page_home_title">ARTHUR-EX</div>
-                    <div class="page_home_item1">
-                      {{ $t("message.12") }}
-                    </div>
-                    <div
-                      class="page_home_item2"
-                      :class="{ marginTop20: lang == 'en' }"
-                    >
-                      {{ $t("message.13") }}
-                    </div>
-                    <div class="page_home_detail">
-                      {{ $t("message.14") }}
-                    </div>
-                    <router-link :to="{ path: '/signIn' }" v-if="isShow">
-                      <div class="page_home_btn">{{ $t("message.15") }}</div>
-                    </router-link>
-                  </div>
-                  <!-- <div class="page_home_bottom"></div> -->
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
+          <!--<van-swipe-item-->
+            <!--&gt;<div style="height: 500px" @click="slkowet">-->
+              <!--<template>-->
+                <!--<div class="page_home">-->
+                  <!--<div class="page_home_top">-->
+                    <!--<div class="page_home_title">ARTHUR-EX</div>-->
+                    <!--<div class="page_home_item1">-->
+                      <!--{{ $t("message.12") }}-->
+                    <!--</div>-->
+                    <!--<div-->
+                      <!--class="page_home_item2"-->
+                      <!--:class="{ marginTop20: lang == 'en' }"-->
+                    <!--&gt;-->
+                      <!--{{ $t("message.13") }}-->
+                    <!--</div>-->
+                    <!--<div class="page_home_detail">-->
+                      <!--{{ $t("message.14") }}-->
+                    <!--</div>-->
+                    <!--<router-link :to="{ path: '/signIn' }" v-if="isShow">-->
+                      <!--<div class="page_home_btn">{{ $t("message.15") }}</div>-->
+                    <!--</router-link>-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; <div class="page_home_bottom"></div> &ndash;&gt;-->
+                <!--</div>-->
+              <!--</template>-->
+            <!--</div></van-swipe-item-->
+          <!--&gt;-->
           <van-swipe-item
             ><div style="height: 100%">
               <template>
@@ -66,20 +66,20 @@
               </template>
             </div></van-swipe-item
           >
-          <van-swipe-item>
-            <div style="height: 100%">
-              <template>
-                <div class="page_right">
-                  <div class="page_right_top">
-                    <div class="page_right_title"></div>
-                    <div class="page_right_item1">
-                      {{ $t("message.519") }}
-                    </div>
-                  </div>
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
+          <!--<van-swipe-item>-->
+            <!--<div style="height: 100%">-->
+              <!--<template>-->
+                <!--<div class="page_right">-->
+                  <!--<div class="page_right_top">-->
+                    <!--<div class="page_right_title"></div>-->
+                    <!--<div class="page_right_item1">-->
+                      <!--{{ $t("message.519") }}-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</template>-->
+            <!--</div></van-swipe-item-->
+          <!--&gt;-->
         </van-swipe>
         <div class="page_content">
           <!-- 关于art -->
