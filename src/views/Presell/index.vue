@@ -49,10 +49,13 @@
           </div>-->
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
-          <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo2.status == 1}]"  :style="{
-                      height: lang_type != 'Chinese' ? '2.8rem' : '2.2rem;',
-                      backgroundSize:lang_type != 'Chinese' ? '5.4rem 2.8rem;' : '5.4rem 2.2rem;'
-                    }">
+          <div :class="[
+            'wrap_plan_default',
+              {
+                'wrap_plan_current': preInfo2.status == 1,
+                'en': lang_type == 'English'
+              }
+             ]">
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.5.1
@@ -954,10 +957,18 @@ export default {
 /*.wrap_plan_third_title {*/
   /*margin-top: 30/100rem;*/
 /*}*/
-.wrap_plan_default div {
-  height: 50/100rem;
-  line-height: 50/100rem;
-  letter-spacing: 1/100rem;
+.wrap_plan_default{
+  height: 220/100rem;
+  background-size: 540/100rem 220/100rem;
+  div {
+    line-height: 50/100rem;
+    letter-spacing: 1/100rem;
+  }
+
+  &.en {
+    height: 300/100rem;
+    background-size: 540/100rem 300/100rem;
+  }
 }
 .wrap_plan_span_art {
   width: 160/100rem;
