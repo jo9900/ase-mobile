@@ -644,15 +644,15 @@ const message = {
 
     504: "Amount",
 
-    505: "Enter the other party's registered email address",
+    505: "the other party's email",
 
-    506: "Enter the transferred AECO quota",
+    506: "the transferred AECO quota",
 
     507: "Enter an integer",
 
     508: "Transfer Account",
 
-    509: "Amount of Transfer (AECO)",
+    509: "Amount(AECO)",
 
     510: "Payment Verification",
 

@@ -864,8 +864,9 @@ export default {
   //   justify-content: space-between;
 }
 /deep/ .el-form-item__content span {
-  width: 170/100rem;
+  width: auto;
   color: #606266;
+  flex-shrink: 0;
   font-size: 30/100rem;
 }
 /deep/ .el-select .el-input .el-select__caret {
