@@ -276,7 +276,7 @@
     .page {
         overflow: hidden;
         box-sizing: border-box;
-        padding-top: 90/100rem;
+        padding-top: 262/100rem;;;
         padding-bottom: 50px;
         display: flex;
         flex-direction: column;
@@ -352,7 +352,7 @@
         border-radius: 40/100rem 40/100rem 0 0;
         .warning_text {
             width: 448/100rem;
-            height: 80/100rem;
+            height: 100/100rem;
             font-size: 28/100rem;
             margin: 0 auto;
             text-align: center;

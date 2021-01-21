@@ -1,6 +1,7 @@
 <!-- -->
 <template>
   <div class="web_nav">
+    <div :class="['top', $lang]"></div>
     <div class="wrap">
       <div class="username_span_div">
         <img src="@/assets/images/logo_art.png" class="logoImg" />
@@ -326,11 +327,21 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .web_nav {
-  height: 90/100rem;
+  height: 262/100rem;
   background: #ffffff;
   // border-bottom: 1px solid #dcd8d8;
   position: relative;
   z-index: 99;
+  .top {
+    height: 172/100rem;
+    width: 100%;
+    &.zh {
+      background: url("../assets/images/top_zh.png");
+    }
+    &.en {
+      background: url("../assets/images/top_en.png");
+    }
+  }
   .wrap {
     padding: 0 13px;
     height: 90/100rem;

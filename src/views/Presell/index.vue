@@ -856,7 +856,7 @@ export default {
   height: 432/100rem;
   background: url("../../assets/images/pic_art_banner.png") no-repeat;
   background-size: 750/100rem 432/100rem;
-  margin-top: 90/100rem;
+  margin-top: 262/100rem;;;
 }
 .wrap_header_title {
   width: 380/100rem;

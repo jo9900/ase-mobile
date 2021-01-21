@@ -196,7 +196,7 @@ export default {
 .page_apply_title {
   // position: fixed;
   // left: 0;
-  // top: 90/100rem;
+  // top: 262/100rem;;;
   width: 750/100rem;
   height: 104/100rem;
   background: #ffffff;
@@ -288,7 +288,7 @@ export default {
   box-sizing: border-box;
   -moz-box-sizing: border-box; /* Firefox */
   -webkit-box-sizing: border-box; /* Safari */
-  padding-top: 90/100rem;
+  padding-top: 262/100rem;;;
 }
 .page-sll {
   width: 100%;
