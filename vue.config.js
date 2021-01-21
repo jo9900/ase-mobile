@@ -13,7 +13,7 @@ module.exports = {
     pwa: {},
 
     devServer: {
-        port: 3004,
+        port: 3002,
         https: false,
         hot: true,
         disableHostCheck: true,
