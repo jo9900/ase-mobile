@@ -11,33 +11,33 @@
           indicator-color="white"
           :height="swipeHeight"
         >
-          <van-swipe-item
-            ><div style="height: 500px" @click="slkowet">
-              <template>
-                <div class="page_home">
-                  <div class="page_home_top">
-                    <div class="page_home_title">ARTHUR-EX</div>
-                    <div class="page_home_item1">
-                      {{ $t("message.12") }}
-                    </div>
-                    <div
-                      class="page_home_item2"
-                      :class="{ marginTop20: lang == 'en' }"
-                    >
-                      {{ $t("message.13") }}
-                    </div>
-                    <div class="page_home_detail">
-                      {{ $t("message.14") }}
-                    </div>
-                    <router-link :to="{ path: '/signIn' }" v-if="isShow">
-                      <div class="page_home_btn">{{ $t("message.15") }}</div>
-                    </router-link>
-                  </div>
-                  <!-- <div class="page_home_bottom"></div> -->
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
+          <!--<van-swipe-item-->
+            <!--&gt;<div style="height: 500px" @click="slkowet">-->
+              <!--<template>-->
+                <!--<div class="page_home">-->
+                  <!--<div class="page_home_top">-->
+                    <!--<div class="page_home_title">ARTHUR-EX</div>-->
+                    <!--<div class="page_home_item1">-->
+                      <!--{{ $t("message.12") }}-->
+                    <!--</div>-->
+                    <!--<div-->
+                      <!--class="page_home_item2"-->
+                      <!--:class="{ marginTop20: lang == 'en' }"-->
+                    <!--&gt;-->
+                      <!--{{ $t("message.13") }}-->
+                    <!--</div>-->
+                    <!--<div class="page_home_detail">-->
+                      <!--{{ $t("message.14") }}-->
+                    <!--</div>-->
+                    <!--<router-link :to="{ path: '/signIn' }" v-if="isShow">-->
+                      <!--<div class="page_home_btn">{{ $t("message.15") }}</div>-->
+                    <!--</router-link>-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; <div class="page_home_bottom"></div> &ndash;&gt;-->
+                <!--</div>-->
+              <!--</template>-->
+            <!--</div></van-swipe-item-->
+          <!--&gt;-->
           <van-swipe-item
             ><div style="height: 100%">
               <template>
@@ -52,10 +52,10 @@
                     </div>
                     <div class="page_banner_date_wrap">
                       <div class="page_banner_item2 text_left">
-                        {{ $t("message.18") }}2021-01-05
+                        <span class="time">{{ $t("message.18") }}</span>:&nbsp;2021-01-05
                       </div>
                       <div class="page_banner_detail text_left">
-                        {{ $t("message.19") }}售罄即止
+                        <span class="time">{{ $t("message.19") }}</span>:&nbsp;{{ $t("message.496") }}
                       </div>
                     </div>
                     <router-link :to="{ path: '/presell' }">
@@ -66,20 +66,20 @@
               </template>
             </div></van-swipe-item
           >
-          <van-swipe-item>
-            <div style="height: 100%">
-              <template>
-                <div class="page_right">
-                  <div class="page_right_top">
-                    <div class="page_right_title"></div>
-                    <div class="page_right_item1">
-                      {{ $t("message.519") }}
-                    </div>
-                  </div>
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
+          <!--<van-swipe-item>-->
+            <!--<div style="height: 100%">-->
+              <!--<template>-->
+                <!--<div class="page_right">-->
+                  <!--<div class="page_right_top">-->
+                    <!--<div class="page_right_title"></div>-->
+                    <!--<div class="page_right_item1">-->
+                      <!--{{ $t("message.519") }}-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</template>-->
+            <!--</div></van-swipe-item-->
+          <!--&gt;-->
         </van-swipe>
         <div class="page_content">
           <!-- 关于art -->
@@ -137,35 +137,36 @@
           <div class="page_content_plan">
             <div class="page_plan_title">{{ $t("message.35") }}</div>
             <div class="page_plan_img_div">
-              <div class="page_plan_img">{{ $t("message.36") }}</div>
+              <div class="page_plan_img"></div>
+              <div class="page_plan_img_title">{{ $t("message.36") }}</div>
             </div>
             <div class="page_plan_item">
               <div class="page_plan_part page_plan_item_div1">
-                <div class="page_plan_part_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.57") }}</div>
               </div>
               <div class="page_plan_part1 page_plan_item_div1 marginR">
-                <div class="page_plan_part1_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part1_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.58") }}</div>
               </div>
               <div class="page_plan_part2 page_plan_item_div">
-                <div class="page_plan_part2_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part2_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.59") }}</div>
               </div>
               <div class="page_plan_part6 page_plan_item_div3">
-                <div class="page_plan_part6_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part6_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.60") }}</div>
               </div>
               <div class="page_plan_part3 page_plan_item_div1">
-                <div class="page_plan_part3_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part3_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.61") }}</div>
               </div>
               <div class="page_plan_part4 page_plan_item_div">
-                <div class="page_plan_part2_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part2_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.62") }}</div>
               </div>
               <div class="page_plan_part5 page_plan_item_div2">
-                <div class="page_plan_part5_pre" v-show="lang != 'en'"></div>
+                <div class="page_plan_part5_pre"></div>
                 <div class="page_plan_part_after">{{ $t("message.63") }}</div>
               </div>
             </div>
@@ -519,9 +520,17 @@ export default {
 }
 .page_plan_img_div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.page_plan_img_title {
+  text-align: center;
+  font-size: 24/100rem;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #65728b;
+  margin-bottom: 20/100rem;
 }
 .page_plan_detail {
   display: flex;
@@ -576,14 +585,9 @@ export default {
   width: 366/100rem;
   height: 366/100rem;
   text-align: center;
-  line-height: 366/100rem;
-  font-size: 24/100rem;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #65728b;
   background: url("../../assets/images/pic_bzt.png") no-repeat;
   background-size: 366/100rem 366/100rem;
-  margin-bottom: 46/100rem;
+  margin-bottom: 26/100rem;
 }
 .page_plan_item {
   display: flex;
@@ -649,44 +653,44 @@ export default {
   margin-right: 85/100rem;
 }
 .page_plan_part_pre {
-  width: 16/100rem;
-  height: 16/100rem;
-  background: #00befa;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
+  background: #01befa;
   margin-right: 8/100rem;
 }
 .page_plan_part1_pre {
-  width: 16/100rem;
-  height: 16/100rem;
-  background: #3064fd;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
+  background: #3164fd;
   margin-right: 8/100rem;
 }
 .page_plan_part2_pre {
-  width: 16/100rem;
-  height: 16/100rem;
-  background: #1039b6;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
+  background: #1138b6;
   margin-right: 8/100rem;
 }
 .page_plan_part3_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #36d8f3;
   margin-right: 8/100rem;
 }
 .page_plan_part4_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #64b6ff;
   margin-right: 8/100rem;
 }
 .page_plan_part5_pre {
-  width: 16/100rem;
-  height: 16/100rem;
-  background: #baf2fe;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
+  background: #baf2fd;
   margin-right: 8/100rem;
 }
 .page_plan_part6_pre {
-  width: 16/100rem;
-  height: 16/100rem;
+  min-width: 16/100rem;
+  min-height: 16/100rem;
   background: #9cdbe7;
   margin-right: 8/100rem;
 }
@@ -984,6 +988,18 @@ export default {
   color: #ffffff;
   line-height: 56/100rem;
   margin-top: 8/100rem;
+}
+.page_banner_date_wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .time {
+    display: inline-block;
+    min-width: 150/100rem;
+    margin-right: 3px;
+    text-align: right;
+  }
 }
 .page_banner_date_wrap .text_left {
   text-align: left;

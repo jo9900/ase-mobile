@@ -28,7 +28,65 @@ const   languageNav = {
          26: "欢迎联系官方客服：Email：aeco@arthurex.com",
          27: "周一 ~ 周五：",
          28: "周六 ~ 周日：",
-    }
+    },
+     en: {
+
+          1: "AECO First-Round Pre-sale Help Document",
+          2: "1. Register and login",
+
+          3: "Click the Register button on the homepage of the official website to open the registration page, register by email, and log in after successful registration. Registration link: ",
+          4: ", Click to enter .",
+
+          5: "Link to the official website:",
+
+
+          6: "Click Register/Register Now to open this page. For your property safety, ensure that your information is true and valid.",
+
+          7: "Link to the Registration Page:",
+
+          8: "2. Identity authentication",
+
+          9: "After logging in, click the icon in the upper right corner of the page. After the menu bar is displayed, click",
+
+          10: "[Personal Center]. You can see [KYC certification]. Click it for certification. Fill in and submit your personal information. Official personnel will complete the review within 1-3 working days after receiving your certification application.",
+
+          11: "3. Start to purchase",
+
+          12: "1. After passing the KYC (identity verification) review (within 1-3 working days after submitting the application), click [Buy Now] on the pre-sale page.",
+
+          13: "Subscription link:",
+
+          14: "2. Fill in the number of items you need to buy on the pop-up page. The system automatically calculates the amount of USDT you need to pay. Confirm the information, and select",
+
+          15: "Click [Next].",
+
+
+          16: "The total amount of AECO in the first round of pre-sale is 1,500. The unit price of AECO is 0.12 USDT. Purchase at least one item. One item is 20,000 AECO. That is, you need to pay 2,400 USDT, and so on.",
+
+          17: "4. Confirm the information and complete the payment",
+
+          18: "After you submit the purchase information, the payment confirmation box appears again. Confirm the payment amount.",
+
+          19: "Copy the payment address (your independent USDT account). QR code payment is supported.",
+
+          20: "1) Make USDT (Omni type) transfers from your personal digital currency wallet.",
+
+          21: "2) Alternatively, after purchasing USDT (Omni type) from digital currency exchanges such as Binance and Huobi., you can transfer from the exchange.",
+
+          22: "5. Complete the transfer. After the customer service confirms your information, the purchase is successful. You can view it in [Personal Center]",
+
+          23: "In [Personal Center], My AECO Assets show the amount of AECO you have successfully subscribed for",
+
+          24: "6. Official customer service",
+
+          25: "For any questions about AECO subscription or transaction, or any construction opinions or suggestions on the development of this platform,",
+
+          26: "please feel free to contact the official customer service by aeco@arthurex.com",
+
+          27: "Monday - Friday:",
+
+          28: "Saturday - Sunday:",
+     }
 }
 
 
