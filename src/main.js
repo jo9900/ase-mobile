@@ -25,10 +25,6 @@ document.onclick = _.throttle(
 );
 import fastclick from "fastclick";
 // ---------------
-import Calendar from "vue2-datepick";
-Vue.use(Calendar);
-
-// ---------------
 import VueI18n from "vue-i18n";
 import messages from "./lang";
 Vue.use(VueI18n);
