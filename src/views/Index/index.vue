@@ -924,7 +924,7 @@ export default {
 }
 .page_home_title {
   width: 100%;
-  height: 242/100rem;
+  height: 90/100rem;
   text-align: center;
   font-size: 60/100rem;
   font-family: Helvetica;
@@ -1040,13 +1040,13 @@ export default {
   width: 100%;
   padding: 0 10/100rem;
   text-align: center;
-  height: 40/100rem;
+  height: 42/100rem;
   font-size: 28/100rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #ffffff;
   line-height: 40/100rem;
-  margin-top: 32/100rem;
+  margin-top: 46/100rem;
 }
 .page_home_btn,
 .page_banner_btn {

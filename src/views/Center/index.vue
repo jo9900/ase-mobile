@@ -305,7 +305,7 @@
           <!--/>-->
         </div>
         <div class="page_invite_QRcode" v-show="marketing.invite_url">
-          <div class="email">{{ user_email }}{{ $t("message.477") }}</div>
+          <div class="email">{{ user_email }}&nbsp;{{ $t("message.477") }}</div>
           <div class="page_invite_QRcode_div" id="qrcode" ref="qrcode" style="position: relative" v-show="!imgData">
             <img style="position: absolute;width: 40px;height: 40px;top: 60px;
                  left: 65px;" src="@/assets/images/logo.png" alt="logo">
