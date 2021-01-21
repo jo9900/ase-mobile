@@ -158,7 +158,6 @@ export default {
   font-weight: 400;
   color: #65728b;
   line-height: 40/100rem;
-  text-align: justify;
 }
 .page_plan_detail_second {
   margin-top: 16/100rem;

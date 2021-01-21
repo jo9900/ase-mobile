@@ -189,7 +189,6 @@ export default {
   font-weight: 400;
   color: #65728b;
   line-height: 44/100rem;
-  text-align: justify;
 }
 .page_content_detail_bottom {
   margin-top: 20/100rem;
