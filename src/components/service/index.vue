@@ -4,7 +4,7 @@
             <dl style=" line-height: 32px;padding-top: 20px">
                 <dt class="IE6PNG">
                     <div class="laodett" style="height: 100%;">
-                        <a target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5">
+                        <a target="_blank" :href="href">
                             <div><img style="width: 30px;margin-top: -7px;" src="../../assets/images/icon_kefu_1.png"/></div>
                         </a>
                     </div>
@@ -20,13 +20,20 @@
         name: "index",
         data(){
             return {
-                loginDialogVisible:false,
+                href: '',
+                map:{
+                    zh: 'https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5',
+                    en: 'https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/4'
+                }
             }
         },
+        created() {
+            this.init()
+        },
         methods:{
-            aClick(){
-            this.loginDialogVisible = true;
-            }
+            init() {
+                this.href = this.map[this.$lang]
+            },
         },
     }
 </script>
