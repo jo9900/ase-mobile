@@ -66,6 +66,7 @@ export default {
   background: #cad7e8;
 }
 .page_content_download {
+  padding: 0 40/100rem;
   width: 750/100rem;
   // height: 922/100rem;
   background: #fff;

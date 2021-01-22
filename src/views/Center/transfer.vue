@@ -30,7 +30,7 @@
                     <el-form
                         ref="form"
                         :model="form"
-                        label-width="80px"
+                        :label-width="labelWidth"
                         :rules="rules"
                         hide-required-asterisk
                     >
@@ -149,6 +149,14 @@
         },
         created() {
           this.verifyData.user_code = localStorage.getItem("code");
+        },
+        computed: {
+            labelWidth(){
+                if (this.$lang == 'ja')
+                    return '100px'
+                else
+                    return '80px'
+            }
         },
         mounted() {
             this.getMyPreSale();

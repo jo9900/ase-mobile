@@ -269,9 +269,6 @@ export default {
   color: #104cff;
   // background: #f5f6f7;
 }
-.get_code:hover {
-  color: #efcf54;
-}
 .input_img {
   position: absolute;
   left: 36/100rem;
@@ -289,16 +286,6 @@ export default {
   -webkit-box-sizing: border-box; /* Safari */
   // height: 700/100rem;
   .wrap {
-    // .page_indicator {
-    //   margin-top: 20px;
-    //   height: 60px;
-    //   line-height: 60px;
-    //   color: #333333;
-    //   font-size: 16px;
-    //   padding: 0 30px;
-    //   background: #ffffff;
-    // }
-    // background: #104cff;
     height: 100%;
     .page_content {
       // margin: 20px 0 0px;

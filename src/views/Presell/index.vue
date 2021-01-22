@@ -19,7 +19,11 @@
 
           <div class="wrap_plan_first_title">{{ $t("message.132") }}</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
-          <div :class="['wrap_plan_default', {'wrap_plan_current': preInfo1.status == 1}]">
+          <div :class="
+            ['wrap_plan_default',
+             {'ja': lang_type == 'Japanese'},
+             {'wrap_plan_current': preInfo1.status == 1}]"
+          >
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.1.5{{ $t("message.496") }}
@@ -966,7 +970,10 @@ export default {
     line-height: 50/100rem;
     letter-spacing: 1/100rem;
   }
-
+  &.ja {
+    height: 260/100rem;
+    background-size: 540/100rem 300/100rem;
+  }
   &.en {
     height: 300/100rem;
     background-size: 540/100rem 300/100rem;
