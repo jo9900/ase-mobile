@@ -157,7 +157,8 @@ export default {
                 message: this.$t("message.91"),
                 type: "success",
               });
-              // this.$router.push("center");
+              this.$store.commit("SETTOKEN", res.data.refresh_token);
+              this.$router.push("center");
             } else if (res.code == 101503) {
               this.$message.error(this.$t("message.302"));
             } else if (res.code == 101504) {

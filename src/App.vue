@@ -9,6 +9,21 @@
 import service from "@/components/service";
 export default {
   name: "",
+    metaInfo() {
+        return {
+            title: this.$t("message.492"),
+            meta: [
+                {
+                    name: 'keyWords',
+                    content: this.$t("message.493")
+                },
+                {
+                    name: 'description',
+                    content: this.$t("message.494")
+                }
+            ]
+        }
+    },
   components: { service },
   data() {
     return {};

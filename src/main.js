@@ -16,6 +16,9 @@ import moment from "moment";
 import _ from "lodash";
 import throttle from "lodash/throttle";
 import { version } from "./util/throttle";
+import MetaInfo from "vue-meta-info"
+
+Vue.use(MetaInfo)
 document.onclick = _.throttle(
     function() {
 

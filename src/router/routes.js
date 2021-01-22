@@ -15,7 +15,7 @@ const routes = [{
         path: "/login",
         name: "login",
         label: "登录",
-        meta: { requiresAuth: false, title: "登录" },
+        meta: { requiresAuth: false },
         component: Login,
     },
 
@@ -23,14 +23,14 @@ const routes = [{
         path: "/signIn",
         name: "signIn",
         label: "注册",
-        meta: { requiresAuth: false, title: "注册" },
+        meta: { requiresAuth: false },
         component: Login,
     },
     {
         path: "/forget",
         name: "resetPas",
         label: "忘记密码",
-        meta: { requiresAuth: false, title: "忘记密码" },
+        meta: { requiresAuth: false },
         component: Login,
     },
 
@@ -38,12 +38,11 @@ const routes = [{
         path: "/",
         component: Layout,
         label: "首页",
-        meta: { title: "首页" },
         children: [{
             path: "/",
             name: "/",
             label: "首页",
-            meta: { requiresAuth: false, title: "首页" },
+            meta: { requiresAuth: false },
             component: Home,
         }, ],
     },
@@ -51,12 +50,11 @@ const routes = [{
         path: "/",
         component: Layout,
         label: "新闻",
-        meta: { title: "新闻" },
         children: [{
                 path: "/journalism",
                 name: "Journalism",
                 label: "新闻",
-                meta: { requiresAuth: false, title: "新闻" },
+                meta: { requiresAuth: false },
                 component: (resolve) =>
                     require(["@/views/Journalism/index.vue"], resolve),
             },
@@ -64,7 +62,7 @@ const routes = [{
                 path: "/journalismDetail",
                 name: "journalism",
                 label: "新闻详情",
-                meta: { requiresAuth: false, title: "新闻" },
+                meta: { requiresAuth: false },
                 component: (resolve) =>
                     require(["@/views/Journalism/journalismDetail.vue"], resolve),
             },
@@ -74,12 +72,11 @@ const routes = [{
         path: "/",
         component: Layout,
         label: "用户协议",
-        meta: { title: "用户协议" },
         children: [{
             path: "/usertext",
             name: "usertext",
             label: "用户协议",
-            meta: { requiresAuth: false, title: "用户协议" },
+            meta: { requiresAuth: false },
             component: (resolve) =>
                 require(["@/views/usertext/index.vue"], resolve),
         }, ],
@@ -92,7 +89,7 @@ const routes = [{
             path: "/purchase",
             name: "purchase",
             label: "申购协议",
-            meta: { requiresAuth: false, title: "申购协议" },
+            meta: { requiresAuth: false },
             component: (resolve) =>
                 require(["@/views/purchase/index.vue"], resolve),
         }, ],
@@ -106,7 +103,7 @@ const routes = [{
             path: "/books",
             name: "books",
             label: "白皮书",
-            meta: { requiresAuth: false, title: "白皮书" },
+            meta: { requiresAuth: false },
             component: (resolve) => require(["@/views/Books/index.vue"], resolve),
         }, ],
     },
@@ -118,7 +115,7 @@ const routes = [{
             path: "/presell",
             name: "presell",
             label: "预售",
-            meta: { requiresAuth: false, title: "预售" },
+            meta: { requiresAuth: false },
 
             component: (resolve) => require(["@/views/Presell/index.vue"], resolve),
         }, ],
@@ -131,7 +128,7 @@ const routes = [{
             path: "/help",
             name: "help",
             label: "帮助手册",
-            meta: { requiresAuth: false, title: "帮助手册" },
+            meta: { requiresAuth: false },
 
             component: (resolve) => require(["@/views/Help/index.vue"], resolve),
         }, ],
@@ -144,7 +141,7 @@ const routes = [{
             path: "/plan",
             name: "plan",
             label: "发行计划",
-            meta: { requiresAuth: false, title: "发行计划" },
+            meta: { requiresAuth: false },
 
             component: (resolve) => require(["@/views/plan/index.vue"], resolve),
         }, ],
@@ -157,7 +154,7 @@ const routes = [{
             path: "/rule",
             name: "rule",
             label: "邀请规则",
-            meta: { requiresAuth: false, title: "邀请规则" },
+            meta: { requiresAuth: false },
 
             component: (resolve) => require(["@/views/rule/index.vue"], resolve),
         }, ],
@@ -170,7 +167,7 @@ const routes = [{
             path: "/about",
             name: "about",
             label: "关于我们",
-            meta: { requiresAuth: false, title: "关于我们" },
+            meta: { requiresAuth: false },
 
             component: (resolve) => require(["@/views/about/index.vue"], resolve),
         }, ],
@@ -183,14 +180,14 @@ const routes = [{
                 path: "/center",
                 name: "center",
                 label: "个人中心",
-                meta: { requiresAuth: true, title: "个人中心" },
+                meta: { requiresAuth: true },
                 component: (resolve) => require(["@/views/Center"], resolve),
             },
             {
                 path: "/KYCapply",
                 name: "KYCapply",
                 label: "KYC认证",
-                meta: { requiresAuth: true, title: "KYC认证" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/KYCapply.vue"], resolve),
             },
@@ -198,7 +195,7 @@ const routes = [{
                 path: "/KYClose",
                 name: "KYClose",
                 label: "认证失败",
-                meta: { requiresAuth: true, title: "认证失败" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/KYClose.vue"], resolve),
             },
@@ -206,7 +203,7 @@ const routes = [{
                 path: "/applyBuylog",
                 name: "applyBuylog",
                 label: "申购记录",
-                meta: { requiresAuth: true, title: "申购记录" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/applyBuylog.vue"], resolve),
             },
@@ -214,7 +211,7 @@ const routes = [{
                 path: "/interestLog",
                 name: "interestLog",
                 label: "利息记录",
-                meta: { requiresAuth: true, title: "利息记录" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/interestLog.vue"], resolve),
             },
@@ -222,7 +219,7 @@ const routes = [{
                 path: "/extendLog",
                 name: "extendLog",
                 label: "推广记录",
-                meta: { requiresAuth: true, title: "推广记录" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/extendLog.vue"], resolve),
             },
@@ -230,7 +227,7 @@ const routes = [{
                 path: "/password",
                 name: "password",
                 label: "修改密码",
-                meta: { requiresAuth: true, title: "修改密码" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/password.vue"], resolve),
             },
@@ -238,7 +235,7 @@ const routes = [{
                 path: "/rebatelog",
                 name: "rebatelog",
                 label: "返利记录",
-                meta: { requiresAuth: true, title: "返利记录" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/rebatelog.vue"], resolve),
             },
@@ -246,7 +243,7 @@ const routes = [{
                 path: "/transfer",
                 name: "transfer",
                 label: "转让",
-                meta: { requiresAuth: true, title: "转让" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/transfer.vue"], resolve),
             },
@@ -254,7 +251,7 @@ const routes = [{
                 path: "/transferLogs",
                 name: "transferLogs",
                 label: "转让记录",
-                meta: { requiresAuth: true, title: "转让记录" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/transferLogs.vue"], resolve),
             },
@@ -262,7 +259,7 @@ const routes = [{
                 path: "/loginlog",
                 name: "loginlog",
                 label: "登录记录",
-                meta: { requiresAuth: true, title: "登录记录" },
+                meta: { requiresAuth: true },
                 component: (resolve) =>
                     require(["@/views/Center/loginLog.vue"], resolve),
             },
