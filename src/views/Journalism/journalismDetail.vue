@@ -33,12 +33,7 @@ export default {
   computed: {},
   watch: {},
   created() {
-    if (this.$lang == "en") {
-      this.lang_type = "English";
-    }
-    if (this.$lang == "zh") {
-      this.lang_type = "Chinese";
-    }
+    this.listQuery.lang_type = this.$langType
     this.get_data();
   },
   mounted() {},

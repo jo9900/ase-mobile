@@ -114,12 +114,7 @@ export default {
   computed: {},
   watch: {},
   created() {
-    if (this.$lang == "en") {
-      this.listQuery.lang_type = "English";
-    }
-    if (this.$lang == "zh") {
-      this.listQuery.lang_type = "Chinese";
-    }
+    this.listQuery.lang_type = this.$langType
     this.get_list();
   },
   mounted() {

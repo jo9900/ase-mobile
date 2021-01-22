@@ -187,18 +187,8 @@
       </div>
     </div>
     <div class="pickerVan" v-show="pickerIsshow">
+
       <van-picker
-        :title="$t('message.216')"
-        show-toolbar
-        :columns="columnsCountry"
-        @confirm="onConfirm"
-        @cancel="onCancel"
-        @change="onChange"
-        class="vanpicker"
-        value-key="name_en"
-        v-if="lang=='en'"
-      />
-       <van-picker
         :title="$t('message.216')"
         show-toolbar
         :columns="columnsCountry"
@@ -208,6 +198,17 @@
         class="vanpicker"
         value-key="name_cn"
         v-if="lang=='zh'"
+      />
+      <van-picker
+        :title="$t('message.216')"
+        show-toolbar
+        :columns="columnsCountry"
+        @confirm="onConfirm"
+        @cancel="onCancel"
+        @change="onChange"
+        class="vanpicker"
+        value-key="name_en"
+        v-else
       />
     </div>
     <div class="pickerID" v-show="pickerIDISshow">
@@ -568,8 +569,7 @@ export default {
     },
 
     get_areaList() {
-      // console.log(this.$qs.stringify());
-      areaList({ lang_type: this.lang_type }).then((res) => {
+      areaList().then((res) => {
         if (res.code == 0) {
           this.areaList = res.data.list;
           this.columnsCountry = res.data.list;
@@ -664,12 +664,6 @@ export default {
   },
 
   created() {
-    if (this.$lang == "en") {
-      this.lang_type = "English";
-    }
-    if (this.$lang == "zh") {
-      this.lang_type = "Chinese";
-    }
 
     setTimeout(() => {
       this.get_areaList();

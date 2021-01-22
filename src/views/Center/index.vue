@@ -47,11 +47,12 @@
                     style="color: #a7acc1"
                     :class="{ taost: userInfo.kyc_status == 1 }"
                   >
-                    <template v-if="lang_type == 'English'">{{
+                    <!--名 姓-->
+                    <template v-if="['ru', 'en', 'ar'].includes($lang)">{{
                       userInfo.kyc_status == 1
-                        ? userInfo.last_name + " · " + userInfo.first_name
-                        : $t("message.97")
-                    }}</template>
+                      ? userInfo.last_name  + userInfo.first_name
+                      : $t("message.97")
+                      }}</template>
                     <template v-else>{{
                       userInfo.kyc_status == 1
                         ? userInfo.first_name + userInfo.last_name
@@ -69,7 +70,7 @@
                   :class="{ taost: userInfo.kyc_status == 1 }"
                 >
                   <template v-if="userInfo.kyc_status == 1">{{
-                    lang_type == "English"
+                    $lang != "zh"
                       ? userInfo.country_name_en
                       : userInfo.country_name
                   }}</template>
