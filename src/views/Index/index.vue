@@ -80,6 +80,14 @@
               </template>
             </div></van-swipe-item
           >
+          <van-swipe-item v-if="$lang == 'zh'">
+            <div style="height: 100%">
+              <template>
+                <div class="page_out">
+                </div>
+              </template>
+            </div></van-swipe-item
+          >
         </van-swipe>
         <div class="page_content">
           <!-- 关于art -->
@@ -355,6 +363,9 @@ export default {
     }
     if (document.querySelector(".page_right")) {
       document.querySelector(".page_right").style.height = this.height;
+    }
+    if (document.querySelector(".page_out")) {
+      document.querySelector(".page_out").style.height = this.height;
     }
   },
 };
@@ -896,6 +907,13 @@ export default {
   justify-content: flex-start;
   align-items: center;
   letter-spacing: 1/100rem;
+  position: relative;
+}
+.page_out {
+  width: 100%;
+  height: 1016/100rem;
+  background: url("../../assets/images/banner4@3x.png") no-repeat center center;
+  background-size: cover;
   position: relative;
 }
 .page_home_top,
