@@ -27,13 +27,11 @@ export default {
   data() {
     return {
       dataInfo: {},
-      lang_type: "",
     };
   },
   computed: {},
   watch: {},
   created() {
-    this.listQuery.lang_type = this.$langType
     this.get_data();
   },
   mounted() {},
@@ -41,7 +39,7 @@ export default {
     get_data() {
       detail(
         this.$qs.stringify({
-          lang_type: this.lang_type,
+          lang_type: this.$langType,
           code: this.$route.query.code,
         })
       ).then((res) => {
