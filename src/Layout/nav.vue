@@ -276,6 +276,8 @@ export default {
     languageChangeType(val) {
       this.$i18n.locale = val; // 切换vue国际化
       this.$Local(val); // 切换vant
+      if (this.$route.name == 'journalismDetail')
+        this.$router.replace('/journalism')
       this.$router.go(0)
     },
     selecMun() {

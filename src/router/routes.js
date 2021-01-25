@@ -60,7 +60,7 @@ const routes = [{
             },
             {
                 path: "/journalismDetail",
-                name: "journalism",
+                name: "journalismDetail",
                 label: "新闻详情",
                 meta: { requiresAuth: false },
                 component: (resolve) =>

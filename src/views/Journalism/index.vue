@@ -83,9 +83,7 @@
 <script>
 // import webFoot from "@/Layout/footer";
 import { digest } from "@/request/news";
-import { List } from "vant";
-import { PullRefresh } from "vant";
-import { Empty } from "vant";
+import { List, PullRefresh, Empty } from "vant";
 
 export default {
   name: "",
@@ -101,6 +99,7 @@ export default {
       loading: true,
       finished: false,
       refreshing: false,
+      // requestOver: false,
       listQuery: {
         lang_type: this.$langType,
         page_no: 1,
@@ -149,6 +148,7 @@ export default {
           this.finished = true;
         }
         this.list = [...this.list, ...res.data.news];
+        // this.requestOver = true
       });
     },
     handleCurrentChange(val) {
