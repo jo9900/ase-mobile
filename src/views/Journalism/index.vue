@@ -118,12 +118,6 @@ export default {
     this.get_list();
   },
   mounted() {
-    let height =
-      document.documentElement.offsetHeight || document.body.offsetHeight;
-    setTimeout(() => {
-      document.querySelector(".page_nodata").style.height =
-        height - document.querySelector(".navhearder").offsetHeight * 2 + "px";
-    }, 300);
   },
   methods: {
     onLoad() {
