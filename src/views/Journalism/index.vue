@@ -121,12 +121,12 @@ export default {
   methods: {
     onLoad() {
       this.listQuery.page_no++;
-      setTimeout(() => {
+      // setTimeout(() => {
         this.get_list();
-      }, 1000);
+      // }, 300);
     },
     onRefresh() {
-      setTimeout(() => {
+      // setTimeout(() => {
         this.finished = false;
         this.refreshing = false;
         this.loading = true;
@@ -137,7 +137,7 @@ export default {
         };
         this.list = [];
         this.get_list();
-      }, 1200);
+      // }, 300);
     },
     get_list() {
       digest(this.$qs.stringify(this.listQuery)).then((res) => {
