@@ -217,6 +217,7 @@ export default {
           } catch {
             this.newsCode = ''
           }
+          localStorage.setItem('newsCode', this.newsCode)
         }
       });
     },

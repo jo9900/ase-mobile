@@ -11,6 +11,14 @@
           indicator-color="white"
           :height="swipeHeight"
         >
+          <van-swipe-item v-if="$lang == 'zh'">
+            <div style="height: 100%">
+              <template>
+                <div class="page_out" @click="toNews">
+                </div>
+              </template>
+            </div></van-swipe-item
+          >
           <van-swipe-item
             ><div style="height: 500px" @click="slkowet">
               <template>
@@ -76,14 +84,6 @@
                       {{ $t("message.519") }}
                     </div>
                   </div>
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
-          <van-swipe-item v-if="$lang == 'zh'">
-            <div style="height: 100%">
-              <template>
-                <div class="page_out">
                 </div>
               </template>
             </div></van-swipe-item
@@ -302,6 +302,15 @@ export default {
   computed: {},
   watch: {},
   methods: {
+    toNews() {
+      let newsCode = localStorage.getItem('newsCode')
+      this.$router.push({
+        path: 'journalismDetail',
+        query: {
+          code: newsCode
+        }
+      })
+    },
     downloadPDF(){
       window.open(this.$BaseUrl + "material/whitepaper.pdf")
     },
