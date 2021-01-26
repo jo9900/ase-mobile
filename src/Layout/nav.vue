@@ -1,7 +1,7 @@
 <!-- -->
 <template>
   <div class="web_nav">
-    <div :class="['top', $lang]" @click="toNews"></div>
+    <!--<div :class="['top', $lang]" @click="toNews"></div>-->
     <div class="wrap">
       <div class="username_span_div">
         <img src="@/assets/images/logo_art.png" class="logoImg" />
