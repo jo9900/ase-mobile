@@ -24,6 +24,7 @@
              {'ja': lang_type == 'Japanese'},
              {'wrap_plan_current': preInfo1.status == 1}]"
           >
+            <img :src="soldout_src" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.1.5{{ $t("message.496") }}
@@ -507,6 +508,7 @@ export default {
     };
 
     return {
+      soldout_src: '',
       userInfo: {},
       roundtext: "",
       isLogin: false,
@@ -755,6 +757,7 @@ export default {
   },
   created() {
     this.isLogin = localStorage.getItem("token") ? true : false;
+    this.soldout_src = require(`../../assets/images/soldout-${this.$lang}@3x.png`)
     this.presellCoander();
   },
   mounted() {
@@ -977,6 +980,15 @@ export default {
   &.en {
     height: 300/100rem;
     background-size: 540/100rem 300/100rem;
+  }
+}
+.soldout {
+  position: absolute;
+  z-index: 3;
+  top: 70/100rem;
+  width: 300/100rem;
+  &.en {
+    top: 150/100rem
   }
 }
 .wrap_plan_span_art {
