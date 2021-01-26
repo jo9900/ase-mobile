@@ -919,6 +919,7 @@ export default {
   position: relative;
 }
 .page_out {
+
   width: 100%;
   height: 1016/100rem;
   position: relative;
