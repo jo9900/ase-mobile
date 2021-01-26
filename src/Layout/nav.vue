@@ -1,7 +1,7 @@
 <!-- -->
 <template>
   <div class="web_nav">
-    <!--<div :class="['top', $lang]" @click="toNews"></div>-->
+    <div :class="['top', $lang]" @click="toNews"></div>
     <div class="wrap">
       <div class="username_span_div">
         <img src="@/assets/images/logo_art.png" class="logoImg" />
@@ -222,12 +222,12 @@ export default {
       });
     },
     toNews() {
-      this.$router.push({
+      /*this.$router.push({
         path: 'journalismDetail',
         query: {
           code: this.newsCode
         }
-      })
+      })*/
     },
     downloadPDF(){
       window.open(this.$BaseUrl + "material/whitepaper.pdf", "_self")

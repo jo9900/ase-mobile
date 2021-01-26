@@ -303,13 +303,13 @@ export default {
   watch: {},
   methods: {
     toNews() {
-      let newsCode = localStorage.getItem('newsCode')
+      /*let newsCode = localStorage.getItem('newsCode')
       this.$router.push({
         path: 'journalismDetail',
         query: {
           code: newsCode
         }
-      })
+      })*/
     },
     downloadPDF(){
       window.open(this.$BaseUrl + "material/whitepaper.pdf")
