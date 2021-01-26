@@ -11,10 +11,10 @@
           indicator-color="white"
           :height="swipeHeight"
         >
-          <van-swipe-item v-if="$lang == 'zh'">
+          <van-swipe-item>
             <div style="height: 100%">
               <template>
-                <div class="page_out" @click="toNews">
+                <div :class="['page_out', $lang]" @click="toNews">
                 </div>
               </template>
             </div></van-swipe-item
@@ -921,9 +921,15 @@ export default {
 .page_out {
   width: 100%;
   height: 1016/100rem;
-  background: url("../../assets/images/banner4@3x.png") no-repeat center center;
-  background-size: cover;
   position: relative;
+  &.zh {
+    background: url("../../assets/images/banner4@3x.png") no-repeat center center;
+    background-size: cover;
+  }
+  &.en {
+    background: url("../../assets/images/banner4-en@3x.png") no-repeat center center;
+    background-size: cover;
+  }
 }
 .page_home_top,
 .page_banner_top,
