@@ -969,6 +969,7 @@ export default {
 .wrap_plan_default{
   height: 220/100rem;
   background-size: 540/100rem 220/100rem;
+  position: relative;
   div {
     line-height: 50/100rem;
     letter-spacing: 1/100rem;
@@ -985,10 +986,10 @@ export default {
 .soldout {
   position: absolute;
   z-index: 3;
-  top: 70/100rem;
+  bottom: 60/100rem;
   width: 300/100rem;
   &.en {
-    top: 150/100rem
+    bottom: 60/100rem;
   }
 }
 .wrap_plan_span_art {
