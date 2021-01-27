@@ -1,9 +1,9 @@
-import en from "./en";
-import zh from "./zh";
-import ar from "./ar";
-import ja from "./ja";
-import ru from "./ru";
-import ko from "./ko";
+import en from "../langPacks/en";
+import zh from "../langPacks/zh";
+import ar from "../langPacks/ar";
+import ja from "../langPacks/ja";
+import ru from "../langPacks/ru";
+import ko from "../langPacks/ko";
 
 const messages = {
     en: {

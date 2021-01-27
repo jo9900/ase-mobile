@@ -1,0 +1,6 @@
+[submodule "src/langs"]
+	path = src/langs
+	url = http://192.168.0.204:8090/zhengyuan/arthur_langs_submodule.git
+[submodule "src/langPacks"]
+	path = src/langPacks
+	url = http://192.168.0.204:8090/zhengyuan/arthur_langs_submodule.git
