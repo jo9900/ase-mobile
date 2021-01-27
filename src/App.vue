@@ -9,7 +9,7 @@
 import service from "@/components/service";
 export default {
   name: "",
-    metaInfo() {
+    metaInfo() { //
         return {
             title: this.$t("message.492"),
             meta: [
