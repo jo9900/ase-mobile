@@ -25,7 +25,7 @@
                 <div class="page_home">
                   <div class="page_home_top">
                     <div class="page_home_title">ARTHUR-EX</div>
-                    <div class="page_home_item1">
+                    <div :class="['page_home_item1', $lang]">
                       {{ $t("message.12") }}
                     </div>
                     <div
@@ -998,6 +998,9 @@ export default {
   font-weight: 600;
   color: #ffffff;
   line-height: 56/100rem;
+  &.ru {
+    height: auto;
+  }
 }
 .page_banner_item1 {
   width: 100%;
