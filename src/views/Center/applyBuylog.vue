@@ -8,13 +8,13 @@
       <div class="page_apply_title_line"></div>
     </div>
     <div class="page_apply_container" v-if="tableData.length > 0">
-      <div class="page_apply_fund">
+      <div :class="['page_apply_fund', $lang]">
         <span class="page_apply_name">{{ $t("message.128") }}</span>
         <span class="page_apply_number"
           >{{ myPreSale.apply_usdt_amount }} USDT</span
         >
       </div>
-      <div class="page_apply_quota">
+      <div :class="['page_apply_quota', $lang]">
         <span class="page_apply_quota_name">{{ $t("message.129") }}</span>
         <span class="page_apply_quota_number"
           >{{ myPreSale.apply_art_amount }} AECO</span
@@ -275,8 +275,11 @@ export default {
 .page_apply_quota_number {
   color: #65728b;
 }
-.page_apply_fund,
-.page_apply_quota {
+.page_apply_fund, .page_apply_quota {
+  &.ru {
+    flex-direction: column;
+    height: auto;
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -349,16 +352,6 @@ export default {
   -webkit-box-sizing: border-box; /* Safari */
 
   .wrap {
-    // .page_indicator {
-    //   margin-top: 20px;
-    //   height: 60px;
-    //   line-height: 60px;
-    //   color: #333333;
-    //   font-size: 16px;
-    //   padding: 0 30px;
-    //   background: #ffffff;
-    // }
-
     .page_content {
       // margin: 20px 0 0px;
       padding: 15px;
