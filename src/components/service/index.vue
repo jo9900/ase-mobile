@@ -32,7 +32,10 @@
         },
         methods:{
             init() {
-                this.href = this.map[this.$lang]
+                let type = ''
+                if (this.$lang === 'zh') type = 'zh'
+                else type = 'en'
+                this.href = this.map[type]
             },
         },
     }
