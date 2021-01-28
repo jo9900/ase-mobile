@@ -568,12 +568,12 @@ export default {
       });
     },
     clickBefore() {
-      // if (this.round == 1 && (this.roundstatus == 0 || this.roundstatus == 2)) {
-      //   return;
-      // }
-      // if (this.round == 2 && (this.roundstatus == 0 || this.roundstatus == 2)) {
-      //   return;
-      // }
+      if (this.round == 1 && (this.roundstatus == 0 || this.roundstatus == 2)) {
+        return;
+      }
+      if (this.round == 2 && (this.roundstatus == 0 || this.roundstatus == 2)) {
+        return;
+      }
       if (this.isLogin) {
         this.presellForm.book_amount = "";
         this.totalPrice = 0;
