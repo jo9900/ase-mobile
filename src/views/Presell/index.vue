@@ -755,8 +755,8 @@ export default {
   },
   created() {
     this.isLogin = localStorage.getItem("token") ? true : false;
-    this.soldout_src = require(`../../assets/images/soldout-${this.$lang}@3x.png`)
     this.presellCoander();
+    this.soldout_src = require(`../../assets/images/soldout-${this.$lang}@3x.png`)
   },
   mounted() {
     this.getPreSale();
