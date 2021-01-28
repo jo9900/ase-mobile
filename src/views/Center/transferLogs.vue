@@ -21,8 +21,8 @@
                 >
                     <div class="list_title flex">
                         <div class="time">{{ $t('message.141') }}</div>
-                        <div class="account">{{ $t('message.508') }}</div>
-                        <div class="amount">{{ $t('message.509') }}</div>
+                        <div :class="['account', $lang]">{{ $t('message.508') }}</div>
+                        <div :class="['amount', $lang]">{{ $t('message.509') }}</div>
                     </div>
                     <ul class="list_ul">
                         <li class="list_row flex" v-for="item in list">
@@ -197,6 +197,11 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             overflow: hidden;
+            text-align: center;
+            width: 35%;
+            &.ru {
+                width: 31%;
+            }
         }
         .time {
             text-align: center;
@@ -204,15 +209,14 @@
             flex-shrink: 0;
             white-space:nowrap;
         }
-        .account {
-            text-align: center;
-            width: 35%;
-        }
         .amount {
             text-align: center;
             flex-shrink: 0;
             width: 40%;
             white-space:nowrap;
+            &.ru {
+                width: 44%;
+            }
         }
     }
     .van-pull-refresh {
