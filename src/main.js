@@ -38,11 +38,11 @@ let f = ''
 if (localStorage.getItem("lang") ) {
     f = localStorage.getItem("lang")
 } else {
-    localStorage.setItem("lang", 'zh')
-    f = 'zh'
+    localStorage.setItem("lang", 'en')
+    f = 'en'
 }
 if (!localStorage.getItem("lang_type")) {
-    localStorage.setItem("lang_type", 'Chinese')
+    localStorage.setItem("lang_type", 'English')
 }
 i18n = new VueI18n({locale: f, messages});
 Locals(f);
