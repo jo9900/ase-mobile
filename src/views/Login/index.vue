@@ -90,8 +90,8 @@
                 <!--&gt;-->
                   <!--{{ $t("message.70") }}-->
                 <!--</div>-->
-                <div v-if="disabled" class="get_code">{{ btntxt }}</div>
-                <div v-else class="get_code" @click="sendcode()">
+                <div v-if="disabled" :class="['get_code', $lang]">{{ btntxt }}</div>
+                <div v-else :class="['get_code', $lang]" @click="sendcode()">
                   {{ btntxt }}
                 </div>
               </el-form-item>
@@ -192,13 +192,8 @@
                   :placeholder="$t('message.69')"
                   v-model.trim="resetData.verify_code"
                 />
-                <!--<div :class="['get_code',{'disabledBtn': disabled1}]"-->
-                     <!--@click="sendcode1()"-->
-                <!--&gt;-->
-                  <!--{{ $t("message.70") }}-->
-                <!--</div>-->
-                <div v-if="disabled1" class="get_code">{{ btntxt1 }}</div>
-                <div v-else class="get_code" @click="sendcode1()">
+                <div v-if="disabled1" :class="['get_code', $lang]">{{ btntxt1 }}</div>
+                <div v-else :class="['get_code', $lang]" @click="sendcode1()">
                   {{ btntxt1 }}
                 </div>
               </el-form-item>
@@ -860,6 +855,12 @@ export default {
               font-weight: 400;
               color: #104cff;
               // background: #f5f6f7;
+              &.ru {
+                width: auto;
+              }
+              &.ar {
+                width: auto;
+              }
             }
             .get_code:hover {
               color: #efcf54;

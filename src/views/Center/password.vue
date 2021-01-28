@@ -20,8 +20,8 @@
               :placeholder="$t('message.69')"
               v-model.trim="dataForm.verify_code"
             />
-            <div v-if="disabled" class="get_code">{{ btntxt }}</div>
-            <div v-else class="get_code" @click="sendcode('forget')">
+            <div v-if="disabled" :class="['get_code', $lang]">{{ btntxt }}</div>
+            <div v-else :class="['get_code', $lang]" @click="sendcode('forget')">
               {{ btntxt }}
             </div>
           </el-form-item>
@@ -269,6 +269,12 @@ export default {
   font-weight: 400;
   color: #104cff;
   // background: #f5f6f7;
+  &.ru {
+    width: auto;
+  }
+  &.ar {
+    width: auto;
+  }
 }
 .input_img {
   position: absolute;
@@ -319,18 +325,6 @@ export default {
   top: -10px;
   right: 0;
 }
-// .get_code {
-//   position: absolute;
-//   right: 10px;
-//   width: 60px;
-//   text-align: center;
-//   padding: 0 4px;
-//   line-height: 36px;
-//   font-size: 16px;
-//   color: #909090;
-//   top: 14px;
-//   border-left: 1px solid #c7c7c7;
-// }
 .text-code:hover {
   cursor: pointer;
   color: #efcf54;
