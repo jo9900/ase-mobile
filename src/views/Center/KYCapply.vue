@@ -461,7 +461,6 @@ export default {
       this.pickerIsshow = false;
     },
     onConfirm1(data, index) {
-      console.log(data, index);
       this.name = data.name;
       this.formLabelAlign.id_type = data.value;
       // Toast(`当前值：${data.name}, 当前索引：${index}`);
@@ -719,7 +718,6 @@ export default {
   margin-top: 20/100rem;
 }
 .IDcard_box_info div {
-  height: 34/100rem;
   line-height: 34/100rem;
 }
 .IDcard_box_info_div {
