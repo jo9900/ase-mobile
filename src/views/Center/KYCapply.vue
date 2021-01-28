@@ -444,7 +444,7 @@ export default {
     },
     onConfirm(value, index) {
       console.log(value, index);
-      if (this.$lang == "en") {
+      if (this.$lang != "zh") {
         this.name_cn = value.name_en;
       } else {
         this.name_cn = value.name_cn;
