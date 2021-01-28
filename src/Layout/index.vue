@@ -5,17 +5,10 @@
         <div class="navhearder"><Nav/></div>
         <div id="mint"><router-view></router-view></div>
         <!-- <el-footer><Footer/></el-footer> -->
-
-        <!--<div class="kf">-->
-            <!--<a class="kf_wrap" target="_blank" href="https://tb.53kf.com/code/client/9b4e57f4454eda27a911267c0001f9c13/5">-->
-                <!--<img src="../assets/images/kf.png" alt="">-->
-            <!--</a>-->
-        <!--</div>-->
     </div>
 </template>
 
 <script>
-// import Left from './left'
 import Nav from './nav'
 import Footer from './footer'
 export default {

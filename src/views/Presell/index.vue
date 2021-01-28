@@ -20,8 +20,7 @@
           <div class="wrap_plan_first_title">{{ $t("message.132") }}</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
           <div :class="
-            ['wrap_plan_default',
-             {'ja': lang_type == 'Japanese'},
+            ['wrap_plan_default', $lang,
              {'wrap_plan_current': preInfo1.status == 1}]"
           >
             <img :src="soldout_src" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
@@ -58,10 +57,9 @@
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
           <div :class="[
-            'wrap_plan_default',
+            'wrap_plan_default', $lang,
               {
                 'wrap_plan_current': preInfo2.status == 1,
-                'en': lang_type == 'English'
               }
              ]">
             <div>
@@ -570,12 +568,12 @@ export default {
       });
     },
     clickBefore() {
-      if (this.round == 1 && (this.roundstatus == 0 || this.roundstatus == 2)) {
-        return;
-      }
-      if (this.round == 2 && (this.roundstatus == 0 || this.roundstatus == 2)) {
-        return;
-      }
+      // if (this.round == 1 && (this.roundstatus == 0 || this.roundstatus == 2)) {
+      //   return;
+      // }
+      // if (this.round == 2 && (this.roundstatus == 0 || this.roundstatus == 2)) {
+      //   return;
+      // }
       if (this.isLogin) {
         this.presellForm.book_amount = "";
         this.totalPrice = 0;
@@ -979,6 +977,10 @@ export default {
     background-size: 540/100rem 300/100rem;
   }
   &.en {
+    height: 300/100rem;
+    background-size: 540/100rem 300/100rem;
+  }
+  &.ru {
     height: 300/100rem;
     background-size: 540/100rem 300/100rem;
   }

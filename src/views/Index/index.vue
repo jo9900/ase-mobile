@@ -51,10 +51,9 @@
               <template>
                 <div class="page_banner">
                   <div class="page_banner_top">
-                    <div class="page_banner_title">{{ $t("message.16") }}</div>
+                    <div :class="['page_banner_title', $lang]">{{ $t("message.16") }}</div>
                     <div
-                      class="page_banner_item1"
-                      :class="{ marginTop10: lang == 'en' }"
+                      :class="['page_banner_item1', $lang]"
                     >
                       {{ $t("message.17") }}
                     </div>
@@ -973,6 +972,9 @@ export default {
   color: #ffffff;
   line-height: 48/100rem;
   margin: 117/100rem 0 0 0;
+  &.ja {
+    line-height: 58/100rem
+  }
 }
 .page_right_title {
   width: 100%;
@@ -1007,6 +1009,13 @@ export default {
   color: #ffffff;
   line-height: 48/100rem;
   margin-top: 42/100rem;
+  &.en {
+    margin-top: 70/100rem
+  }
+  &.ja {
+    margin-top: 70/100rem
+
+  }
 }
 .page_home_item2 {
   width: 100%;
