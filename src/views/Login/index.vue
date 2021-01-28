@@ -861,6 +861,9 @@ export default {
               &.ar {
                 width: auto;
               }
+              &.ja {
+                width: auto;
+              }
             }
             .get_code:hover {
               color: #efcf54;
