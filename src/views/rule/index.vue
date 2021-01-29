@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="page">
+    <div class="page rtl">
       <div class="page_title">{{ $t("message.259") }}</div>
       <div class="page_detail">
         {{ $t("message.260") }}
