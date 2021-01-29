@@ -864,6 +864,9 @@ export default {
               &.ja {
                 width: auto;
               }
+              &.ko {
+                width: auto;
+              }
             }
             .get_code:hover {
               color: #efcf54;
