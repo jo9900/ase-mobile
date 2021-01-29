@@ -13,32 +13,32 @@
 
         </div>
         <div class="page_plan_item">
-          <div class="page_plan_part page_plan_item_div1">
-            <div class="page_plan_part_pre"></div>
+          <div class="legend page_plan_part">
+            <div class="icon page_plan_part_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.57") }}</div>
           </div>
-          <div class="page_plan_part1 page_plan_item_div1 marginR">
-            <div class="page_plan_part1_pre"></div>
+          <div class="legend page_plan_part1">
+            <div class="icon page_plan_part1_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.58") }}</div>
           </div>
-          <div class="page_plan_part2 page_plan_item_div">
-            <div class="page_plan_part2_pre"></div>
+          <div class="legend page_plan_part2">
+            <div class="icon page_plan_part2_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.59") }}</div>
           </div>
-          <div class="page_plan_part6 page_plan_item_div3">
-            <div class="page_plan_part6_pre"></div>
+          <div class="legend page_plan_part6">
+            <div class="icon page_plan_part6_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.60") }}</div>
           </div>
-          <div class="page_plan_part3 page_plan_item_div1">
-            <div class="page_plan_part3_pre"></div>
+          <div class="legend page_plan_part3">
+            <div class="icon page_plan_part3_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.61") }}</div>
           </div>
-          <div class="page_plan_part4 page_plan_item_div">
-            <div class="page_plan_part2_pre"></div>
+          <div class="legend page_plan_part4">
+            <div class="icon page_plan_part2_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.62") }}</div>
           </div>
-          <div class="page_plan_part5 page_plan_item_div2">
-            <div class="page_plan_part5_pre"></div>
+          <div class="legend page_plan_part5">
+            <div class="icon page_plan_part5_pre"></div>
             <div class="page_plan_part_after">{{ $t("message.63") }}</div>
           </div>
         </div>
@@ -207,100 +207,60 @@ export default {
   align-items: center;
   width: 100%;
   margin-bottom: 60/100rem;
+  >.legend {
+    width: 33%;
+    display: flex;
+    font-size: 0.2rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #a7b6ca;
+    margin-bottom: 20/100rem;
+    align-items: center;
+    .icon {
+      flex-shrink: 0;
+    }
+  }
 }
-.page_plan_item_div {
-  width: 168/100rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 20/100rem;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #a7b6ca;
-  margin-top: 12/100rem;
-  margin-right: 36/100rem;
-}
-.page_plan_item_div1 {
-  width: 120/100rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 20/100rem;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #a7b6ca;
-  margin-top: 12/100rem;
-  margin-right: 36/100rem;
-}
-.page_plan_item_div2 {
-  width: 140/100rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 20/100rem;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #a7b6ca;
-  margin-top: 12/100rem;
-  margin-right: 36/100rem;
-}
-.page_plan_item_div3 {
-  width: 80/100rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 20/100rem;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #a7b6ca;
-  margin-top: 12/100rem;
-}
-.marginR {
-  margin-right: 85/100rem;
-}
+
 .page_plan_part_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #00befa;
   margin-right: 8/100rem;
 }
 .page_plan_part1_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #3064fd;
   margin-right: 8/100rem;
 }
 .page_plan_part2_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #1039b6;
   margin-right: 8/100rem;
 }
 .page_plan_part3_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #36d8f3;
   margin-right: 8/100rem;
 }
 .page_plan_part4_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #64b6ff;
   margin-right: 8/100rem;
 }
 .page_plan_part5_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #baf2fe;
   margin-right: 8/100rem;
 }
 .page_plan_part6_pre {
-  min-width: 16/100rem;
-  min-height: 16/100rem;
+  width: 16/100rem;
+  height: 16/100rem;
   background: #9cdbe7;
   margin-right: 8/100rem;
 }
