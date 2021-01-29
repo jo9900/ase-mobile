@@ -9,10 +9,11 @@
     </div>
     <div class="page_container">
       <div class="page_my">
-        <div class="page_apply_content"  @click="toTransfer()">
+        <div class="page_apply_content">
           <div class="page_invite_content_pre">
             <div class="page_invite_content_name title">{{ $t("message.93") }}</div>
             <div v-if="userInfo.kyc_status == 1"
+                 @click="toTransfer()"
                  class="page_invite_content_number transfer"
             >
               {{ $t("message.478") }}
