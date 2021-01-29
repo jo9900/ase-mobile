@@ -1,6 +1,6 @@
 
 <template>
-  <div id="app" ref="box">
+  <div id="app" ref="box" :class="$lang">
     <router-view />
      <service />
   </div>
@@ -35,7 +35,7 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="less">
 .gobaket:hover {
   color: #104cff;
 }
@@ -45,7 +45,14 @@ export default {
 .el-select-dropdown__item {
   width: 300px !important;
 }
-.el-message-box {
-  width: 80% !important;
+
+#app.ar{
+    /deep/ .rtl {
+        direction: rtl;
+    }
+    /deep/ .ltr {
+        direction: ltr;
+
+    }
 }
 </style>

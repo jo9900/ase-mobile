@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page rtl">
     <!--<div class="page_apply_title">
       <div class="page_apply_title_name">{{ $t("message.257") }}</div>
       <div class="page_apply_title_line"></div>

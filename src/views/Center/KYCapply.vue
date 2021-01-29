@@ -120,7 +120,7 @@
                   </div>
                 </div>
                 </div>
-                <div class="IDcard_box_info">
+                <div class="IDcard_box_info rtl">
                   <div class="IDcard_box_info_pre">{{$t('message.229')}}</div>
                   <div class="IDcard_box_info_div" :class="{'IDcard_box_info_div1':lang=='en'}">{{$t('message.230')}}</div>
                 </div>

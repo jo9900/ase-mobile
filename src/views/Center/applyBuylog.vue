@@ -7,7 +7,7 @@
       <div class="page_apply_title_name">{{ $t("message.127") }}</div>
       <div class="page_apply_title_line"></div>
     </div>
-    <div class="page_apply_container" v-if="tableData.length > 0">
+    <div class="page_apply_container rtl" v-if="tableData.length > 0">
       <div :class="['page_apply_fund', $lang]">
         <span class="page_apply_name">{{ $t("message.128") }}</span>
         <span class="page_apply_number"

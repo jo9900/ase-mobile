@@ -50,7 +50,7 @@
             ><div style="height: 100%">
               <template>
                 <div class="page_banner">
-                  <div class="page_banner_top">
+                  <div class="page_banner_top rtl">
                     <div :class="['page_banner_title', $lang]">{{ $t("message.16") }}</div>
                     <div
                       :class="['page_banner_item1', $lang]"
@@ -88,7 +88,7 @@
             </div></van-swipe-item
           >
         </van-swipe>
-        <div class="page_content">
+        <div class="page_content rtl">
           <!-- 关于art -->
           <div class="page_content_about">
             <div class="page_content_title">{{ $t("message.22") }}</div>
@@ -1021,6 +1021,9 @@ export default {
   color: #ffffff;
   line-height: 56/100rem;
   &.ru {
+    height: auto;
+  }
+  &.ar {
     height: auto;
   }
 }

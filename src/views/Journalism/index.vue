@@ -38,7 +38,7 @@
                           />
                         </router-link>
                       </div>
-                      <div class="dissoer">
+                      <div class="dissoer rtl">
                         <div class="text-conter-container">
                           <div class="text-conter-container_div">
                             <div class="text-title">

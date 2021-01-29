@@ -5,7 +5,7 @@
       <div class="page_apply_title_line"></div>
     </div>-->
     <div class="page_content">
-      <div class="page_content_plan">
+      <div class="page_content_plan rtl">
         <div class="page_plan_title">{{ $t("message.35") }}</div>
         <div class="page_plan_img_div">
           <div class="page_plan_img"></div>

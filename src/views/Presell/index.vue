@@ -20,7 +20,7 @@
           <div class="wrap_plan_first_title">{{ $t("message.132") }}</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
           <div :class="
-            ['wrap_plan_default', $lang,
+            ['wrap_plan_default rtl', $lang,
              {'wrap_plan_current': preInfo1.status == 1}]"
           >
             <img :src="soldout_src" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
@@ -37,7 +37,7 @@
               >3,600,000 USDT
             </div>
           </div>
-          <div class="wrap-cont-text">{{ $t("message.497") }}</div>
+          <div class="wrap-cont-text rtl">{{ $t("message.497") }}</div>
           <!--<div class="wrap_plan_first_title">次轮预售</div>
           <div class="wrap_plan_second_title" style="font-size: 0.45rem;">
             2021.3.1
@@ -57,7 +57,7 @@
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
           <div :class="[
-            'wrap_plan_default', $lang,
+            'wrap_plan_default rtl', $lang,
               {
                 'wrap_plan_current': preInfo2.status == 1,
               }
@@ -75,15 +75,15 @@
               >{{ $t("message.153") }}
             </div>
           </div>
-          <div class="wrap-cont-text" style="color: #9CB5FF;">
+          <div class="wrap-cont-text rtl" style="color: #9CB5FF;">
             {{ $t("message.499") }}
           </div>
-          <div class="wrap-cont-text" style="color: #9CB5FF; margin-top: 0;">
+          <div class="wrap-cont-text rtl" style="color: #9CB5FF; margin-top: 0;">
             {{ $t("message.523") }}
           </div>
         </div>
         <div class="wrap_rule_container">
-          <div class="wrap_rule">
+          <div class="wrap_rule rtl">
             <div class="wrap_rule_header">{{ $t("message.155") }}</div>
             <div class="wrap_rule_name">{{ $t("message.156") }}</div>
             <!-- <div class="wrap_rule_content">

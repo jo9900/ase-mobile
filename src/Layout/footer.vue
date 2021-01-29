@@ -1,7 +1,7 @@
 
 <!-- -->
 <template>
-  <div class="footer">
+  <div class="footer rtl">
     <div class="footer_container">
       <div class="footer_container_header">
         <div class="footer_container_header_title">{{ $t("message.50") }}</div>
