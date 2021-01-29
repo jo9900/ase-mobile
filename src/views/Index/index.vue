@@ -38,7 +38,7 @@
                       {{ $t("message.14") }}
                     </div>
                     <router-link :to="{ path: '/signIn' }" v-if="isShow">
-                      <div class="page_home_btn">{{ $t("message.15") }}</div>
+                      <div :class="['page_home_btn', $lang]">{{ $t("message.15") }}</div>
                     </router-link>
                   </div>
                   <!-- <div class="page_home_bottom"></div> -->
@@ -66,7 +66,7 @@
                       </div>
                     </div>
                     <router-link :to="{ path: '/presell' }">
-                      <div class="page_banner_btn">{{ $t("message.20") }}</div>
+                      <div :class="['page_banner_btn', $lang]">{{ $t("message.20") }}</div>
                     </router-link>
                   </div>
                 </div>
@@ -994,6 +994,9 @@ export default {
   &.ja {
     line-height: 58/100rem
   }
+  &.ar {
+    height: auto;
+  }
 }
 .page_right_title {
   width: 100%;
@@ -1122,6 +1125,10 @@ export default {
   font-weight: 600;
   color: #ffffff;
   margin-top: 70/100rem;
+  &.ru {
+    width: auto;
+    padding: 0 10px;
+  }
 }
 .page_banner_btn {
   margin-top: 66/100rem;
