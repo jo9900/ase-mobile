@@ -995,7 +995,8 @@ export default {
     line-height: 58/100rem
   }
   &.ar {
-    height: auto;
+    height: 130/100rem;
+    line-height: 78/100rem;
   }
 }
 .page_right_title {
@@ -1042,7 +1043,9 @@ export default {
   }
   &.ja {
     margin-top: 70/100rem
-
+  }
+  &.ar {
+    margin-top: 60/100rem
   }
 }
 .page_home_item2 {

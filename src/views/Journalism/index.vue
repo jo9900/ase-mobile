@@ -164,7 +164,7 @@ export default {
 // 暂无数据
 .page_nodata {
   width: 100%;
-  height: 1200/100rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
