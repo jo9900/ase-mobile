@@ -933,6 +933,22 @@ export default {
     background: url("../../assets/images/banner4-en@3x.png") no-repeat center center;
     background-size: cover;
   }
+  &.ja {
+    background: url("../../assets/images/banner4-ja.png") no-repeat center center;
+    background-size: cover;
+  }
+  &.ru {
+    background: url("../../assets/images/banner4-ru.png") no-repeat center center;
+    background-size: cover;
+  }
+  &.ar {
+    background: url("../../assets/images/banner4-ar.png") no-repeat center center;
+    background-size: cover;
+  }
+  &.ko {
+    background: url("../../assets/images/banner4-ko.png") no-repeat center center;
+    background-size: cover;
+  }
 }
 .page_home_top,
 .page_banner_top,
