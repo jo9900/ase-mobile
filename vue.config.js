@@ -63,8 +63,8 @@ module.exports = {
 
     chainWebpack: (config) => {
 
-        config.output.filename('./assets/js/[name].[chunkhash:8].js');
-        config.output.chunkFilename('./assets/js/[name].[chunkhash:8].js');
+        config.output.filename('./assets/js/[name].[hash:8].js');
+        config.output.chunkFilename('./assets/js/[name].[hash:8].js');
 
         config.resolve.symlinks(true);
         config.set('externals', {

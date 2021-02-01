@@ -7,9 +7,9 @@
         <!--<div class="wrap_title">{{ $t("message.145") }}</div>-->
         <!--<div class="wrap_line"></div>-->
         <div class="wrap_header">
-          <div class="wrap_header_title">
+          <div :class="['wrap_header_title', $lang]">
             <div>{{ $t("message.527") }}</div>
-            <div>{{ $t("message.528") }}</div>
+            <div class="rtl">{{ $t("message.528") }}</div>
           </div>
         </div>
         <div class="wrap_content">
@@ -882,6 +882,9 @@ export default {
   letter-spacing: 2/100rem;
   margin: 224/100rem 0 0 328/100rem;
   font-weight: bold;
+  &.ar {
+    font-size: 48/100rem;
+  }
 }
 .wrap_content {
   position: relative;
