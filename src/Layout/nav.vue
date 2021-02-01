@@ -164,6 +164,7 @@ import { digest } from "@/request/news";
 export default {
   components: { vanPopup: Popup, vanPicker: Picker },
   name: "",
+
   data() {
     return {
       columns: [
