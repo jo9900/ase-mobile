@@ -66,7 +66,7 @@
                       </div>
                     </div>
                     <router-link :to="{ path: '/presell' }">
-                      <div :class="['page_banner_btn', $lang]">{{ $t("message.20") }}1111111</div>
+                      <div :class="['page_banner_btn', $lang]">{{ $t("message.20") }}</div>
                     </router-link>
                   </div>
                 </div>
