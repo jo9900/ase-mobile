@@ -311,10 +311,11 @@ export default {
       })*/
     },
     downloadPDF(){
-      if ($lang == 'zh')
+      window.open(this.$BaseUrl + "material/whitepaper.pdf")
+      /*if ($lang == 'zh')
         window.open(this.$BaseUrl + "material/whitepaper.pdf")
       else
-        window.open(this.$BaseUrl + "material/whitepaper-en.pdf")
+        window.open(this.$BaseUrl + "material/whitepaper-en.pdf")*/
     },
     download() {
       this.$message({
