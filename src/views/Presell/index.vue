@@ -1083,6 +1083,9 @@ export default {
         text-align: center;
         background: #0B32A8;
         cursor: pointer;
+        &.ru,&.ja {
+          font-size: 32/100rem;
+        }
       }
       .daosk {
         width: 100%;
