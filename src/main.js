@@ -67,7 +67,6 @@ Vue.use(ElementUI);
 Vue.prototype.$langType = localStorage.getItem("lang_type")
 Vue.prototype.$lang = localStorage.getItem("lang")
 Vue.prototype.$BaseUrl = process.env.VUE_APP_BASE_API;
-console.log( process.env.VUE_APP_BASE_API )
 
 new Vue({
     router,

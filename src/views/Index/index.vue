@@ -11,41 +11,41 @@
           indicator-color="white"
           :height="swipeHeight"
         >
-          <van-swipe-item>
-            <div style="height: 100%">
-              <template>
-                <div :class="['page_out', $lang]" @click="toNews">
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
-          <van-swipe-item
-            ><div style="height: 500px" @click="slkowet">
-              <template>
-                <div class="page_home">
-                  <div class="page_home_top">
-                    <div class="page_home_title">ARTHUR-EX</div>
-                    <div :class="['page_home_item1', $lang]">
-                      {{ $t("message.12") }}
-                    </div>
-                    <div
-                      class="page_home_item2"
-                      :class="{ marginTop20: lang == 'en' }"
-                    >
-                      {{ $t("message.13") }}
-                    </div>
-                    <div class="page_home_detail">
-                      {{ $t("message.14") }}
-                    </div>
-                    <router-link :to="{ path: '/signIn' }" v-if="isShow">
-                      <div :class="['page_home_btn', $lang]">{{ $t("message.15") }}</div>
-                    </router-link>
-                  </div>
-                  <!-- <div class="page_home_bottom"></div> -->
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
+<!--          <van-swipe-item>-->
+<!--            <div style="height: 100%">-->
+<!--              <template>-->
+<!--                <div :class="['page_out', $lang]" @click="toNews">-->
+<!--                </div>-->
+<!--              </template>-->
+<!--            </div></van-swipe-item-->
+<!--          >-->
+<!--          <van-swipe-item-->
+<!--            ><div style="height: 500px" @click="slkowet">-->
+<!--              <template>-->
+<!--                <div class="page_home">-->
+<!--                  <div class="page_home_top">-->
+<!--                    <div class="page_home_title">ARTHUR-EX</div>-->
+<!--                    <div :class="['page_home_item1', $lang]">-->
+<!--                      {{ $t("message.12") }}-->
+<!--                    </div>-->
+<!--                    <div-->
+<!--                      class="page_home_item2"-->
+<!--                      :class="{ marginTop20: lang == 'en' }"-->
+<!--                    >-->
+<!--                      {{ $t("message.13") }}-->
+<!--                    </div>-->
+<!--                    <div class="page_home_detail">-->
+<!--                      {{ $t("message.14") }}-->
+<!--                    </div>-->
+<!--                    <router-link :to="{ path: '/signIn' }" v-if="isShow">-->
+<!--                      <div :class="['page_home_btn', $lang]">{{ $t("message.15") }}</div>-->
+<!--                    </router-link>-->
+<!--                  </div>-->
+<!--                  &lt;!&ndash; <div class="page_home_bottom"></div> &ndash;&gt;-->
+<!--                </div>-->
+<!--              </template>-->
+<!--            </div></van-swipe-item-->
+<!--          >-->
           <van-swipe-item
             ><div style="height: 100%">
               <template>
@@ -58,10 +58,10 @@
                       {{ $t("message.17") }}
                     </div>
                     <div class="page_banner_date_wrap">
-                      <div class="page_banner_item2 text_left">
+                      <div :class="['page_banner_item2 text_left', $lang]">
                         <span class="time">{{ $t("message.18") }}</span>:&nbsp;2021-01-05
                       </div>
-                      <div class="page_banner_detail text_left">
+                      <div :class="['page_banner_detail text_left', $lang]">
                         <span class="time">{{ $t("message.19") }}</span>:&nbsp;{{ $t("message.496") }}
                       </div>
                     </div>
@@ -73,20 +73,20 @@
               </template>
             </div></van-swipe-item
           >
-          <van-swipe-item>
-            <div style="height: 100%">
-              <template>
-                <div class="page_right">
-                  <div class="page_right_top">
-                    <div class="page_right_title"></div>
-                    <div class="page_right_item1">
-                      {{ $t("message.519") }}
-                    </div>
-                  </div>
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
+<!--          <van-swipe-item>-->
+<!--            <div style="height: 100%">-->
+<!--              <template>-->
+<!--                <div class="page_right">-->
+<!--                  <div class="page_right_top">-->
+<!--                    <div class="page_right_title"></div>-->
+<!--                    <div class="page_right_item1">-->
+<!--                      {{ $t("message.519") }}-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </template>-->
+<!--            </div></van-swipe-item-->
+<!--          >-->
         </van-swipe>
         <div class="page_content rtl">
           <!-- 关于art -->
@@ -1073,10 +1073,12 @@ export default {
 }
 .page_banner_date_wrap .text_left {
   text-align: left;
+  &.ar {
+    text-align: right ;
+  }
 }
 .page_banner_item2 {
   width: 100%;
-  text-align: center;
   height: 37/100rem;
   font-size: 28/100rem;
   font-family: PingFang SC;
