@@ -167,8 +167,8 @@ export default {
   data() {
     return {
       columns: [
-          { name: "中文", value: "zh" },
           { name: "English", value: "en" },
+          { name: "中文", value: "zh" },
           { name: "日本語", value: "ja" },
           { name: "عربى", value: "ar" },
           { name: "한국어", value: "ko" },
