@@ -1088,7 +1088,7 @@ export default {
         &.ru {
           font-size: 30/100rem;
           line-height: 40/100rem;
-          padding-top: 10/100rem;
+          padding-top: 5/100rem;
         }
       }
       .daosk {
