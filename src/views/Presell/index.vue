@@ -129,8 +129,7 @@
 
       <div class="apply" style="margin-top: 150px">
         <div
-          class="apply_btn"
-          :class="{ daosk: roundstatus == '1' }"
+          :class="['apply_btn', $lang, { daosk: roundstatus == '1' }]"
           @click="clickBefore"
         >
           <template v-if="round == '1'">
@@ -1083,8 +1082,13 @@ export default {
         text-align: center;
         background: #0B32A8;
         cursor: pointer;
-        &.ru,&.ja {
+        &.ja {
           font-size: 32/100rem;
+        }
+        &.ru {
+          font-size: 30/100rem;
+          line-height: 40/100rem;
+          padding-top: 10/100rem;
         }
       }
       .daosk {
