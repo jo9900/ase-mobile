@@ -456,7 +456,8 @@ export default {
   margin-top: 26/100rem;
 }
 .page_subscribe_btn {
-  width: 320/100rem;
+  min-width: 320/100rem;
+  padding: 0 10/100rem;
   height: 80/100rem;
   text-align: center;
   line-height: 80/100rem;
