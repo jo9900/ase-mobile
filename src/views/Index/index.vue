@@ -57,13 +57,27 @@
                     >
                       {{ $t("message.17") }}
                     </div>
-                    <div class="page_banner_date_wrap">
-                      <div :class="['page_banner_item2 text_left', $lang]">
-                        <span class="time">{{ $t("message.18") }}</span>:&nbsp;2021-01-05
+                    <div class="page_banner_date_wrap rtl">
+                      <div class="block text">
+                        <div>{{ $t("message.18") }}</div>
+                        <div>{{ $t("message.19") }}</div>
                       </div>
-                      <div :class="['page_banner_detail text_left', $lang]">
-                        <span class="time">{{ $t("message.19") }}</span>:&nbsp;{{ $t("message.496") }}
+                      <div class="block colon">
+                        <div>:</div>
+                        <div>:</div>
                       </div>
+                      <div class="block date">
+                        <div>2021-01-05</div>
+                        <div>{{ $t("message.496") }}</div>
+                      </div>
+<!--                      <div :class="['page_banner_detail', $lang]">-->
+<!--                        <span class="time">{{ $t("message.18") }}</span>:&nbsp;-->
+<!--                        <span>2021-01-05</span>-->
+<!--                      </div>-->
+<!--                      <div :class="['page_banner_detail', $lang]">-->
+<!--                        <span class="time">{{ $t("message.19") }}</span>:&nbsp;-->
+<!--                        <span>{{ $t("message.496") }}</span>-->
+<!--                      </div>-->
                     </div>
                     <router-link :to="{ path: '/presell' }">
                       <div :class="['page_banner_btn', $lang]">{{ $t("message.20") }}</div>
@@ -1065,13 +1079,19 @@ export default {
 .page_banner_date_wrap {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  .time {
-    display: inline-block;
-    min-width: 150/100rem;
-    margin-right: 3px;
-    text-align: right;
+  font-size: 28/100rem;
+  font-family: PingFang SC;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 48/100rem;
+  margin-top: 53/100rem;
+  .block {
+    &.text  {
+      text-align: right;
+    }
+    &.colon {
+      margin: 0 2px;
+    }
   }
 }
 .page_banner_date_wrap .text_left {
@@ -1079,16 +1099,6 @@ export default {
   &.ar {
     text-align: right ;
   }
-}
-.page_banner_item2 {
-  width: 100%;
-  height: 37/100rem;
-  font-size: 28/100rem;
-  font-family: PingFang SC;
-  font-weight: 300;
-  color: #ffffff;
-  line-height: 48/100rem;
-  margin-top: 53/100rem;
 }
 .page_right_item1 {
   width: 575/100rem;
