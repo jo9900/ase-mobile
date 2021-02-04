@@ -1,6 +1,4 @@
 import {get, post } from "./http";
-import request from "./request";
-
 const baseUrl = "api/v1/";
 
 // 用户信息
@@ -8,13 +6,6 @@ export const userInfo = (params) => {
     return post(baseUrl + "user/info", params);
 };
 
-// export function userInfo(data) {
-//     return request({
-//         url: baseUrl + "user/info",
-//         method: "post",
-//         data,
-//     });
-// }
 // 我的预售
 export const myPreSale = (params) => {
     return post(baseUrl + "user/pre-sale", params);

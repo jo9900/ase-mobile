@@ -2,15 +2,6 @@ import Login from "@/views/Login";
 import Layout from "@/Layout";
 import Home from "@/views/Index";
 
-let language = localStorage.getItem("lang");
-let name;
-if (language == null || language == "zh") {
-    name = "zh";
-} else {
-    name = language;
-}
-console.log(`${"@/lang/" + name + ".js"}`);
-
 const routes = [{
         path: "/login",
         name: "login",
