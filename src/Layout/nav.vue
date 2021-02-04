@@ -231,12 +231,10 @@ export default {
       })*/
     },
     downloadPDF(){
-      window.open(this.$BaseUrl + "material/whitepaper.pdf", "_self")
-
-      /*if ($lang == 'zh')
+      if ($lang == 'zh')
         window.open(this.$BaseUrl + "material/whitepaper.pdf", "_self")
       else
-        window.open(this.$BaseUrl + "material/whitepaper-en.pdf", "_self")*/
+        window.open(this.$BaseUrl + "material/whitepaper-en.pdf", "_self")
     },
     messageTips() {
       this.$message({
