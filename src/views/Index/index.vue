@@ -325,7 +325,7 @@ export default {
       })*/
     },
     downloadPDF(){
-      if ($lang == 'zh')
+      if (this.$lang == 'zh')
         window.open(this.$BaseUrl + "material/whitepaper.pdf")
       else
         window.open(this.$BaseUrl + "material/whitepaper-en.pdf")
