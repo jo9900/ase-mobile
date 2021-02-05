@@ -2,7 +2,7 @@
 node_modules
 /dist
 /dist-web-phone
-
+.history
 # local env files
 .env.local
 .env.*.local
