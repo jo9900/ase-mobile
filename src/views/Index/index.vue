@@ -1189,6 +1189,7 @@ export default {
     justify-content: center;
     img {
       width: 400/100rem;
+      height: 370/100rem;
     }
   }
   .subtitle {
