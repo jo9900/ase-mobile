@@ -154,6 +154,27 @@
               </div>
             </div>
           </div>
+<!--          uvtoken-->
+          <div class="page_content_wallet">
+            <div class="page_wallet_title">{{ $t("message.529") }}</div>
+            <div class="page_wallet_img">
+              <img src="../../assets/images/wallet.png" alt="" />
+            </div>
+            <div class="page_wallet_detail">
+              <div class="subtitle">{{ $t("message.532") }}</div>
+              <span>{{ $t("message.530") }}</span>
+              <div class="page_wallet_detail2">
+                <span>{{ $t("message.531") }}</span>
+              </div>
+            </div>
+            <div class="page_wallet_download">
+              <div class="slogan">{{ $t("message.534") }}</div>
+              <div class="device">
+                <a class="device_icon"  target="_self" href="http://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
+                <a class="device_icon"  target="_self" href="http://apps.apple.com/us/app/uvtoken/id1542306381?uo=4"></a>
+              </div>
+            </div>
+          </div>
           <!-- 发行计划 -->
           <div class="page_content_plan">
             <div class="page_plan_title">{{ $t("message.35") }}</div>
@@ -218,7 +239,7 @@
             <div class="page_download_app">
               <img src="../../assets/images/icon_down_app.png" alt="" />
               <div class="page_download_app_btn" @click="download">
-                {{ $t("message.43") }}
+                {{ $t("message.533") }}
               </div>
             </div>
             <div class="page_download_book">
@@ -759,7 +780,7 @@ export default {
   width: 100%;
   height: 100%;
 }
-.page_settlement_detail {
+.page_settlement_detail, .page_wallet_detail {
   font-size: 26/100rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -1152,5 +1173,64 @@ export default {
 }
 .page_banner_btn {
   margin-top: 66/100rem;
+}
+.page_content_wallet {
+  .page_wallet_title {
+    font-size: 44/100rem;
+    font-family: Helvetica;
+    line-height: 64/100rem;
+    color: #323A43;
+    text-align: center;
+    margin-bottom: 86/100rem;
+    font-weight: bold;
+  }
+  .page_wallet_img {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 400/100rem;
+    }
+  }
+  .subtitle {
+    font-size: 28/100rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 120/100rem;
+    color: #323A43;
+  }
+
+  .page_wallet_detail {
+    margin-bottom: 40/100rem;
+  }
+  .page_wallet_download {
+    .slogan {
+      font-size: 28/100rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      line-height: 120/100rem;
+      color: #323A43;
+      text-align: center;
+    }
+    .device {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40/100rem;
+      .device_icon{
+        height: 70/100rem;
+        display: block;
+        &:nth-child(1) {
+          width: 60/100rem;
+          background: url("../../assets/images/and@3x.png") center center no-repeat;
+          margin-right: 222/100rem;
+          background-size: contain;
+        }
+        &:nth-child(2) {
+          width: 64/100rem;
+          background: url("../../assets/images/ios@3x.png") center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
 }
 </style>
