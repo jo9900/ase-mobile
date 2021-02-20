@@ -170,7 +170,7 @@
             <div class="page_wallet_download">
               <div class="slogan">{{ $t("message.534") }}</div>
               <div class="device ltr">
-                <a class="device_icon"  target="_self" href="http://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
+                <a :class="['device_icon', $lang]"  target="_self" href="http://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
                 <a class="device_icon"  target="_self" href="https://apps.apple.com/us/app/UvToken/id1552556395?uo=4"></a>
               </div>
             </div>
@@ -1217,17 +1217,23 @@ export default {
       justify-content: center;
       padding-bottom: 40/100rem;
       .device_icon{
-        height: 70/100rem;
+        height: 160/100rem;
         display: block;
         &:nth-child(1) {
-          width: 60/100rem;
-          background: url("../../assets/images/and@3x.png") center center no-repeat;
-          margin-right: 222/100rem;
+          width: 40%;
+          background: url("../../assets/images/apk@3x.png") center center no-repeat;
+          margin-right: 45/100rem;
           background-size: contain;
+          &.zh {
+            width: 40%;
+            background: url("../../assets/images/apk-zh@3x.png") center center no-repeat;
+            margin-right: 45/100rem;
+            background-size: contain;
+          }
         }
         &:nth-child(2) {
-          width: 64/100rem;
-          background: url("../../assets/images/ios@3x.png") center center no-repeat;
+          width: 40%;
+          background: url("../../assets/images/app-store@3x.png") center center no-repeat;
           background-size: contain;
         }
       }
