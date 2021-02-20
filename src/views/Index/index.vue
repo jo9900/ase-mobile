@@ -169,7 +169,7 @@
             </div>
             <div class="page_wallet_download">
               <div class="slogan">{{ $t("message.534") }}</div>
-              <div class="device">
+              <div class="device ltr">
                 <a class="device_icon"  target="_self" href="http://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
                 <a class="device_icon"  target="_self" href="http://apps.apple.com/us/app/uvtoken/id1542306381?uo=4"></a>
               </div>
