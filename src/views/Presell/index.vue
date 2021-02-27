@@ -694,7 +694,7 @@ export default {
     nextPay() {
       this.$refs["presellForm"].validate((valid) => {
         if (valid) {
-          if (this.round == 1) {
+          if (this.round == 1||this.round == 2) {
             if (parseInt(this.presellForm.book_amount) > this.preInfo.total) {
               return this.$message.error(
                 this.lang_type == "English"
@@ -709,7 +709,7 @@ export default {
               );
             }
           }
-          if (this.round == 2) {
+          if (this.round == 3) {
             if (this.totalPrice > this.preInfo.total) {
               return this.$message.error(
                 this.$t("message.203") + this.preInfo.total + " 份"
@@ -727,7 +727,7 @@ export default {
           subBook(
             this.$qs.stringify({
               user_code: localStorage.getItem("code"),
-              amount_type: this.round == 1 ? "1" : "0",
+              amount_type: this.round == 1||this.round == 2 ? "1" : "0",
               book_amount: this.presellForm.book_amount,
             })
           ).then((res) => {
