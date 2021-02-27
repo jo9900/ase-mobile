@@ -119,6 +119,7 @@ const   languageNav = {
           28: "土曜日 ~日曜日：",
 
      },
+
      ko: {
 
 
