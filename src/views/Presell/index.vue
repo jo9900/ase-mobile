@@ -475,7 +475,7 @@ export default {
   components: { webFoot },
   data() {
     var roundtext = (rule, value, callback) => {
-      if (this.round == 1) {
+      if (this.round == 1||this.round == 2) {
         if (value == "") {
           callback(new Error(this.$t("message.197")));
         } else if (value.toString().length > 8) {
@@ -484,7 +484,7 @@ export default {
           callback();
         }
       }
-      if (this.round == 2) {
+      if (this.round == 3) {
         if (value == "") {
           callback(new Error(this.$t("message.198")));
         } else {
@@ -493,7 +493,7 @@ export default {
       }
     };
     var validateSurnmae = (rule, value, callback) => {
-      if (this.round == 1) {
+      if (this.round == 1||this.round == 2) {
         if (value < 1) {
           callback(new Error(this.$t("message.199")));
         } else if (!/(^[1-9]\d*$)/.test(value)) {
