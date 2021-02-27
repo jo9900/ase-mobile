@@ -61,7 +61,7 @@
                 >5,000,000 USDT
             </div>
           </div>
-
+          <div class="wrap-cont-text rtl" style="margin-top: 0.0rem;">{{ $t("message.497") }}</div>
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
           <div :class="[
