@@ -209,7 +209,7 @@
 
                 <div class="progress_info">
                   <div>
-                    <template v-if="round == 1">
+                    <template v-if="round == 1||round == 2">
                       <template v-if="lang_type == 'English'"
                         >{{ preInfo.progress }}
                         {{ $t("message.173") }}</template
@@ -220,18 +220,18 @@
                         {{ $t("message.174") }}</template
                       >
                     </template>
-                    <template v-if="round == 2"
+                    <template v-if="round == 3"
                       >{{ $t("message.175") }} {{ preInfo.progress }}%</template
                     >
                   </div>
 
                   <div>
                     {{ $t("message.176") }}
-                    <template v-if="round == 1">
+                    <template v-if="round == 1||round == 2">
                       {{ preInfo.total }}
                       {{ $t("message.174") }}</template
                     >
-                    <template v-if="round == 2"
+                    <template v-if="round == 3"
                       >{{
                         preInfo.total
                           ? preInfo.total.replace(/\B(?=(?:\d{3})+\b)/g, ",")
@@ -255,7 +255,7 @@
               <el-col :span="24">
                 <el-form-item
                   :label="
-                    round == 1
+                    round == 1||round == 2
                       ? $t('message.177') +
                         '（1' +
                         $t('message.174') +
@@ -271,7 +271,7 @@
                     type="number"
                     v-model.trim="presellForm.book_amount"
                     :placeholder="
-                      round == 1
+                      round == 1||round == 2
                         ? $t('message.179')
                         : $t('message.180')
                     "
@@ -283,11 +283,11 @@
                     :style="{
                       width: lang_type == 'English' ? '47px' : '31px',
                     }"
-                    v-if="round == 1"
+                    v-if="round == 1||round == 2"
                   >
                     {{ $t("message.174") }}
                   </div>
-                  <div class="skert" style="width: 42px" v-if="round == 2">
+                  <div class="skert" style="width: 42px" v-if="round == 3">
                     AECO
                   </div>
                 </el-form-item>
@@ -684,7 +684,7 @@ export default {
     },
 
     getPreSale2() {
-      preSale(this.$qs.stringify({ round: 2, amount_type: 0 })).then((res) => {
+      preSale(this.$qs.stringify({ round: 2, amount_type: 1 })).then((res) => {
         if (res.code == 0) {
           this.preInfo2 = res.data;
         }
