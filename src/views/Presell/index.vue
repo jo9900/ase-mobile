@@ -15,15 +15,16 @@
         <div class="wrap_content">
           <div class="wrap-wllr"><img src="@/assets/images/pic_dian@3x.png"/></div>
           <div class="wrap-wllr ter"><img src="@/assets/images/pic_dian@3x.png"/></div>
+          <div class="wrap-wllr ter" style="top: 11.2rem;"><img src="@/assets/images/pic_dian@3x.png"/></div>
           <!--<div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>-->
 
-          <div class="wrap_plan_first_title">{{ $t("message.132") }}</div>
+          <div class="wrap_plan_first_title">{{ $t("message.535") }}</div>
           <div class="wrap_plan_first_title"  style="font-size: 0.45rem;">2021.1.5</div>
           <div :class="
             ['wrap_plan_default rtl', $lang,
              {'wrap_plan_current': preInfo1.status == 1}]"
           >
-            <img :src="soldout_src" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
+            <img :src="soldout_src" v-if="round>1" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
             <div>
               <span>{{ $t("message.147") }}</span
               >2021.1.5{{ $t("message.496") }}
@@ -38,28 +39,35 @@
             </div>
           </div>
           <div class="wrap-cont-text rtl">{{ $t("message.497") }}</div>
-          <!--<div class="wrap_plan_first_title">次轮预售</div>
+
+          <div class="wrap_plan_first_title">{{$t("message.536")}}</div>
           <div class="wrap_plan_second_title" style="font-size: 0.45rem;">
             2021.3.1
           </div>
-          <div class="wrap_plan_second" style="margin-bottom: 0.4rem;">
+          <div :class="
+            ['wrap_plan_default rtl', $lang,
+             {'wrap_plan_current': preInfo2.status == 1}]"  style="margin-bottom: 0.4rem;">
+            <img :src="soldout_src" v-if="round>2" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
             <div>
               <span>{{ $t("message.147") }}</span
-              >2021.3.1-2021.4.15
+              >2021.3.1{{$t("message.496")}}
             </div>
             <div>
-              <span>{{ $t("message.148") }}{{ $t("message.153") }}</span>
+               <span>{{ $t("message.148") }}</span
+               >0.18 USDT
             </div>
             <div>
-              <span>{{ $t("message.149") }}{{ $t("message.153") }}</span>
+                <span>{{ $t("message.149") }}</span
+                >5,000,000 USDT
             </div>
-          </div>-->
+          </div>
+
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
           <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
           <div :class="[
             'wrap_plan_default rtl', $lang,
               {
-                'wrap_plan_current': preInfo2.status == 1,
+                'wrap_plan_current': preInfo3.status == 1,
               }
              ]">
             <div>
@@ -150,6 +158,11 @@
             }}</template>
           </template>-->
           <template v-if="round == '2'">
+            <template v-if="roundstatus == '0'">{{ $t("message.537") }}</template>
+            <template v-if="roundstatus == '1'">{{ $t("message.168") }}</template>
+            <template v-if="roundstatus == '2'">{{ $t("message.170") }}</template>
+          </template>
+          <template v-if="round == '3'">
             <template v-if="roundstatus == '0'">{{ $t("message.171") }}</template>
             <template v-if="roundstatus == '1'">{{ $t("message.168") }}</template>
             <template v-if="roundstatus == '2'">{{ $t("message.170") }}</template>
@@ -161,8 +174,8 @@
       <el-dialog
         :title="
           round == 1
-            ? $t('message.132')
-            : $t('message.498')
+            ? $t('message.535')
+            :round == 2?$t('message.536'): $t('message.498')
         "
         :visible.sync="firstDialogVisible"
         custom-class="firstDialogVisible"
@@ -528,6 +541,7 @@ export default {
       preInfo: {},
       preInfo1: {},
       preInfo2: {},
+      preInfo3:{},
       charge_address: "", //收货地址
       rules: {
         book_amount: [
@@ -573,6 +587,9 @@ export default {
       if (this.round == 2 && (this.roundstatus == 0 || this.roundstatus == 2)) {
         return;
       }
+        if (this.round == 3 && (this.roundstatus == 0 || this.roundstatus == 2)) {
+            return;
+        }
       if (this.isLogin) {
         this.presellForm.book_amount = "";
         this.totalPrice = 0;
@@ -893,7 +910,7 @@ export default {
   background-size: 750/100rem 1890/100rem;*/
   //height: 1248/100rem;
   background: url("../../assets/images/preSale2.png") no-repeat;
-  background-size: 750/100rem 1248/100rem;
+  background-size: 750/100rem 2000/100rem;
   margin-top: -2/100rem;
   display: flex;
   flex-direction: column;
@@ -922,9 +939,9 @@ export default {
 .wrap_plan_third_title {
   // width: 308/100rem;
   //height: 84/100rem;
-  font-size: 60/100rem;
+  font-size:0.36rem;
   font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
+  font-weight: 600;
   color: #ffffff;
   line-height: 84/100rem;
 }
@@ -1071,6 +1088,7 @@ export default {
       position: fixed;
       bottom: 0;
       width: 100%;
+      z-index: 99999;
       .apply_btn {
         padding: 0 31px;
         height: 100/100rem;
