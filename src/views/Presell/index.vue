@@ -15,7 +15,7 @@
         <div class="wrap_content">
           <div class="wrap-wllr"><img src="@/assets/images/pic_dian@3x.png"/></div>
           <div class="wrap-wllr ter"><img src="@/assets/images/pic_dian@3x.png"/></div>
-          <div class="wrap-wllr ter" style="top: 11.2rem;"><img src="@/assets/images/pic_dian@3x.png"/></div>
+          <div class="wrap-wllr ter"><img style="top: 12.7rem;" src="@/assets/images/pic_dian@3x.png"/></div>
           <!--<div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>-->
 
           <div class="wrap_plan_first_title">{{ $t("message.535") }}</div>
