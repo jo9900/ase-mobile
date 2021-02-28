@@ -58,7 +58,7 @@
             </div>
             <div>
                 <span>{{ $t("message.149") }}</span
-                >5,000,000 USDT
+                >5,400,000 USDT
             </div>
           </div>
           <div class="wrap-cont-text rtl" style="margin-top: 0.0rem;">{{ $t("message.497") }}</div>
