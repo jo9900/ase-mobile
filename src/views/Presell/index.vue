@@ -281,7 +281,7 @@
                   <div
                     class="skert"
                     :style="{
-                      width: lang_type == 'English' ? '47px' : '31px',
+                      width: lang_type == 'English' ? '47px' : '41px',
                     }"
                     v-if="round == 1||round == 2"
                   >
