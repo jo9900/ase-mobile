@@ -15,7 +15,7 @@
         <div class="wrap_content">
           <div class="wrap-wllr"><img src="@/assets/images/pic_dian@3x.png"/></div>
           <div class="wrap-wllr ter"><img src="@/assets/images/pic_dian@3x.png"/></div>
-          <div class="wrap-wllr ter" style="top: 11.2rem;"><img src="@/assets/images/pic_dian@3x.png"/></div>
+          <div class="wrap-wllr ter"><img style="top: 12.7rem;" src="@/assets/images/pic_dian@3x.png"/></div>
           <!--<div class="wrap-wllr tert"><img src="@/assets/images/pic_dian@3x.png"/></div>-->
 
           <div class="wrap_plan_first_title">{{ $t("message.535") }}</div>
@@ -58,7 +58,7 @@
             </div>
             <div>
                 <span>{{ $t("message.149") }}</span
-                >5,000,000 USDT
+                >5,400,000 USDT
             </div>
           </div>
           <div class="wrap-cont-text rtl" style="margin-top: 0.0rem;">{{ $t("message.497") }}</div>
@@ -281,7 +281,7 @@
                   <div
                     class="skert"
                     :style="{
-                      width: lang_type == 'English' ? '47px' : '31px',
+                      width: lang_type == 'English' ? '47px' : '41px',
                     }"
                     v-if="round == 1||round == 2"
                   >
