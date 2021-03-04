@@ -1,6 +1,3 @@
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
-const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
-const path = require('path');
 
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = /\.(js|css|json|txt|html)(\?.*)?$/i;
@@ -60,16 +57,6 @@ module.exports = {
                     },
                     sourceMap: false,
                     parallel: true
-                })
-            )
-            config.plugins.push(
-                new PrerenderSPAPlugin({
-                    staticDir: path.join(__dirname, 'dist-web-phone'),
-                    routes: ['/', '/about', '/presell'],
-                    renderer: new Renderer({
-                        headless: true,
-                        renderAfterDocumentEvent: 'render-event'
-                    })
                 })
             )
         }

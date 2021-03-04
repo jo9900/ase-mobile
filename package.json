@@ -22,7 +22,6 @@
     "lodash": "^4.17.20",
     "moment": "^2.29.0",
     "normalize.css": "^8.0.1",
-    "prerender-spa-plugin": "^3.4.0",
     "qrcodejs2": "^0.0.2",
     "qs": "^6.9.4",
     "vant": "^2.11.1",
