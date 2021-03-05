@@ -339,7 +339,7 @@ export default {
     toNews() {
       /*let newsCode = localStorage.getItem('newsCode')
       this.$router.push({
-        path: 'journalismDetail',
+        path: 'newsDetail',
         query: {
           code: newsCode
         }
@@ -381,7 +381,7 @@ export default {
     },
     slkowet() {
       // this.$router.push({
-      //   path: "/journalismDetail",
+      //   path: "/newsDetail",
       //   query: { code: this.list[0].code },
       // });
     },

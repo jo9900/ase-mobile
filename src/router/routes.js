@@ -42,20 +42,20 @@ const routes = [{
         component: Layout,
         label: "新闻",
         children: [{
-                path: "/journalism",
-                name: "Journalism",
+                path: "/news",
+                name: "news",
                 label: "新闻",
                 meta: { requiresAuth: false },
                 component: (resolve) =>
-                    require(["@/views/Journalism/index.vue"], resolve),
+                    require(["@/views/News/index.vue"], resolve),
             },
             {
-                path: "/journalismDetail",
-                name: "journalismDetail",
+                path: "/newsDetail",
+                name: "newsDetail",
                 label: "新闻详情",
                 meta: { requiresAuth: false },
                 component: (resolve) =>
-                    require(["@/views/Journalism/journalismDetail.vue"], resolve),
+                    require(["@/views/News/newsDetail.vue"], resolve),
             },
         ],
     },

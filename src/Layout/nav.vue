@@ -63,13 +63,13 @@
               />
               <router-link to="/">{{ $t("message.1") }}</router-link>
             </li>
-            <li :class="pagePath == '/journalism' ? 'active' : ''">
+            <li :class="pagePath == '/news' ? 'active' : ''">
               <img
                 src="../assets/images/icon_news.png"
                 alt=""
                 class="iconImg"
               />
-              <router-link to="/journalism">{{ $t("message.3") }}</router-link>
+              <router-link to="/news">{{ $t("message.3") }}</router-link>
             </li>
             <li :class="pagePath == '/books' ? 'active' : ''">
               <img
@@ -224,7 +224,7 @@ export default {
     },
     toNews() {
       /*this.$router.push({
-        path: 'journalismDetail',
+        path: 'newsDetail',
         query: {
           code: this.newsCode
         }
@@ -281,8 +281,8 @@ export default {
     languageChangeType(val) {
       this.$i18n.locale = val; // 切换vue国际化
       this.$Local(val); // 切换vant
-      if (this.$route.name == 'journalismDetail')
-        this.$router.replace('/journalism')
+      if (this.$route.name == 'newsDetail')
+        this.$router.replace('/news')
       this.$router.go(0)
     },
     selecMun() {
