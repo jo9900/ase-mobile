@@ -159,7 +159,7 @@
           </template>-->
           <template v-if="round == '2'">
             <template v-if="roundstatus == '0'">{{ $t("message.537") }}</template>
-            <template v-if="roundstatus == '1'">{{ $t("message.168") }}</template>
+            <template v-if="roundstatus == '1'" style="line-height: unset;">{{ $t("message.168") }}</template>
             <template v-if="roundstatus == '2'">{{ $t("message.170") }}</template>
           </template>
           <template v-if="round == '3'">
@@ -271,7 +271,7 @@
                     type="number"
                     v-model.trim="presellForm.book_amount"
                     :placeholder="
-                      round == 1||round == 2
+                      round == 1 || round == 2
                         ? $t('message.179')
                         : $t('message.180')
                     "
@@ -1105,7 +1105,7 @@ export default {
         }
         &.ru {
           font-size: 30/100rem;
-          line-height: 40/100rem;
+          //line-height: 40/100rem;
           padding-top: 5/100rem;
         }
       }
