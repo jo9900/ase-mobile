@@ -360,6 +360,7 @@ export default {
       this.$refs["subscribe_email"].validate((valid) => {
         if (valid) {
           subscription(this.$qs.stringify(this.subscribe_email)).then((res) => {
+            this.$message.closeAll()
             if (res.code == 0) {
               this.$message({
                 message: this.$t("message.213"),
