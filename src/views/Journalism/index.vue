@@ -28,7 +28,7 @@
                         <router-link
                           class="linkHaef"
                           :to="{
-                            path: '/newsDetail',
+                            path: '/journalismDetail',
                             query: { code: item.code },
                           }"
                         >
@@ -45,7 +45,7 @@
                               <router-link
                                 class="linkHaef"
                                 :to="{
-                                  path: '/newsDetail',
+                                  path: '/journalismDetail',
                                   query: { code: item.code },
                                 }"
                                 >{{ item.title }}</router-link

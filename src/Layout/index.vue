@@ -48,7 +48,7 @@ export default {
     .navhearder{
         position: fixed;
         width: 100%;
-        // z-index: 6000;
+         z-index: 99;
         top: 0;
     }
     #mint{
