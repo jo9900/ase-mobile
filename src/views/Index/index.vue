@@ -963,27 +963,27 @@ export default {
   height: 1016/100rem;
   position: relative;
   &.zh {
-    background: url("../../assets/images/banner4@3x.png") no-repeat center center;
+    background: url("../../assets/images/banner5-zh.png") no-repeat center center;
     background-size: cover;
   }
   &.en {
-    background: url("../../assets/images/banner4-en@3x.png") no-repeat center center;
+    background: url("../../assets/images/banner5-en.png") no-repeat center center;
     background-size: cover;
   }
   &.ja {
-    background: url("../../assets/images/banner4-ja.png") no-repeat center center;
+    background: url("../../assets/images/banner5-ja.png") no-repeat center center;
     background-size: cover;
   }
   &.ru {
-    background: url("../../assets/images/banner4-ru.png") no-repeat center center;
+    background: url("../../assets/images/banner5-ru.png") no-repeat center center;
     background-size: cover;
   }
   &.ar {
-    background: url("../../assets/images/banner4-ar.png") no-repeat center center;
+    background: url("../../assets/images/banner5-ar.png") no-repeat center center;
     background-size: cover;
   }
   &.ko {
-    background: url("../../assets/images/banner4-ko.png") no-repeat center center;
+    background: url("../../assets/images/banner5-ko.png") no-repeat center center;
     background-size: cover;
   }
 }
