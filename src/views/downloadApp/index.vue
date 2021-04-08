@@ -82,7 +82,7 @@ name: "index",
   bottom: 0;
   padding: 1em;
   width: 100%;
-  box-shadow: 0 0 0 1px #010101 inset, 0 0.5em 1em rgba(156,156,156,.18);
+  box-shadow: 0 0 0 1px #010101c2 inset, 0 0.5em 1em rgba(156,156,156,.18);
   text-shadow: 0 1px 1px hsl(0deg 0% 23% / 49%);
   background: hsla(0,0%,100%,.3);
   font-size: 28/100rem;
