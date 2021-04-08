@@ -1,7 +1,13 @@
 <template>
-<div :class="['body', $lang]">
-  <div class="main">
-    <div class="text">{{ $t("message.256") }}</div>
+<div class="page">
+  <div :class="['dl-body', $lang]">
+    <div class="mask"></div>
+    <div class="main">
+      <div class="text" @click="download">
+              <a v-if="isAndroid" href="#">{{ $t("message.256") }}</a>
+              <a v-else href="#">{{ $t("message.256") }}</a>
+      </div>
+    </div>
   </div>
 </div>
 </template>
@@ -11,28 +17,33 @@ export default {
 name: "index",
   data() {
     return {
-      bt: ''
+      isAndroid: false
     }
   },
   mounted() {
-    this.bt = require('../../assets/images/downloadapp/bt-' + this.$lang + '.png')
+    let u = navigator.userAgent;
+    this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
   },
   methods: {
     download() {
-
+      this.$message(this.$t('message.214'))
     }
   }
 }
 </script>
 
 <style scoped lang="less">
-.body {
-
+.page {
+  // background: #f0f2f5;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari */
+  padding-bottom: 50px;
+}
+.dl-body {
   min-height: 100vh;
   box-sizing: border-box;
-  margin: 0;
-  padding-top: calc(50vh - 6em);
-  font: 150%/1.6 serif;
   background-size: cover;
   &.zh {
     background: url("../../assets/images/downloadapp/dl-zh.png") no-repeat;
@@ -59,15 +70,20 @@ name: "index",
     background-size: cover;
   }
 }
+.mask {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 180/100rem;
 
+}
 .main {
   position: fixed;
   bottom: 0;
   padding: 1em;
   width: 100%;
-  box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,
-  0 .5em 1em rgba(0, 0, 0, 0.6);
-  text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+  box-shadow: 0 0 0 1px #010101 inset, 0 0.5em 1em rgba(156,156,156,.18);
+  text-shadow: 0 1px 1px hsl(0deg 0% 23% / 49%);
   background: hsla(0,0%,100%,.3);
   font-size: 28/100rem;
   overflow: hidden;
@@ -80,10 +96,11 @@ name: "index",
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
-    background: #1D223B;
-    margin: -10px;
+    -webkit-filter: blur(9px);
+    //filter: blur(9px);
+    backdrop-filter: blur(9px);
+    background: url("../../assets/images/downloadapp/dl-zh.png") bottom center no-repeat;
+    background-size: cover;
   }
 }
 .text {
