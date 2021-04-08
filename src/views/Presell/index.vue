@@ -1088,6 +1088,7 @@ export default {
       position: fixed;
       bottom: 0;
       width: 100%;
+      z-index: 5;
       // z-index: 5000;
       .apply_btn {
         padding: 0 31px;
