@@ -1,6 +1,6 @@
 <template>
 <div class="page">
-  <div :class="['dl-body', $lang]">
+  <div :class="['dl-body', lang]">
     <div class="mask"></div>
     <div class="main">
       <div class="text" @click="download">
@@ -17,7 +17,21 @@ export default {
 name: "index",
   data() {
     return {
-      isAndroid: false
+      isAndroid: false,
+      lang: undefined
+    }
+  },
+  watch: {
+    '$route': {
+      handler(cur) {
+        this.lang = this.getQueryVariable(
+            "language",
+            cur.fullPath
+        )
+        this.lang = this.lang || this.$lang
+      },
+      deep:true,
+      immediate: true
     }
   },
   mounted() {
@@ -25,6 +39,15 @@ name: "index",
     this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
   },
   methods: {
+    getQueryVariable(name, url) {
+      return (
+          decodeURIComponent(
+              (new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(
+                  url
+              ) || [, ""])[1].replace(/\+/g, "%20")
+          ) || null
+      );
+    },
     download() {
       this.$message(this.$t('message.214'))
     }
