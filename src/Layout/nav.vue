@@ -104,6 +104,10 @@
               />
               <router-link to="/help">{{ $t("message.475") }}</router-link>
             </li>
+            <li :class="pagePath == '/downloadApp' ? 'active' : ''">
+              <img src="../assets/images/icon_app.png" alt="" class="iconImg" />
+              <router-link to="/downloadApp">{{ $t("message.43") }}</router-link>
+            </li>
             <li :class="pagePath == '/about' ? 'active' : ''">
               <img src="../assets/images/icon_we.png" alt="" class="iconImg" />
               <router-link to="/about">{{ $t("message.7") }}</router-link>

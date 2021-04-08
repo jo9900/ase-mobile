@@ -75,6 +75,19 @@ const routes = [{
     {
         path: "/",
         component: Layout,
+        label: "下载app",
+        children: [{
+            path: "/downloadApp",
+            name: "downloadApp",
+            label: "下载app",
+            meta: { requiresAuth: false },
+            component: (resolve) =>
+                require(["@/views/downloadApp/index.vue"], resolve),
+        }, ],
+    },
+    {
+        path: "/",
+        component: Layout,
         label: "申购协议",
         children: [{
             path: "/purchase",
