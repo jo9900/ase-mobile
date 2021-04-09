@@ -1,11 +1,10 @@
 <template>
 <div class="page">
-  <div :class="['dl-body', lang]">
+  <div :class="['dl-body', $lang]">
     <div class="mask"></div>
     <div class="main">
       <div class="text" @click="download">
-              <a v-if="isAndroid" href="#">{{ $t("message.256") }}</a>
-              <a v-else href="#">{{ $t("message.256") }}</a>
+        <a :href="link">{{ $t("message.256") }}</a>
       </div>
     </div>
   </div>
@@ -18,38 +17,40 @@ name: "index",
   data() {
     return {
       isAndroid: false,
-      lang: undefined
+      link: '',
+      and: 'https://www.arthurex.com/app/android/aeco.apk',
+      ios: '#',
+      test_and: 'http://t.arthurex.com/app/android/aeco.apk',
+      test_ios: '#',
+      NODE_ENV: process.env.NODE_ENV
     }
   },
   watch: {
     '$route': {
       handler(cur) {
-        this.lang = this.getQueryVariable(
-            "language",
-            cur.fullPath
-        )
-        this.lang = this.lang || this.$lang
+        let u = navigator.userAgent;
+        this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+        this.isProd = this.NODE_ENV === 'production'
+        if (this.isAndroid)
+          this.link = this.isProd? this.and : this.test_and
+        if (!this.isAndroid)
+          this.link = this.isProd? this.ios : this.test_ios
+        let newLang = cur.query.language
+        let oldLang = localStorage.getItem('lang')
+        if (newLang != oldLang) {
+          localStorage.setItem('lang', newLang)
+          this.$router.go(0)
+        }
       },
       deep:true,
       immediate: true
     }
   },
   mounted() {
-    let u = navigator.userAgent;
-    this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
   },
   methods: {
-    getQueryVariable(name, url) {
-      return (
-          decodeURIComponent(
-              (new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(
-                  url
-              ) || [, ""])[1].replace(/\+/g, "%20")
-          ) || null
-      );
-    },
     download() {
-      this.$message(this.$t('message.214'))
+        this.$message(this.$t('message.214'))
     }
   }
 }
