@@ -46,47 +46,6 @@
               </template>
             </div></van-swipe-item
           >
-          <van-swipe-item
-            ><div style="height: 100%">
-              <template>
-                <div class="page_banner">
-                  <div class="page_banner_top rtl">
-                    <div :class="['page_banner_title', $lang]">{{ $t("message.16") }}</div>
-                    <div
-                      :class="['page_banner_item1', $lang]"
-                    >
-                      {{ $t("message.17") }}
-                    </div>
-                    <div class="page_banner_date_wrap rtl">
-                      <div class="block text">
-                        <div>{{ $t("message.18") }}</div>
-                        <div>{{ $t("message.19") }}</div>
-                      </div>
-                      <div class="block colon">
-                        <div>:</div>
-                        <div>:</div>
-                      </div>
-                      <div class="block date">
-                        <div>2021-01-05</div>
-                        <div>{{ $t("message.496") }}</div>
-                      </div>
-<!--                      <div :class="['page_banner_detail', $lang]">-->
-<!--                        <span class="time">{{ $t("message.18") }}</span>:&nbsp;-->
-<!--                        <span>2021-01-05</span>-->
-<!--                      </div>-->
-<!--                      <div :class="['page_banner_detail', $lang]">-->
-<!--                        <span class="time">{{ $t("message.19") }}</span>:&nbsp;-->
-<!--                        <span>{{ $t("message.496") }}</span>-->
-<!--                      </div>-->
-                    </div>
-                    <router-link :to="{ path: '/presell' }">
-                      <div :class="['page_banner_btn', $lang]">{{ $t("message.20") }}</div>
-                    </router-link>
-                  </div>
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
           <van-swipe-item>
             <div style="height: 100%">
               <template>
