@@ -8,6 +8,24 @@
       </div>
     </div>
   </div>
+  <div class="doaderRower" v-if="isCloseGoander" @click="closeBower">
+    <div class="slodert">
+      <div class="" style="text-align: right"><img src="@/assets/images/icon_jt.png"/></div>
+      <template v-if="">
+
+      </template>
+      <div class="cakeot" v-if="$lang=='zh'">
+
+        <div class="">请点击右上角 ···</div>
+        <div class="">选择“在浏览器中打开”</div>
+      </div>
+      <div class="cakeot" style="margin-right: 0" v-else>
+        <div class=""> Please click in the upper right corner···</div>
+        <div class="">Select open in browser</div>
+      </div>
+
+    </div>
+  </div>
 </div>
 </template>
 
@@ -16,6 +34,7 @@ export default {
 name: "index",
   data() {
     return {
+      isCloseGoander: false,
       isAndroid: false,
       link: '',
       and: 'https://www.arthurex.com/app/android/aeco.apk',
@@ -57,6 +76,15 @@ name: "index",
     }
   },
   mounted() {
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    if (isAndroid) {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        this.isCloseGoander = true;
+      }
+    }
   },
   methods: {
     download() {
@@ -154,4 +182,116 @@ name: "index",
   font-family: "PingFangSC-Regular,PingFang SC";
   background: linear-gradient(90deg, #2278ff 0%, #3d58ff 100%);
 }
+.rlm-got img{
+  width: 100%;
+}
+.gseter{
+  text-align: center;
+  margin-top: -20px;
+
+}
+.boet{
+  font-size: 23px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  margin-top: 11px;
+}
+.dowbont{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 14px 0;
+  /*height: 62px;*/
+  /*padding-top: 13px;*/
+  background: #FFFFFF;
+  box-shadow: 0px 0px 0px 0px #D5D5D5;
+}
+/*.dowBoander{*/
+/*width: 80%;*/
+/*line-height: 44px;*/
+/*height: 44px;*/
+/*background: linear-gradient(270deg, #000000 0%, #694000 100%);*/
+/*border-radius: 23px;*/
+/*margin: 0 auto;*/
+/*z-index: 99999;*/
+/*text-align: center;*/
+/*color: #fff*/
+/*}*/
+
+.boet_en{
+  font-size: 21px;
+
+  font-weight: 800;
+
+}
+.msoet{
+  float: left;
+  margin-right: 5px;
+}
+
+.appstoreLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+
+  height: 44px;
+  background: linear-gradient(270deg, #000000 0%, #694000 100%);
+  border-radius: 5px;
+}
+.appstoreLink2{
+  margin: 0 3%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 44px;
+  background: #009DFF;
+  border-radius: 5px;
+}
+.appstoreLink3{
+  text-align: center;
+  width: 100px;
+  color: #fff;
+  line-height: 44px;
+  height: 44px;
+  background: #081FCA;
+  border-radius: 5px;
+}
+
+.appstoreLink4{
+  display: block;
+  width: 80%;
+  line-height: 44px;
+  height: 44px;
+  background: linear-gradient(270deg, #000000 0%, #694000 100%);
+  border-radius: 23px;
+  margin: 0 auto;
+  z-index: 99999;
+  text-align: center;
+  color: #fff
+}
+.doaderRower{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  top: 0;
+  background: rgba(0,0,0,0.8)
+}
+.cakeot{
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 65px;
+  font-weight: 600;
+  line-height: 29px;
+}
+.slodert{
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+
 </style>
