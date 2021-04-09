@@ -106,7 +106,7 @@
             </li>
             <li :class="pagePath == '/downloadApp' ? 'active' : ''">
               <img src="../assets/images/icon_app.png" alt="" class="iconImg" />
-              <router-link to="/downloadApp">{{ $t("message.43") }}</router-link>
+              <router-link :to="'/downloadApp?language='+ $lang">{{ $t("message.43") }}</router-link>
             </li>
             <li :class="pagePath == '/about' ? 'active' : ''">
               <img src="../assets/images/icon_we.png" alt="" class="iconImg" />

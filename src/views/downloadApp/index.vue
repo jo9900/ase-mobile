@@ -22,7 +22,15 @@ name: "index",
       ios: '#',
       test_and: 'http://t.arthurex.com/app/android/aeco.apk',
       test_ios: '#',
-      NODE_ENV: process.env.NODE_ENV
+      NODE_ENV: process.env.NODE_ENV,
+      map: {
+        'zh': ['简体中文', 'Chinese'],
+        'en': ['English', 'English'],
+        'ja': ['日本語', 'Japanese'],
+        'ar': ['عربى', 'Arabic'],
+        'ko': ['한국어', 'Korean'],
+        'ru': ['русский', 'Russian'],
+      },
     }
   },
   watch: {
@@ -39,6 +47,8 @@ name: "index",
         let oldLang = localStorage.getItem('lang')
         if (newLang != oldLang) {
           localStorage.setItem('lang', newLang)
+          localStorage.setItem("lang_type", this.map[newLang][1])
+
           this.$router.go(0)
         }
       },
