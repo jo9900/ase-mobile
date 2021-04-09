@@ -60,7 +60,11 @@ name: "index",
   },
   methods: {
     download() {
+      if (!this.isAndroid) {
         this.$message(this.$t('message.214'))
+        return false
+      }
+
     }
   }
 }
