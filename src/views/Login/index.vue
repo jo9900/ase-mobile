@@ -34,9 +34,9 @@
                   :placeholder="$t('message.65')"
                   v-model.trim="loginForm.password"
                 />
-                  <img v-show="!showEye1" @click="showEye1 = !showEye1"
+                  <img v-show="!showEye" @click="showEye = !showEye"
                       class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
-                  <img v-show="showEye1" class="eye" @click="showEye1 = !showEye1"
+                  <img v-show="showEye" class="eye" @click="showEye = !showEye"
                       src="@/assets/images/eye-open.svg" alt="eye">
               </el-form-item>
               <div class="forget_link">
