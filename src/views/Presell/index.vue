@@ -63,7 +63,7 @@
           </div>
           <div class="wrap-cont-text rtl" style="margin-top: 0.0rem;">{{ $t("message.497") }}</div>
           <div class="wrap_plan_first_title">{{ $t("message.498") }}</div>
-          <div class="wrap_plan_third_title" style="font-size: 0.45rem;">2021.5.1</div>
+          <div class="wrap_plan_third_title" style="font-size: 0.45rem;"></div>
           <div :class="[
             'wrap_plan_default rtl', $lang,
               {
@@ -72,7 +72,8 @@
              ]">
             <div>
               <span>{{ $t("message.147") }}</span
-              >2021.5.1
+              >
+              <span>{{ $t( 'message.540' ) }}</span>
             </div>
             <div>
               <span>{{ $t("message.148") }}</span
@@ -84,7 +85,9 @@
             </div>
           </div>
           <div class="wrap-cont-text rtl" style="color: #9CB5FF;">
-            {{ $t("message.499") }}
+<!--            {{ $t("message.499") }}-->
+            {{ $t("message.539") }}
+
           </div>
           <div class="wrap-cont-text rtl" style="color: #9CB5FF; margin-top: 0;">
             {{ $t("message.523") }}
@@ -996,12 +999,12 @@ export default {
     background-size: 540/100rem 300/100rem;
   }
   &.en {
-    height: 300/100rem;
-    background-size: 540/100rem 300/100rem;
+    height: 350/100rem;
+    background-size: 540/100rem 350/100rem;
   }
   &.ru {
-    height: 300/100rem;
-    background-size: 540/100rem 300/100rem;
+    height: 350/100rem;
+    background-size: 540/100rem 350/100rem;
   }
 }
 .soldout {
