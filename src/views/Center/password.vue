@@ -28,20 +28,26 @@
           <el-form-item prop="password" style="margin-top: 25px">
             <el-input
               prefix-icon="el-icon-lock"
-              type="password"
-              show-password="true"
+              :type="!showEye?'password':'text'"
               :placeholder="$t('message.65')"
               v-model.trim="dataForm.password"
             />
+              <img v-show="!showEye" @click="showEye = !showEye"
+                  class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+              <img v-show="showEye" class="eye" @click="showEye = !showEye"
+                  src="@/assets/images/eye-open.svg" alt="eye">
           </el-form-item>
           <el-form-item prop="againPassword" style="margin-top: 25px">
             <el-input
               prefix-icon="el-icon-lock"
-              type="password"
-              show-password="true"
+              :type="!showEye1?'password':'text'"
               :placeholder="$t('message.71')"
               v-model.trim="dataForm.againPassword"
             />
+              <img v-show="!showEye1" @click="showEye1 = !showEye1"
+                  class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+              <img v-show="showEye1" class="eye" @click="showEye1 = !showEye1"
+                  src="@/assets/images/eye-open.svg" alt="eye">
           </el-form-item>
         </el-form>
         <el-button
@@ -87,6 +93,8 @@ export default {
       }
     };
     return {
+      showEye:'',
+      showEye1:'',
       disabled: false,
       time: 60,
       timerNull: null,
