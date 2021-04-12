@@ -68,6 +68,7 @@
             'wrap_plan_default rtl', $lang,
               {
                 'wrap_plan_current': preInfo3.status == 1,
+                'last-en': $lang == 'en',
               }
              ]">
             <div>
@@ -947,6 +948,7 @@ export default {
   font-weight: 600;
   color: #ffffff;
   line-height: 84/100rem;
+  padding-right: 10px;
 }
 .wrap_plan_default {
   width: 540/100rem;
@@ -999,10 +1001,14 @@ export default {
     background-size: 540/100rem 300/100rem;
   }
   &.en {
+    height: 250/100rem;
+    background-size: 540/100rem 250/100rem;
+  }
+  &.ru {
     height: 350/100rem;
     background-size: 540/100rem 350/100rem;
   }
-  &.ru {
+  &.last-en {
     height: 350/100rem;
     background-size: 540/100rem 350/100rem;
   }
