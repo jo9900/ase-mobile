@@ -29,6 +29,7 @@
             <el-input
               prefix-icon="el-icon-lock"
               type="password"
+              show-password="true"
               :placeholder="$t('message.65')"
               v-model.trim="dataForm.password"
             />
@@ -37,6 +38,7 @@
             <el-input
               prefix-icon="el-icon-lock"
               type="password"
+              show-password="true"
               :placeholder="$t('message.71')"
               v-model.trim="dataForm.againPassword"
             />
