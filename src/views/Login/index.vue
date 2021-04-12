@@ -31,6 +31,7 @@
                   prefix-icon="el-icon-lock"
                   autocomplete="off"
                   type="password"
+                  show-password="true"
                   :placeholder="$t('message.65')"
                   v-model.trim="loginForm.password"
                 />
@@ -98,6 +99,7 @@
               <el-form-item class="form_row" prop="password">
                 <el-input
                   type="password"
+                  show-password="true"
                   prefix-icon="el-icon-lock"
                   autocomplete="off"
                   :placeholder="$t('message.65')"
@@ -108,6 +110,7 @@
                 <el-input
                   prefix-icon="el-icon-lock"
                   type="password"
+                  show-password="true"
                   autocomplete="off"
                   :placeholder="$t('message.71')"
                   v-model.trim="signInForm.againPassword"
@@ -202,6 +205,7 @@
                 <el-input
                   prefix-icon="el-icon-lock"
                   type="password"
+                  show-password="true"
                   :placeholder="$t('message.65')"
                   v-model.trim="resetData.password"
                 />
@@ -210,6 +214,7 @@
                 <el-input
                   prefix-icon="el-icon-lock"
                   type="password"
+                  show-password="true"
                   autocomplete="off"
                   :placeholder="$t('message.71')"
                   v-model.trim="resetData.againPassword"
