@@ -32,3 +32,11 @@
 .gradientLtoR {
     background: linear-gradient(to right, #efcf54, #bf8d08);
 }
+.eye{
+  position: absolute;
+  z-index: 10;
+  width: 24px;
+  opacity: .3;
+  right: 13px;
+  top: 10px;
+}
