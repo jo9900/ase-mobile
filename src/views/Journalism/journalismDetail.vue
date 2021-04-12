@@ -59,6 +59,7 @@ export default {
   -moz-box-sizing: border-box; /* Firefox */
   -webkit-box-sizing: border-box; /* Safari */
   background: #f6f6f6;
+  min-height: 100vh;
 }
 .page-sll {
   width: 100%;

@@ -85,6 +85,8 @@ name: "index",
         this.isCloseGoander = true;
       }
     }
+    alert('isAndroid'+ this.isAndroid)
+    alert('isCloseGoander'+ this.isCloseGoander)
   },
   methods: {
     download() {
