@@ -327,13 +327,15 @@ export default {
           subscription(this.$qs.stringify(this.subscribe_email)).then((res) => {
             this.$message.closeAll()
             if (res.code == 0) {
-              this.subscribe_email = ''
+              this.subscribe_email.sub_email = ''
               this.$message({
                 message: this.$t("message.213"),
                 type: "success",
               });
             } else if (res.code == 105403) {
               this.$message.info(this.$t("message.425"));
+            } else if (res.code == 105402) {
+              this.$message.info(this.$t("message.541"));
             } else {
               this.$message.error(res.msg);
             }
