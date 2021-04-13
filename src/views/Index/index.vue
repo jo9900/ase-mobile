@@ -335,7 +335,7 @@ export default {
             } else if (res.code == 105403) {
               this.$message.info(this.$t("message.425"));
             } else if (res.code == 105402) {
-              this.$message.info(this.$t("message.541"));
+              this.$message.error(this.$t("message.541"));
             } else {
               this.$message.error(res.msg);
             }
