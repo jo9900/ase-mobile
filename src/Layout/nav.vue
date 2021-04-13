@@ -4,7 +4,10 @@
     <!--<div :class="['top', $lang]" @click="toNews"></div>-->
     <div class="wrap">
       <div class="username_span_div">
-        <img src="@/assets/images/logo_art.png" class="logoImg" />
+        <img src="@/assets/images/logo_art.png"
+             class="logoImg"
+             @click="$router.push('/')"
+        />
         <span class="username_span" v-if="email != null" @click="selecMun">{{
           email
         }}</span>

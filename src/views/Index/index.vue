@@ -204,7 +204,12 @@
             <div class="page_download_book">
               <img src="../../assets/images/icon_down_book.png" alt="" />
               <div class="page_download_book_btn">
-                <a @click="downloadPDF">{{ $t("message.45") }}</a>
+                <a target="_blank"
+                :href="$lang == 'zh'?
+                  $BaseUrl + 'material/whitepaper.pdf':
+                  $BaseUrl + 'material/whitepaper-en.pdf'
+                "
+                >{{ $t("message.45") }}</a>
               </div>
             </div>
           </div>
@@ -322,6 +327,7 @@ export default {
           subscription(this.$qs.stringify(this.subscribe_email)).then((res) => {
             this.$message.closeAll()
             if (res.code == 0) {
+              this.subscribe_email = ''
               this.$message({
                 message: this.$t("message.213"),
                 type: "success",
