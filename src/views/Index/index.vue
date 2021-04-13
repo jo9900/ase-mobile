@@ -327,7 +327,7 @@ export default {
                 type: "success",
               });
             } else if (res.code == 105403) {
-              this.$message.error(this.$t("message.425"));
+              this.$message.info(this.$t("message.425"));
             } else {
               this.$message.error(res.msg);
             }
