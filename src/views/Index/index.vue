@@ -311,9 +311,10 @@ export default {
         window.open(this.$BaseUrl + "material/whitepaper-en.pdf")
     },
     download() {
-      this.$message({
-        message: this.$t("message.214"),
-      });
+      this.$router.push('downloadapp');
+      // this.$message({
+      //   message: this.$t("message.214"),
+      // });
     },
     subEmail() {
       this.$refs["subscribe_email"].validate((valid) => {
