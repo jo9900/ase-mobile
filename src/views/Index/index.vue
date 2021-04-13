@@ -204,7 +204,12 @@
             <div class="page_download_book">
               <img src="../../assets/images/icon_down_book.png" alt="" />
               <div class="page_download_book_btn">
-                <a @click="downloadPDF">{{ $t("message.45") }}</a>
+                <a target="_blank"
+                :href="$lang == 'zh'?
+                  $BaseUrl + 'material/whitepaper.pdf':
+                  $BaseUrl + 'material/whitepaper-en.pdf'
+                "
+                >{{ $t("message.45") }}</a>
               </div>
             </div>
           </div>
