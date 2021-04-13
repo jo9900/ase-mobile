@@ -327,6 +327,7 @@ export default {
           subscription(this.$qs.stringify(this.subscribe_email)).then((res) => {
             this.$message.closeAll()
             if (res.code == 0) {
+              this.subscribe_email = ''
               this.$message({
                 message: this.$t("message.213"),
                 type: "success",
