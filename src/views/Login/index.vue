@@ -30,11 +30,14 @@
                 <el-input
                   prefix-icon="el-icon-lock"
                   autocomplete="off"
-                  type="password"
-                  show-password="true"
+                  :type="!showEye?'password':'text'"
                   :placeholder="$t('message.65')"
                   v-model.trim="loginForm.password"
                 />
+                  <img v-show="!showEye" @click="showEye = !showEye"
+                      class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+                  <img v-show="showEye" class="eye" @click="showEye = !showEye"
+                      src="@/assets/images/eye-open.png" alt="eye">
               </el-form-item>
               <div class="forget_link">
                 <span @click="toReset">{{ $t("message.66") }}</span>
@@ -98,23 +101,29 @@
               </el-form-item>
               <el-form-item class="form_row" prop="password">
                 <el-input
-                  type="password"
-                  show-password="true"
+                  :type="!showEye1?'password':'text'"
                   prefix-icon="el-icon-lock"
                   autocomplete="off"
                   :placeholder="$t('message.65')"
                   v-model.trim="signInForm.password"
                 />
+                  <img v-show="!showEye1" @click="showEye1 = !showEye1"
+                      class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+                  <img v-show="showEye1" class="eye" @click="showEye1 = !showEye1"
+                      src="@/assets/images/eye-open.png" alt="eye">
               </el-form-item>
               <el-form-item class="form_row" prop="againPassword">
                 <el-input
                   prefix-icon="el-icon-lock"
-                  type="password"
-                  show-password="true"
+                  :type="!showEye2?'password':'text'"
                   autocomplete="off"
                   :placeholder="$t('message.71')"
                   v-model.trim="signInForm.againPassword"
                 />
+                  <img v-show="!showEye2" @click="showEye2 = !showEye2"
+                      class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+                  <img v-show="showEye2" class="eye" @click="showEye2 = !showEye2"
+                      src="@/assets/images/eye-open.png" alt="eye">
               </el-form-item>
               <el-form-item class="form_row form_row1">
                 <template v-if="inviteCode">
@@ -204,21 +213,27 @@
 
                 <el-input
                   prefix-icon="el-icon-lock"
-                  type="password"
-                  show-password="true"
+                  :type="!showEye3?'password':'text'"
                   :placeholder="$t('message.65')"
                   v-model.trim="resetData.password"
                 />
+                  <img v-show="!showEye3" @click="showEye3 = !showEye3"
+                      class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+                  <img v-show="showEye3" class="eye" @click="showEye3 = !showEye3"
+                      src="@/assets/images/eye-open.png" alt="eye">
               </el-form-item>
               <el-form-item class="form_row" prop="againPassword">
                 <el-input
                   prefix-icon="el-icon-lock"
-                  type="password"
-                  show-password="true"
+                  :type="!showEye4?'password':'text'"
                   autocomplete="off"
                   :placeholder="$t('message.71')"
                   v-model.trim="resetData.againPassword"
                 />
+                  <img v-show="!showEye4" @click="showEye4 = !showEye4"
+                      class="eye eye-close" src="@/assets/images/eye.png" alt="eye">
+                  <img v-show="showEye4" class="eye" @click="showEye4 = !showEye4"
+                      src="@/assets/images/eye-open.png" alt="eye">
               </el-form-item>
             </el-form>
             <div class="btnPass_div">
@@ -283,6 +298,11 @@ export default {
     };
 
     return {
+      showEye:'',
+      showEye1:'',
+      showEye2:'',
+      showEye3:'',
+      showEye4:'',
       fromPath: "",
       flag: true,
       loading: false,
