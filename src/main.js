@@ -35,7 +35,7 @@ import { Locals } from "./lang/vantLocal.js";
 Vue.prototype.$Local = Locals;
 let i18n;
 let f = ''
-if (localStorage.getItem("lang") ) {
+if (localStorage.getItem("lang") && localStorage.getItem("lang") != 'undefined') {
     f = localStorage.getItem("lang")
 } else {
     localStorage.setItem("lang", 'en')
