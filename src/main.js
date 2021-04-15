@@ -35,15 +35,21 @@ import { Locals } from "./lang/vantLocal.js";
 Vue.prototype.$Local = Locals;
 let i18n;
 let f = ''
-if (localStorage.getItem("lang") && localStorage.getItem("lang") != 'undefined') {
+const map = {
+    'zh': ['简体中文', 'Chinese'],
+    'en': ['English', 'English'],
+    'ja': ['日本語', 'Japanese'],
+    'ar': ['عربى', 'Arabic'],
+    'ko': ['한국어', 'Korean'],
+    'ru': ['русский', 'Russian'],
+}
+if (map[localStorage.getItem("lang")]) {
     f = localStorage.getItem("lang")
 } else {
     localStorage.setItem("lang", 'en')
     f = 'en'
 }
-if (!localStorage.getItem("lang_type")) {
-    localStorage.setItem("lang_type", 'English')
-}
+localStorage.setItem("lang_type", map[f][1])
 i18n = new VueI18n({locale: f, messages});
 Locals(f);
 fastclick.prototype.focus = function(targetElement) {
