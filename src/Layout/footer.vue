@@ -8,33 +8,34 @@
         <div class="footer_container_header_content">
           <div
             class="footer_container_header_first footer_container_header_div"
-          >
+          ><a href="https://medium.com/@Arthur_EX2021">
             <img
-              src="../assets/images/icon_facebook.png"
+              src="../assets/images/icon_medium@3x.png"
               alt=""
               class="footer_container_header_img"
             />
-            <span class="footer_container_header_span">facebook</span>
+            <span class="footer_container_header_span">Medium</span></a>
           </div>
           <div
             class="footer_container_header_second footer_container_header_div"
-          >
+          ><a href="https://twitter.com/Arthur_EX2021">
             <img
               src="../assets/images/icon_twitter.png"
               alt=""
               class="footer_container_header_img"
             />
-            <span class="footer_container_header_span">Twitter</span>
+            <span class="footer_container_header_span">Twitter</span></a>
           </div>
           <div
             class="footer_container_header_third footer_container_header_div"
-          >
+          ><a href="https://t.me/arthur_ex">
             <img
               src="../assets/images/icon_telegram.png"
               alt=""
               class="footer_container_header_img"
             />
             <span class="footer_container_header_span">Telegram</span>
+          </a>
           </div>
         </div>
         <div class="footer_container_header_email">
@@ -108,7 +109,7 @@ export default {
   justify-content: space-between;
   margin-top: 60/100rem;
 }
-.footer_container_header_div {
+.footer_container_header_div a {
   width: 120/100rem;
   height: 120/100rem;
   display: flex;
