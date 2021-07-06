@@ -51,7 +51,10 @@
                 <span>{{$t('message.219')}}</span>
                 <el-input
                   v-model.trim="formLabelAlign.last_name"
-                  :placeholder="$t('message.219')"
+                  :placeholder="
+                  $lang != 'zh'?
+                  $t('message.219')
+                  :$t('message.219') + '（如您叫张三宝，输入三宝即可）'"
                 ></el-input>
               </el-form-item>
             </el-col>
