@@ -8,7 +8,7 @@
         <div class="footer_container_header_content">
           <div
             class="footer_container_header_first footer_container_header_div"
-          ><a href="https://medium.com/@Arthur_EX2021">
+          ><a href="https://medium.com/@Arthur_EX2021" target="_blank">
             <img
               src="../assets/images/icon_medium@3x.png"
               alt=""
@@ -18,7 +18,7 @@
           </div>
           <div
             class="footer_container_header_second footer_container_header_div"
-          ><a href="https://twitter.com/Arthur_EX2021">
+          ><a href="https://twitter.com/Arthur_EX2021" target="_blank">
             <img
               src="../assets/images/icon_twitter.png"
               alt=""
@@ -28,7 +28,7 @@
           </div>
           <div
             class="footer_container_header_third footer_container_header_div"
-          ><a href="https://t.me/arthur_ex">
+          ><a href="https://t.me/arthur_ex" target="_blank">
             <img
               src="../assets/images/icon_telegram.png"
               alt=""
