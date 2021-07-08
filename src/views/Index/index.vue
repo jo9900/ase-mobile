@@ -129,8 +129,10 @@
             <div class="page_wallet_download">
               <div class="slogan">{{ $t("message.534") }}</div>
               <div class="device ltr">
-                <a :class="['device_icon', $lang]"  target="_self" href="https://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
-                <a class="device_icon"  target="_self" href="https://apps.apple.com/us/app/UvToken/id1552556395?uo=4"></a>
+                <a :class="['device_icon', $lang]"  target="_blank"
+                   @click="recordClick('Android')"
+                   href="https://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
+                <a class="device_icon"  @click="recordClick('iOS')" target="_blank" href="https://apps.apple.com/us/app/UvToken/id1552556395?uo=4"></a>
               </div>
             </div>
           </div>
@@ -300,6 +302,19 @@ export default {
   computed: {},
   watch: {},
   methods: {
+    recordClick(type) {
+      let url = ''
+      if (process.env.NODE_ENV == 'production') {
+        url = 'http://wallet.uvtoken.com/wallet/statistics/downloadCount'
+      } else {
+        url = process.env.VUE_APP_COUNT_API + 'wallet/statistics/downloadCount'
+      }
+      let img = document.createElement('img')
+      img.src = url + '?download_type=' + type +'&t=' + +new Date()
+      img.style.display = 'none'
+      document.body.appendChild(img)
+      document.body.removeChild(img)
+    },
     toNews() {
       /*let newsCode = localStorage.getItem('newsCode')
       this.$router.push({
