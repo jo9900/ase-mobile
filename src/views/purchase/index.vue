@@ -23,9 +23,9 @@
         <div class="marginTop10">
           {{ $t("message.272") }}
         </div>
-        <div class="marginTop10">
+        <!-- <div class="marginTop10">
           {{ $t("message.273") }}
-        </div>
+        </div> -->
         <div class="marginTop10">
           {{ $t("message.274") }}
         </div>
