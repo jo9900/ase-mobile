@@ -50,13 +50,13 @@
             <el-col>
               <!--label="First  Name"-->
               <el-form-item class="el-form-item-country item_border_top" prop="last_name">
-                <span>{{$t('message.219')}}</span>
+                <span>{{$t('message.218')}}</span>
                 <el-input
                   v-model.trim="formLabelAlign.last_name"
                   :placeholder="
                   $lang != 'zh'?
-                  $t('message.219')
-                  :$t('message.219') + '（如您叫张三宝，输入三宝即可）'"
+                  $t('message.218')
+                  :$t('message.218') + '（如您叫张三宝，输入三宝即可）'"
                 ></el-input>
               </el-form-item>
             </el-col>
@@ -65,10 +65,10 @@
           <el-row>
             <el-col>
               <el-form-item class="el-form-item-country item_border_top" prop="first_name">
-                <span>{{$t('message.218')}}</span>
+                <span>{{$t('message.219')}}</span>
                 <el-input
                   v-model.trim="formLabelAlign.first_name"
-                  :placeholder="$t('message.218')"
+                  :placeholder="$t('message.219')"
                 ></el-input>
               </el-form-item>
             </el-col>
