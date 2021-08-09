@@ -193,6 +193,10 @@
                 if (res.code == 0) {
                   this.isVerifySuccess = true
                   this.myPreSale.user_balance_amount = res.data.aeco_balance_amount
+                  this.form= {
+                    to_account: '',
+                    aeco_amount: ''
+                  };
                 } else {
                   this.isVerifySuccess = false
                   if (res.code == "102601") {
