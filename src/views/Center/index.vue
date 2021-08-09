@@ -185,7 +185,7 @@
         </div>
       </div>
       <!-- 我的邀请 -->
-      <div class="page_invite">
+      <div class="page_invite" v-if="false">
         <div class="page_invite_title">
           <span>{{ $t("message.109") }}</span>
           <span class="page_invite_rule"

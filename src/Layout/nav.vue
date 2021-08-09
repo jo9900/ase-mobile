@@ -177,10 +177,10 @@ export default {
       columns: [
           { name: "English", value: "en" },
           { name: "中文", value: "zh" },
-          { name: "日本語", value: "ja" },
-          { name: "عربى", value: "ar" },
-          { name: "한국어", value: "ko" },
-          { name: "русский", value: "ru" },
+          // { name: "日本語", value: "ja" },
+          // { name: "عربى", value: "ar" },
+          // { name: "한국어", value: "ko" },
+          // { name: "русский", value: "ru" },
       ],
       changeISlanguage: false,
       makes: false,
@@ -196,10 +196,10 @@ export default {
       map: {
         'zh': ['简体中文', 'Chinese'],
         'en': ['English', 'English'],
-        'ja': ['日本語', 'Japanese'],
-        'ar': ['عربى', 'Arabic'],
-        'ko': ['한국어', 'Korean'],
-        'ru': ['русский', 'Russian'],
+        // 'ja': ['日本語', 'Japanese'],
+        // 'ar': ['عربى', 'Arabic'],
+        // 'ko': ['한국어', 'Korean'],
+        // 'ru': ['русский', 'Russian'],
       },
       newsCode: ''
     };
@@ -396,7 +396,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     color: #272727;
-    background: #100746;
+    background: #000;
+    // background: #100746;
     .nav_logo {
       width: 360/100rem;
       // font-size: 24px;

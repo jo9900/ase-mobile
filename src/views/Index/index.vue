@@ -4,63 +4,15 @@
   <div class="page">
     <div class="">
       <div class="page_container">
-        <van-swipe
-          class="my-swipe"
-          :autoplay="5000"
-          :loop="true"
-          indicator-color="white"
-          :height="swipeHeight"
-        >
-          <van-swipe-item>
-            <div style="height: 100%">
-              <template>
-                <div :class="['page_out', $lang]" @click="toNews">
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
-          <van-swipe-item
-            ><div style="height: 500px" @click="slkowet">
-              <template>
-                <div class="page_home">
-                  <div class="page_home_top">
-                    <div class="page_home_title">ARTHUR-EX</div>
-                    <div :class="['page_home_item1', $lang]">
-                      {{ $t("message.12") }}
-                    </div>
-                    <div
-                      class="page_home_item2"
-                      :class="{ marginTop20: lang == 'en' }"
-                    >
-                      {{ $t("message.13") }}
-                    </div>
-                    <div class="page_home_detail">
-                      {{ $t("message.14") }}
-                    </div>
-                    <router-link :to="{ path: '/signIn' }" v-if="isShow">
-                      <div :class="['page_home_btn', $lang]">{{ $t("message.15") }}</div>
-                    </router-link>
-                  </div>
-                  <!-- <div class="page_home_bottom"></div> -->
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
-          <van-swipe-item>
-            <div style="height: 100%">
-              <template>
-                <div class="page_right">
-                  <div class="page_right_top">
-                    <div class="page_right_title"></div>
-                    <div class="page_right_item1">
-                      {{ $t("message.519") }}
-                    </div>
-                  </div>
-                </div>
-              </template>
-            </div></van-swipe-item
-          >
-        </van-swipe>
+        <!-- banner -->
+        <div class="banner">
+          <img class="img_1" src="@/assets/images/banner_ex.png" alt="">
+          <p class="p-txt">{{$t('message.543')}}</p>
+          <div class="banner_main">
+            <img src="@/assets/images/img_qiu.png" alt="">
+          </div>
+          <div class="btn">{{$t('message.544')}}</div>
+        </div>
         <div class="page_content rtl">
           <!-- 关于art -->
           <div class="page_content_about">
@@ -403,7 +355,52 @@ export default {
 
 <style lang='less' scoped>
 .page {
+  .banner{
+    height: 92vh;
+    background: #000000;
+    text-align: center;
+    .img_1{
+      width: 58vw;
+      padding-top: 16vw;
+    }
+    .p-txt{
+      width: 70vw;
+      margin: 0 auto;
+      padding-top: 7vw;
+      font-size: 3.7vw;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #D1F2FD;
+      line-height: 5.8vw;
+    }
+    .banner_main{
+      margin-top: 20px;
+      margin-bottom: 50px;
+      img{
+        width: 80%;
+      }
+      // margin-top: 10vw;
+      // height: 85vw;
+      // width: 100%;
+      // background: url('../../assets/images/banner_img.gif') no-repeat center;
+      // background-size: 30rem 13rem;
+      // background-position-y: -60vw;
+    }
+    .btn{
+      background: url('./../../assets/images/btn_01.png');
+      background-size: cover;
+      width: 85vw;
+      height: 10.3vw;
+      margin: auto;
+      margin-top: 7vw;
 
+      font-size: 3.7vw;
+      font-family: PingFang SC;
+      font-weight: 200;
+      color: #D1F2FD;
+      line-height: 11vw;
+    }
+  }
 }
 .marginTop20 {
   margin-top: 60/100rem !important;

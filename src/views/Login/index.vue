@@ -125,7 +125,7 @@
                   <img v-show="showEye2" class="eye" @click="showEye2 = !showEye2"
                       src="@/assets/images/eye-open.png" alt="eye">
               </el-form-item>
-              <el-form-item class="form_row form_row1">
+              <!-- <el-form-item class="form_row form_row1">
                 <template v-if="inviteCode">
                   <el-input
                     prefix-icon="el-icon-collection-tag"
@@ -140,7 +140,7 @@
                     :placeholder="$t('message.72')"
                     v-model="signInForm.invite_code"
                 /></template>
-              </el-form-item>
+              </el-form-item> -->
               <!-- <div class="form_row codeText">
 
               </div> -->

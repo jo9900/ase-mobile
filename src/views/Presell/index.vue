@@ -42,7 +42,7 @@
 
           <div class="wrap_plan_first_title">{{$t("message.536")}}</div>
           <div class="wrap_plan_second_title" style="font-size: 0.45rem;">
-            2021.3.1
+            2021.8.9
           </div>
           <div :class="
             ['wrap_plan_default rtl', $lang,
@@ -50,11 +50,11 @@
             <img :src="soldout_src" v-if="round>2" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
             <div>
               <span>{{ $t("message.147") }}</span
-              >2021.3.1{{$t("message.496")}}
+              >2021.8.9 {{$t("message.496")}}
             </div>
             <div>
                <span>{{ $t("message.148") }}</span
-               >0.18 USDT
+               >0.56 USDT
             </div>
             <div>
                 <span>{{ $t("message.149") }}</span
@@ -111,7 +111,7 @@
             <div class="wrap_rule_detail">
               {{ $t("message.159") }}
             </div>
-            <div class="wrap_rule_detail">
+            <!-- <div class="wrap_rule_detail">
               {{ $t("message.160") }}
             </div>
             <div class="wrap_rule_detail">
@@ -122,7 +122,7 @@
             </div>
             <div class="wrap_rule_detail">
               {{ $t("message.163") }}
-            </div>
+            </div> -->
             <div class="wrap_rule_detail">
               {{ $t("message.164") }}
             </div>
