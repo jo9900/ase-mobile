@@ -157,7 +157,7 @@
       <!-- 我的申购 -->
       <div class="page_apply">
         <div class="page_apply_my_title">{{ $t("message.106") }}</div>
-        <div class="page_apply_content" @click="toApplyBuylog">
+        <!-- <div class="page_apply_content" @click="toApplyBuylog">
           <div class="page_apply_content_pre">
             <div class="page_apply_content_name">{{ $t("message.107") }}</div>
             <div class="page_apply_content_number">
@@ -169,7 +169,7 @@
             alt=""
             class="pagez_kyc_content_arrow"
           />
-        </div>
+        </div> -->
         <div class="page_apply_content" @click="toApplyBuylog">
           <div class="page_apply_content_pre">
             <div class="page_apply_content_name">{{ $t("message.108") }}</div>
