@@ -19,7 +19,7 @@
             <el-col :span="24">
               <el-form-item class="el-form-item-country" prop="country_code">
                 <span>{{$t('message.216')}}</span>
-                <div @click="chooseCountry">
+                <!-- <div @click="chooseCountry">
                   <el-input
                     v-model.trim="name_cn"
                     :placeholder="$t('message.217')"
@@ -29,7 +29,20 @@
                  <input
                   type="hidden"
                   v-model.trim="formLabelAlign.country_code"
-                ></input>
+                ></input> -->
+                <el-select
+                  filterable
+                  v-model="formLabelAlign.country_code"
+                  :placeholder="$t( 'message.217' )"
+                  style="width: 100%"
+                >
+                  <el-option
+                    :label="$lang == 'zh' ? item.name_cn : item.name_en"
+                    :value="item.code"
+                    v-for="item in areaList"
+                    :key="item.code"
+                  ></el-option>
+                </el-select>
               </el-form-item>
             </el-col>
           </el-row>
