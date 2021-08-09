@@ -374,8 +374,9 @@ export default {
       line-height: 5.8vw;
     }
     .banner_main{
-      margin-top: 20px;
-      margin-bottom: 50px;
+      min-height: 80vw;
+      margin-top: 5.3vw;
+      margin-bottom: 13.3vw;
       img{
         width: 80%;
       }
@@ -402,6 +403,18 @@ export default {
     }
   }
 }
+#app.en .page .banner{
+  .img_1{
+    padding-top: 12vw;
+  }
+  .banner_main{
+    margin-bottom: 8.3vw;
+  }
+  .p-txt{
+    width: 85vw;
+  }
+} 
+
 .marginTop20 {
   margin-top: 60/100rem !important;
 }
