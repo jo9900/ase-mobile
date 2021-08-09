@@ -91,7 +91,7 @@
         >
           <div class="pagez_kyc_content_pre">
             <div class="pagez_kyc_content_name">{{ $t("message.100") }}</div>
-            <div class="pagez_kyc_content_status" style="color: #a7acc1">
+            <div class="pagez_kyc_content_status" style="color: #5885fd;">
               {{ $t("message.97") }}
             </div>
           </div>
@@ -173,7 +173,7 @@
         <div class="page_apply_content" @click="toApplyBuylog">
           <div class="page_apply_content_pre">
             <div class="page_apply_content_name">{{ $t("message.108") }}</div>
-            <div class="page_apply_content_number">
+            <div class="page_apply_content_number" style="color: #5885fd;">
               {{ myPreSale && myPreSale.apply_art_amount }} AECO
             </div>
           </div>
@@ -345,7 +345,7 @@
         <div class="page_safe_content" @click="toEditPas">
           <div class="page_safe_content_pre">
             <div class="page_safe_content_name">{{ $t("message.121") }}</div>
-            <div class="page_safe_content_account">
+            <div class="page_safe_content_account" style="color: #5885fd;">
               {{ $t("message.120") }}
             </div>
           </div>
@@ -360,7 +360,7 @@
             <div class="page_safe_content_name">
               {{ $t("message.125") }}
             </div>
-            <div class="page_safe_content_account">{{ $t("message.126") }}</div>
+            <div class="page_safe_content_account" style="color: #5885fd;">{{ $t("message.126") }}</div>
           </div>
           <img
             src="../../assets/images/icon_found_more.png"
