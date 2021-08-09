@@ -585,7 +585,7 @@ export default {
       let Orientation;
       let flile = e.target.files[0];
       let size = flile.size;
-      let size1 = (size / 1024) * 1024;
+      let size1 = size / (1024 * 1024);
       if (size == 0) {
         this.$message.error(this.$t("message.300"));
       }
