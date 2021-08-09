@@ -51,12 +51,12 @@
                     <!--名 姓-->
                     <template v-if="['ru', 'en', 'ar'].includes($lang)">{{
                       userInfo.kyc_status == 1
-                      ? userInfo.last_name + ' . ' + userInfo.first_name
+                      ? userInfo.first_name + ' . ' + userInfo.last_name
                       : $t("message.97")
                       }}</template>
                     <template v-else>{{
                       userInfo.kyc_status == 1
-                        ? userInfo.first_name + userInfo.last_name
+                        ? userInfo.last_name + userInfo.first_name
                         : $t("message.97")
                     }}</template>
                   </p>
