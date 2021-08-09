@@ -48,17 +48,6 @@
           </el-row>
           <el-row>
             <el-col>
-              <el-form-item class="el-form-item-country item_border_top" prop="first_name">
-                <span>{{$t('message.218')}}</span>
-                <el-input
-                  v-model.trim="formLabelAlign.first_name"
-                  :placeholder="$t('message.218')"
-                ></el-input>
-              </el-form-item>
-            </el-col>
-          </el-row>
-          <el-row>
-            <el-col>
               <!--label="First  Name"-->
               <el-form-item class="el-form-item-country item_border_top" prop="last_name">
                 <span>{{$t('message.219')}}</span>
@@ -72,6 +61,17 @@
               </el-form-item>
             </el-col>
             <!--label="Last  Name"-->
+          </el-row>
+          <el-row>
+            <el-col>
+              <el-form-item class="el-form-item-country item_border_top" prop="first_name">
+                <span>{{$t('message.218')}}</span>
+                <el-input
+                  v-model.trim="formLabelAlign.first_name"
+                  :placeholder="$t('message.218')"
+                ></el-input>
+              </el-form-item>
+            </el-col>
           </el-row>
           <el-row>
             <el-col>
