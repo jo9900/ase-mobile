@@ -589,6 +589,10 @@ export default {
       if (size == 0) {
         this.$message.error(this.$t("message.300"));
       }
+      if(size1>4){
+        this.$message.error(this.$t("message.300"));
+        return false;
+      }
       let imgType = e.target.files[0].type;
       if (!this.isImg(imgType)) {
         this.$message.error(this.$t("message.301"));
@@ -633,6 +637,10 @@ export default {
       let size1 = size / (1024 * 1024);
       if (size == 0) {
         this.$message.error(this.$t("message.300"));
+      }
+      if(size1>4){
+        this.$message.error(this.$t("message.300"));
+        return false;
       }
       let imgType = e.target.files[0].type;
       if (!this.isImg(imgType)) {
