@@ -8,12 +8,12 @@
       <div class="page_apply_title_line"></div>
     </div>
     <div class="page_apply_container rtl" v-if="tableData.length > 0">
-      <div :class="['page_apply_fund', $lang]">
+      <!-- <div :class="['page_apply_fund', $lang]">
         <span class="page_apply_name">{{ $t("message.128") }}</span>
         <span class="page_apply_number"
           >{{ myPreSale.apply_usdt_amount }} USDT</span
         >
-      </div>
+      </div> -->
       <div :class="['page_apply_quota', $lang]">
         <span class="page_apply_quota_name">{{ $t("message.129") }}</span>
         <span class="page_apply_quota_number"
@@ -35,7 +35,7 @@
             prop="apply_amount"
             width="120px"
             fixed
-            :label="$t('message.130') + '    (USDT)'"
+            :label="$t('message.130') + '    (AECO)'"
           >
             <template slot-scope="scope">
               <span style="color: #ff4343">{{ scope.row.apply_amount }}</span>
