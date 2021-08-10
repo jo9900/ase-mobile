@@ -42,7 +42,7 @@
 
           <div class="wrap_plan_first_title">{{$t("message.536")}}</div>
           <div class="wrap_plan_second_title" style="font-size: 0.45rem;">
-            2021.8.9
+            2021.8.10
           </div>
           <div :class="
             ['wrap_plan_default rtl', $lang,
@@ -50,7 +50,7 @@
             <img :src="soldout_src" v-if="round>2" alt="soldOut" :class="['soldout', {'en': $lang == 'en'}]">
             <div>
               <span>{{ $t("message.147") }}</span
-              >2021.8.9 {{$t("message.496")}}
+              >2021.8.10 {{$t("message.496")}}
             </div>
             <div>
                <span>{{ $t("message.148") }}</span
