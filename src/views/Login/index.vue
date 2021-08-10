@@ -557,7 +557,6 @@ export default {
           }
           let params = JSON.parse(JSON.stringify(this.signInForm));
           // this.getPubKey();
-          this.loading1 = true;
           let resData = await pubKey();
           if (resData.code == 0) {
             this.pk = resData.data.pub_key;
@@ -568,6 +567,7 @@ export default {
             return;
           }
           params.password = this.rsaData(sha256(params.password));
+          this.loading1 = true;
           signIn(this.$qs.stringify(params)).then((res) => {
             this.loading1 = false;
             if (res.code == 0) {
