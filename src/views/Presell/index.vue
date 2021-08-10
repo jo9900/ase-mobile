@@ -212,7 +212,7 @@
                 ></el-progress>
 
                 <div class="progress_info">
-                  <div>
+                  <!-- <div>
                     <template v-if="round == 1||round == 2">
                       <template v-if="lang_type == 'English'"
                         >{{ preInfo.progress }}
@@ -227,9 +227,9 @@
                     <template v-if="round == 3"
                       >{{ $t("message.175") }} {{ preInfo.progress }}%</template
                     >
-                  </div>
+                  </div> -->
 
-                  <div>
+                  <!-- <div>
                     {{ $t("message.176") }}
                     <template v-if="round == 1||round == 2">
                       {{ preInfo.total_amount }}
@@ -243,7 +243,7 @@
                       }}
                       USDT</template
                     >
-                  </div>
+                  </div> -->
                 </div>
               </el-col>
 
