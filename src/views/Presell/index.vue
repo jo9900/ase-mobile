@@ -207,7 +207,7 @@
                       ? parseInt(preInfo.progress)
                       : preInfo.progress == 0
                       ? 0
-                      : parseInt(preInfo.progress)>=parseInt(preInfo.total)?100:parseFloat((preInfo.progress/preInfo.total)*100).toFixed(2)
+                      : parseInt(preInfo.progress)>=parseInt(preInfo.total_amount)?100:parseFloat((preInfo.progress/preInfo.total_amount)*100).toFixed(2)
                   "
                 ></el-progress>
 
@@ -232,13 +232,13 @@
                   <div>
                     {{ $t("message.176") }}
                     <template v-if="round == 1||round == 2">
-                      {{ preInfo.total }}
+                      {{ preInfo.total_amount }}
                       {{ $t("message.174") }}</template
                     >
                     <template v-if="round == 3"
                       >{{
-                        preInfo.total
-                          ? preInfo.total.replace(/\B(?=(?:\d{3})+\b)/g, ",")
+                        preInfo.total_amount
+                          ? preInfo.total_amount.replace(/\B(?=(?:\d{3})+\b)/g, ",")
                           : "0"
                       }}
                       USDT</template
