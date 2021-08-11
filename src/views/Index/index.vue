@@ -7,7 +7,14 @@
         <!-- banner -->
         <div class="banner">
           <img class="img_1" src="@/assets/images/banner_ex.png" alt="">
-          <p class="p-txt">{{$t('message.543')}}</p>
+          <p class="p-txt" v-if="lang == 'zh'">
+            {{$t('message.5431')}}
+            <br>
+            {{$t('message.5432')}}
+          </p>
+          <p class="p-txt" v-else>
+            {{$t('message.543')}}
+          </p>
           <div class="banner_main">
             <img src="@/assets/images/img_qiu.png" alt="">
           </div>
