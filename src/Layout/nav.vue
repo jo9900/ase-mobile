@@ -140,10 +140,8 @@
     >
       <van-picker
         :title="$t('message.56')"
-        show-toolbar
         :columns="columns"
-        @confirm="onConfirm"
-        @cancel="onCancel"
+        :default-index="Object.keys(map).indexOf(lang)"
         @change="onChange"
         value-key="name"
       />
@@ -194,14 +192,14 @@ export default {
       code: localStorage.getItem("code"),
       email: localStorage.getItem("email"),
       map: {
-        'zh': ['简体中文', 'Chinese'],
         'en': ['English', 'English'],
+        'zh': ['简体中文', 'Chinese'],
         // 'ja': ['日本語', 'Japanese'],
         // 'ar': ['عربى', 'Arabic'],
         // 'ko': ['한국어', 'Korean'],
         // 'ru': ['русский', 'Russian'],
       },
-      newsCode: ''
+      newsCode: '',
     };
   },
   computed: {},
@@ -261,6 +259,12 @@ export default {
       // Toast(`当前值：${value.name}, 当前索引：${index}`);
     },
     onChange(picker, value, index) {
+      console.log(picker, value, index);
+      this.changeISlanguage = false;
+      this.makes = false;
+      setTimeout(() => {
+        this.handleCommandLang(value);
+      }, 500);
       // Toast(`当前值：${value.name}, 当前索引：${index}`);
     },
     onCancel() {
