@@ -455,7 +455,7 @@ export default {
         // background: linear-gradient(170deg, #2BCDFF 0%, #294CFF 100%);
         // border-radius: 10px;
         background: url('./../../assets/images/time_border.png');
-        background-size: cover;
+        background-size: 0.66rem 0.62rem;;
 
         font-size: .36rem;
         font-family: PingFang SC;
