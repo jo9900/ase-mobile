@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <div id="suspend" class="suspend" style="overflow: hidden; width:40px; display: block;text-align: center">
+        <!-- <div id="suspend" class="suspend" style="overflow: hidden; width:40px; display: block;text-align: center">
             <dl style=" line-height: 32px;padding-top: 20px">
                 <dt class="IE6PNG">
                     <div class="laodett" style="height: 100%;">
@@ -10,7 +10,7 @@
                     </div>
                 </dt>
             </dl>
-        </div>
+        </div> -->
 
     </div>
 </template>
