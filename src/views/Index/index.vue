@@ -424,12 +424,12 @@ export default {
 <style lang='less' scoped>
 .page {
   .banner{
-    height: 92vh;
+    height: 162vw;
     background: #000000;
     text-align: center;
     .img_1{
       width: 58vw;
-      padding-top: 10vw;
+      padding-top: 6vw;
     }
     .p-txt{
       width: 70vw;
@@ -443,7 +443,7 @@ export default {
     }
     .time_out{
       position: absolute;
-      top: 4rem;
+      top: 3.9rem;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -454,7 +454,7 @@ export default {
         // border-image: linear-gradient(170deg, #2BCDFF, #294CFF) 10 10;
         // background: linear-gradient(170deg, #2BCDFF 0%, #294CFF 100%);
         // border-radius: 10px;
-        background: url('./../../assets/images/time_border.png');
+        background: url('./../../assets/images/time_border.png') no-repeat;
         background-size: 0.66rem 0.62rem;;
 
         font-size: .36rem;
@@ -468,19 +468,15 @@ export default {
         font-size: .24rem;
         font-family: PingFang SC;
         font-weight: 400;
-        color: #FFFFFF;
+        color: #2950FF;
         line-height: .66rem;
         margin: 0 .15rem;
-
-        background: linear-gradient(177deg, #2BCEFF 0%, #2950FF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
     }
     .banner_main{
       min-height: 80vw;
-      margin-top: 10.3vw;
-      margin-bottom: 10.3vw;
+      margin-top: 14.3vw;
+      margin-bottom: 6.3vw;
       img{
         width: 80%;
         margin-left: -2.6vw;
@@ -510,13 +506,16 @@ export default {
 }
 #app.en .page .banner{
   .img_1{
-    padding-top: 10vw;
+    padding-top: 8vw;
   }
   .time_out{
     top: 4.3rem;
   }
   .banner_main{
-    margin-bottom: 8.3vw;
+    margin-bottom: 0;
+  }
+  .btn{
+    margin-top: 2vw;
   }
   .p-txt{
     width: 85vw;
