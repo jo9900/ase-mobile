@@ -483,7 +483,7 @@ export default {
       margin-bottom: 10.3vw;
       img{
         width: 80%;
-        margin-left: 2.6vw;
+        margin-left: -2.6vw;
       }
       // margin-top: 10vw;
       // height: 85vw;
