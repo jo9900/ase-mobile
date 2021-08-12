@@ -28,7 +28,7 @@
           </div>
 
           <div class="banner_main">
-            <img src="@/assets/images/img_qiu.png" alt="">
+            <img src="@/assets/images/banner_img.gif" alt="">
           </div>
           <div class="btn">{{$t('message.544')}}</div>
         </div>
