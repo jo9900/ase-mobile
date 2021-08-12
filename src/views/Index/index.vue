@@ -15,6 +15,18 @@
           <p class="p-txt" v-else>
             {{$t('message.543')}}
           </p>
+
+          <div class="time_out" v-if="time_out_id">
+            <span class="sp1">{{time.day}}</span>
+            <span class="sp2">{{$t('message.548')}}</span>
+            <span class="sp1">{{time.hours}}</span>
+            <span class="sp2">{{$t('message.549')}}</span>
+            <span class="sp1">{{time.minute}}</span>
+            <span class="sp2">{{$t('message.550')}}</span>
+            <span class="sp1">{{time.second}}</span>
+            <span class="sp2">{{$t('message.551')}}</span>
+          </div>
+
           <div class="banner_main">
             <img src="@/assets/images/img_qiu.png" alt="">
           </div>
@@ -256,6 +268,13 @@ export default {
           },
         ],
       },
+      time: {
+        day:'00',
+        hours:'00',
+        minute: '00',
+        second: '00'
+      },
+      time_out_id:'',
     };
   },
   computed: {},
@@ -328,6 +347,43 @@ export default {
       //   query: { code: this.list[0].code },
       // });
     },
+    time_out(){
+
+      this.time= {
+        day:'',
+        hours:'',
+        minute: '',
+        second: ''
+      }
+      let end_time = +new Date("2021/11/12 00:00:00");
+      let new_time = +new Date();
+      let time = end_time - new_time;
+      if(time<=0){
+        clearTimeout(this.time_out_id);
+        return false;
+      }
+      let day = time/(1000*24*3600);
+      day = parseInt(day);
+      time = time - (day * 1000*24*3600);
+      let hours = parseInt(time/(1000*3600));
+      time = time - hours*1000*3600;
+      let minute = parseInt(time/(1000*60));
+      time = time - minute*1000*60;
+      // console.log('time', time);
+      let second = parseInt(time/1000);
+
+      this.time= {
+        day: day,
+        hours: hours,
+        minute: minute,
+        second: second
+      }
+      // console.log('this.time', this.time)
+      this.time_out_id = setTimeout(() => {
+        this.time_out();
+      }, 1000);
+
+    }
   },
   created() {
     this.get_list();
@@ -337,6 +393,7 @@ export default {
       this.isShow = true;
     }
     console.log(localStorage.getItem("code"));
+    this.time_out();
   },
   mounted() {
     let height =
@@ -357,6 +414,9 @@ export default {
       document.querySelector(".page_out").style.height = this.height;
     }
   },
+  destroyed () {
+    clearTimeout(this.time_out_id);
+  },
 };
 </script>
 
@@ -368,7 +428,7 @@ export default {
     text-align: center;
     .img_1{
       width: 58vw;
-      padding-top: 16vw;
+      padding-top: 10vw;
     }
     .p-txt{
       width: 70vw;
@@ -380,10 +440,46 @@ export default {
       color: #D1F2FD;
       line-height: 5.8vw;
     }
+    .time_out{
+      position: absolute;
+      top: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      .sp1{
+        width: .66rem;
+        height: .62rem;
+        // border: 1px solid;
+        // border-image: linear-gradient(170deg, #2BCDFF, #294CFF) 10 10;
+        // background: linear-gradient(170deg, #2BCDFF 0%, #294CFF 100%);
+        // border-radius: 10px;
+        background: url('./../../assets/images/time_border.png');
+        background-size: cover;
+
+        font-size: .36rem;
+        font-family: PingFang SC;
+        font-weight: 600;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: .62rem;
+      }
+      .sp2{
+        font-size: .24rem;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: .66rem;
+        margin: 0 .15rem;
+
+        background: linear-gradient(177deg, #2BCEFF 0%, #2950FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
     .banner_main{
       min-height: 80vw;
-      margin-top: 5.3vw;
-      margin-bottom: 13.3vw;
+      margin-top: 10.3vw;
+      margin-bottom: 10.3vw;
       img{
         width: 80%;
       }
@@ -412,13 +508,17 @@ export default {
 }
 #app.en .page .banner{
   .img_1{
-    padding-top: 12vw;
+    padding-top: 10vw;
+  }
+  .time_out{
+    top: 4.3rem;
   }
   .banner_main{
     margin-bottom: 8.3vw;
   }
   .p-txt{
     width: 85vw;
+    padding-top: 6vw;
   }
 } 
 
