@@ -1,9 +1,19 @@
+<!--
+ * @Author: jhy
+ * @Date: 2021-03-23 14:14:43
+ * @LastEditTime: 2021-09-01 10:17:31
+ * @LastEditors: jhy
+ * @Description: 
+ * @FilePath: /taf2-front-web/Users/jhy/yongqi/arthur-m/src/Layout/index.vue
+-->
 
 <!--   -->
 <template>
     <div>
-        <div class="navhearder"><Nav/></div>
-        <div id="mint"><router-view></router-view></div>
+        <div class="navhearder"><div id="ad_banner_con"></div><Nav/></div>
+        <div id="mint">
+            <router-view></router-view>
+        </div>
         <!-- <el-footer><Footer/></el-footer> -->
     </div>
 </template>
@@ -22,7 +32,12 @@ export default {
     methods:{
 
     },
-
+    mounted () {
+        
+        let lang = localStorage.getItem('lang');
+        ad('ad_banner_con',lang, 1);
+        
+    },
 }
 </script>
 <style lang="less" scoped>

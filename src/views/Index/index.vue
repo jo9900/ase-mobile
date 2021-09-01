@@ -427,6 +427,7 @@ export default {
     height: 162vw;
     background: #000000;
     text-align: center;
+    position: relative;
     .img_1{
       width: 58vw;
       padding-top: 6vw;
@@ -443,7 +444,7 @@ export default {
     }
     .time_out{
       position: absolute;
-      top: 3.9rem;
+      top: 2.9rem;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -509,7 +510,7 @@ export default {
     padding-top: 8vw;
   }
   .time_out{
-    top: 4.3rem;
+    top: 3.3rem;
   }
   .banner_main{
     margin-bottom: 0;
