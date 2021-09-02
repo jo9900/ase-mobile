@@ -2,29 +2,7 @@ import Login from "@/views/Login";
 import Layout from "@/Layout";
 import Home from "@/views/Index";
 
-const routes = [{
-        path: "/login",
-        name: "login",
-        label: "登录",
-        meta: { requiresAuth: false },
-        component: Login,
-    },
-
-    {
-        path: "/signIn",
-        name: "signIn",
-        label: "注册",
-        meta: { requiresAuth: false },
-        component: Login,
-    },
-    {
-        path: "/forget",
-        name: "resetPas",
-        label: "忘记密码",
-        meta: { requiresAuth: false },
-        component: Login,
-    },
-
+const routes = [
     {
         path: "/",
         component: Layout,
@@ -37,6 +15,44 @@ const routes = [{
             component: Home,
         }, ],
     },
+    {
+        path: "/",
+        component: Layout,
+        label: "登录",
+        children: [{
+            path: "/login",
+            name: "login",
+            label: "登录",
+            meta: { requiresAuth: false },
+            component: Login,
+        }]
+    },
+
+    {
+        path: "/",
+        component: Layout,
+        label: "注册",
+        children: [{
+            path: "/signIn",
+            name: "signIn",
+            label: "注册",
+            meta: { requiresAuth: false },
+            component: Login,
+        }]
+    },
+    {
+        path: "/",
+        component: Layout,
+        label: "忘记密码",
+        children: [{
+            path: "/forget",
+            name: "resetPas",
+            label: "忘记密码",
+            meta: { requiresAuth: false },
+            component: Login,
+        }]
+    },
+
     {
         path: "/",
         component: Layout,

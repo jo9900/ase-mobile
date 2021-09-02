@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <webNav></webNav>
+    <!-- <webNav></webNav> -->
     <div class="page_content_div">
       <div class="page_content">
         <!-- <div
