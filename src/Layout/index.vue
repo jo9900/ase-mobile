@@ -1,7 +1,7 @@
 <!--
  * @Author: jhy
  * @Date: 2021-03-23 14:14:43
- * @LastEditTime: 2021-09-01 10:17:31
+ * @LastEditTime: 2021-09-02 17:56:56
  * @LastEditors: jhy
  * @Description: 
  * @FilePath: /taf2-front-web/Users/jhy/yongqi/arthur-m/src/Layout/index.vue
@@ -11,7 +11,7 @@
 <template>
     <div>
         <div class="navhearder"><div id="ad_banner_con"></div><Nav/></div>
-        <div id="mint">
+        <div id="mint" :class="ad_con_status?'on':''">
             <router-view></router-view>
         </div>
         <!-- <el-footer><Footer/></el-footer> -->
@@ -26,16 +26,22 @@ export default {
     components: {Nav,Footer},
     data(){
         return {
-
+            ad_con_status: false
         }
     },
     methods:{
 
     },
     mounted () {
-        
+        let that = this;
         let lang = localStorage.getItem('lang');
-        ad('ad_banner_con',lang, 1);
+        ad('ad_banner_con',lang, 1, e=>{
+            if(e){
+                that.ad_con_status = true;
+            }else{
+                that.ad_con_status = false;
+            }
+        });
         
     },
 }
@@ -69,6 +75,9 @@ export default {
     #mint{
         overflow: hidden;
         margin-top: 0.9rem; /* 2.42rem */
+        &.on{
+            margin-top: 2.4rem;
+        }
     }
 
     /*.kf {*/
