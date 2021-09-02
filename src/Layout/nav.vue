@@ -204,10 +204,22 @@ export default {
   },
   computed: {},
   watch: {
-    $route: function (to, from) {
-      this.pagePath = this.$route.path;
-      this.makes = false;
-    },
+    // $route: function (to, from) {
+    //   this.pagePath = this.$route.path;
+    //   this.makes = false;
+    //   this.isLogin = localStorage.getItem("token") ? true : false;
+    // },
+    '$route': {
+      handler() {
+        this.pagePath = this.$route.path;
+        this.makes = false;
+        this.isLogin = !!localStorage.getItem("token");
+        this.email = localStorage.getItem("email")
+        this.code = localStorage.getItem("code")
+      },
+      deep: true,
+      immediate: true
+    }
   },
   methods: {
     getNews() {
