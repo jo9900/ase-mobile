@@ -103,7 +103,7 @@
                 <a :class="['device_icon', $lang]"  target="_blank"
                    @click="recordClick('Android')"
                    href="https://wallet.uvtoken.com/static/download/android/uvtoken.apk"></a>
-                <a class="device_icon"  @click="recordClick('iOS')" target="_blank" href="https://apps.apple.com/us/app/UvToken/id1552556395?uo=4"></a>
+                <a class="device_icon"  @click="recordClick('iOS')" target="_blank" href="https://ios.tafchain.com/distribute/down/MTU="></a>
               </div>
             </div>
           </div>
