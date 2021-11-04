@@ -26,7 +26,7 @@ document.onclick = _.throttle(
     },
     1000 * 60 * 3, { trailing: false }
 );
-import fastclick from "fastclick";
+// import fastclick from "fastclick";
 // ---------------
 import VueI18n from "vue-i18n";
 import messages from "./lang";
@@ -52,12 +52,12 @@ if (map[localStorage.getItem("lang")]) {
 localStorage.setItem("lang_type", map[f][1])
 i18n = new VueI18n({locale: f, messages});
 Locals(f);
-fastclick.prototype.focus = function(targetElement) {
+// fastclick.prototype.focus = function(targetElement) {
 
-    "use strict";
-    targetElement.focus();
-};
-fastclick.attach(document.body);
+//     "use strict";
+//     targetElement.focus();
+// };
+// fastclick.attach(document.body);
 
 // ---------------
 Vue.prototype.$moment = moment;

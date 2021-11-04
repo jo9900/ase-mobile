@@ -16,7 +16,7 @@
             {{$t('message.543')}}
           </p>
 
-          <div class="time_out" v-if="time_out_id">
+          <!-- <div class="time_out" v-if="time_out_id">
             <span class="sp1">{{time.day}}</span>
             <span class="sp2">{{$t('message.548')}}</span>
             <span class="sp1">{{time.hours}}</span>
@@ -25,7 +25,7 @@
             <span class="sp2">{{$t('message.550')}}</span>
             <span class="sp1">{{time.second}}</span>
             <span class="sp2">{{$t('message.551')}}</span>
-          </div>
+          </div> -->
 
           <div class="banner_main">
             <img src="@/assets/images/banner_img.gif" alt="">
