@@ -6,9 +6,9 @@ axios.defaults.withCredentials = true;
 
 let baseUrl = "";
 if (process.env.NODE_ENV == "development") {
-    baseUrl = window.location.origin + '/'
-} else {
-    baseUrl = window.location.origin + '/'
+    baseUrl = "";
+} else if (process.env.NODE_ENV == "production") {
+    baseUrl = process.env.VUE_APP_BASE_API;
 }
 
 axios.defaults.baseURL = baseUrl;

@@ -30,7 +30,7 @@
           <div class="banner_main">
             <img src="@/assets/images/banner_img.gif" alt="">
           </div>
-          <div class="btn">{{$t('message.544')}}</div>
+          <!-- <div class="btn">{{$t('message.544')}}</div> -->
         </div>
         <div class="page_content rtl">
           <!-- 关于art -->

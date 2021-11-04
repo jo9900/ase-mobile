@@ -287,7 +287,7 @@ const routes = [
         component: () =>
             import ("@/views/Notfind"),
     },
-    // { path: "*", redirect: "/404" },
+    { path: "*", redirect: "/404" },
 ];
 
 export default routes;

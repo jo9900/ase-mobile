@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     mode: "history",
     // mode: 'hash',
-    base: '/m/',//process.env.BASE_URL,
+    base: process.env.BASE_URL,
     routes,
 });
 
@@ -43,20 +43,18 @@ router.beforeEach((to, from, next) => {
         ua.toLowerCase().match(/MicroMessenger/i ) == 'micromessenger' // wx
     ) {
         next()
-    } else  {
-        window.location.href = location.origin
     }
-    // else {
-    //     if (getQueryVariable("ref", window.location.href)) {
-    //         window.location.href =
-    //             process.env.VUE_APP_BASE_APILink +
-    //             "signIn?ref=" +
-    //             getQueryVariable("ref", window.location.href);
-    //     }
-    //     else
-    //         window.location.href = process.env.VUE_APP_BASE_APILink;
+    else {
+        if (getQueryVariable("ref", window.location.href)) {
+            window.location.href =
+                process.env.VUE_APP_BASE_APILink +
+                "signIn?ref=" +
+                getQueryVariable("ref", window.location.href);
+        }
+        else
+            window.location.href = process.env.VUE_APP_BASE_APILink;
 
-    // }
+    }
 });
 
 router.beforeEach((to, from, next) => {
