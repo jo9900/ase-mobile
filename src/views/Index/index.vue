@@ -360,6 +360,7 @@ export default {
       let time = end_time - new_time;
       if(time<=0){
         clearTimeout(this.time_out_id);
+        this.time_out_id = '';
         return false;
       }
       let day = time/(1000*24*3600);
